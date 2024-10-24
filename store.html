@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Add Item</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .required-textbox {
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center text-dark font-weight-bold">Indian Add Item</h1>
+    <form id="itemForm">
+        <div class="form-group">
+            <label for="itemCode">Item Code</label>
+            <input type="text" class="form-control" id="itemCode" value="0" readonly>
+        </div>
+        <div class="form-group">
+            <label for="itemOption">Item Description List</label>
+            <select class="form-control" id="itemOption">
+                <option value="option1">Mobile</option>
+                <option value="option2">Watch</option>
+                <option value="option3">Lights</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="newItemDescription">Add New Item in Description List</label>
+            <div class="input-group">
+                <input type="text" class="form-control w-50" id="newItemDescription" placeholder="Enter new item description">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-primary" onclick="addItem()">Add Item</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="itemDescription">Item Description</label>
+            <input type="text" class="form-control" id="itemDescription" required>
+        </div>
+        <div class="form-group">
+            <label for="umo">UMO</label>
+            <select class="form-control" id="umo">
+                <option value="umo1">lit</option>
+                <option value="umo2">kg</option>
+                <option value="umo3">mt</option>
+                <option value="umo1">inch</option>
+                <option value="umo2">ft</option>
+                <option value="umo3">mg</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="quantityRequired">Quantity Required</label>
+            <input type="number" class="form-control" id="quantityRequired" required>
+        </div>
+        <div class="form-group">
+            <label for="population">Population</label>
+            <input type="number" class="form-control" id="population" required>
+        </div>
+        <div class="form-group">
+            <label for="purchaseQuantity">Purchase Quantity Till Date</label>
+            <input type="date" class="form-control" id="purchaseQuantity">
+        </div>
+        <div class="form-group">
+            <label for="issuedQuantity">Issued Quantity Till Date</label>
+            <input type="date" class="form-control" id="issuedQuantity">
+        </div>
+        <div class="form-group">
+            <label for="stockPosition">Stock Position</label>
+            <select class="form-control" id="stockPosition" onchange="toggleRequiredTextbox()">
+                <option value="nil">Nil</option>
+                <option value="required">Required</option>
+            </select>
+            <input type="text" class="form-control required-textbox" id="requiredTextbox" placeholder="Enter details here">
+        </div>
+        <div class="form-group">
+            <label for="lastPurchasePrice">Last Purchase Price</label>
+            <input type="number" class="form-control" id="lastPurchasePrice" required>
+        </div>
+        <div class="form-group">
+            <label for="lastPurchaseDate">Last Purchase Date</label>
+            <input type="date" class="form-control" id="lastPurchaseDate">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<script>
+    // Function to toggle the visibility of the required textbox based on the dropdown selection
+    function toggleRequiredTextbox() {
+        var stockPosition = document.getElementById("stockPosition").value;
+        var requiredTextbox = document.getElementById("requiredTextbox");
+        if (stockPosition === "required") {
+            requiredTextbox.style.display = "block"; // Show textbox
+        } else {
+            requiredTextbox.style.display = "none"; // Hide textbox
+        }
+    }
+
+    // Function to add a new item to the dropdown list
+    function addItem() {
+        var newItemDescription = document.getElementById("newItemDescription").value;
+        if (newItemDescription !== "") {
+            var itemOptionSelect = document.getElementById("itemOption");
+            var newOption = document.createElement("option");
+            newOption.text = newItemDescription;
+            newOption.value = "option" + (itemOptionSelect.options.length + 1);
+            itemOptionSelect.add(newOption);
+            document.getElementById("newItemDescription").value = ""; // Clear input field
+        }
+    }
+
+    // Automatically increment item code (for demonstration purposes)
+    document.addEventListener("DOMContentLoaded", function() {
+        var itemCodeInput = document.getElementById("itemCode");
+        var currentCode = parseInt(itemCodeInput.value);
+        itemCodeInput.value = currentCode + 1;
+    });
+</script>
+
+
+</body>
+</html>

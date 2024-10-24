@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Maharashtra Vidyut Nigam Pvt. Ltd.</title>
+    <style>
+        body {
+            background-image: url(''); /* Replace with your image URL */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            width: 150px; /* Adjust logo size */
+            margin-top: 20px;
+            animation: logo-fade-in 2s; /* Animation for logo */
+        }
+        .heading {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            font-weight: bold;
+            animation: text-fade-in 2s; /* Animation for heading */
+        }
+        .subheading {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: text-fade-in 2.5s; /* Animation for subheading */
+        }
+        .btn-custom {
+            cursor: pointer;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            position: relative;
+            transition: transform 0.2s; 
+            opacity: 0; /* Start as invisible */
+            animation: button-fade-in 2s forwards; /* Animation for buttons */
+        }
+        .btn-custom:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        @keyframes logo-fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes text-fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes button-fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Replace with your logo URL -->
+    <h1 class="heading text-dark">Welcome to Maharashtra Vidyut Nigam Pvt. Ltd.</h1>
+    <h3 class="subheading text-black-50 font-weight-bold">Innovative Energy for a Sustainable World!</h3>
+    
+    <div>
+        <a href="purchase.html" class="btn btn-primary btn-custom" data-toggle="tooltip" title="Click for more">Purchase</a>
+        <a href="store.html" class="btn btn-danger btn-custom" data-toggle="tooltip" title="Click for more">Store</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
