@@ -142,6 +142,11 @@ button{
     color: var(--grad-clr1);
 }
 
+.logo {
+    width: 150px; /* Adjust logo size */
+    margin-top: 20px;
+}
+
 .overlay-container{
     position: absolute;
     top: 0;
