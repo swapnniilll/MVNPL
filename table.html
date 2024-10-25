@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Display Data</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .nature {
+            top: 20px;
+            left: 70px;
+        }
+        .prno {
+            bottom: 120px;
+            right: 80px;
+        }
+        .bud {
+            top: -35px;
+            left: 70px;
+        }
+        .dtt {
+            bottom: 40px;
+            right: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button class="btn btn-secondary mb-3" onclick="window.history.back()">Back</button>
+    
+    <h1 class="text-center text-dark font-weight-bold">Submitted Item Details</h1>
+    
+    <!-- Nature of Indent Section -->
+    <div class="form-group position-relative nature">
+        <label for="natureOfIndent">Nature of Indent:</label><br>
+        <input type="checkbox" id="nature1" name="natureOfIndent" value="Nature 1">
+        <label for="nature1">Most Urgent</label><br>
+        <input type="checkbox" id="nature2" name="natureOfIndent" value="Nature 2">
+        <label for="nature2">Urgent</label><br>
+        <input type="checkbox" id="nature3" name="natureOfIndent" value="Nature 3">
+        <label for="nature3">Regular</label>
+    </div>
+
+    <div class="form-group row position-relative prno">
+        <div class="col-md-12 text-right align-top">
+            <label for="prNo" class="ml-3">PR. NO:</label>
+            <input type="text" id="prNo" class="form-control w-25 d-inline" readonly>
+        </div>
+    </div>
+
+    <!-- Budget Head Section -->
+    <div class="form-group row">
+        <div class="col-md-8 position-relative bud">
+            <label for="budgetHead">Budget Head:</label>
+            <select class="form-control w-25 d-inline" id="budgetHead">
+                <option value="Budget 1">Budget 1</option>
+                <option value="Budget 2">Budget 2</option>
+                <option value="Budget 3">Budget 3</option>
+                <option value="Budget 4">Budget 4</option>
+            </select>
+        </div>
+        <div class="col-md-4 text-right position-relative dtt">
+            <label for="currentDate" class="ml-3">Date:</label>
+            <input type="text" id="currentDate" class="form-control w-50 d-inline" readonly>
+        </div>
+    </div>
+
+    <table class="table table-bordered mt-3" id="itemTable">
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Item Description List</th>
+                <th>Item Description</th>
+                <th>UMO</th>
+                <th>Quantity Required</th>
+                <th>Population</th>
+                <th>Purchase Quantity Till Date</th>
+                <th>Issued Quantity Till Date</th>
+                <th>Stock Position</th>
+                <th>Last Purchase Price</th>
+                <th>Last Purchase Date</th>
+            </tr>
+        </thead>
+        <tbody id="itemTableBody">
+            <!-- Data will be displayed here -->
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-3"><hr class="border border-dark w-75">
+            <label class="ml-5">Indent By</label>
+        </div>
+        <div class="col-3"><hr class ="border border-dark w-75">
+            <label class="ml-4">Signature of Store Manager</label>
+        </div>
+        <div class="col-3"><hr class="border border-dark w-75">
+            <label class="ml-5">HOD</label>
+        </div>
+        <div class="col-3"><hr class="border border-dark w-75">
+            <label class="ml-5">Sanctioned</label>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve data from local storage
+        const itemData = JSON.parse(localStorage.getItem('itemData'));
+
+        // Create a new table row
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${itemData.itemCode}</td>
+            <td>${itemData.itemOption}</td>
+            <td>${itemData.itemDescription}</td>
+            <td>${itemData.umo}</td>
+            <td>${itemData.quantityRequired}</td>
+            <td>${itemData.population}</td>
+            <td>${itemData.purchaseQuantity}</td>
+            <td>${itemData.issuedQuantity}</td>
+            <td>${itemData.stockPositionValue}</td>
+            <td>${itemData.lastPurchasePrice}</td>
+            <td>${itemData.lastPurchaseDate}</td>
+        `;
+
+        // Add the new row to the table
+        document.getElementById('itemTableBody').appendChild(newRow);
+
+        // Generate PR. NO. (for demonstration purposes)
+        const prNo = `PR-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}`;
+        document.getElementById('prNo').value = prNo;
+
+        // Set current date
+        const currentDate = new Date().toISOString().split('T')[0]; // Format : YYYY-MM-DD
+        document.getElementById('currentDate').value = currentDate;
+    </script>
+
+</body>
+</html>

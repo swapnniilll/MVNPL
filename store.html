@@ -25,14 +25,14 @@
     <form id="itemForm">
         <div class="form-group">
             <label for="itemCode">Item Code</label>
-            <input type="text" class="form-control" id="itemCode" value="0" readonly>
+            <input type="text" class="form-control" id="itemCode" readonly>
         </div>
         <div class="form-group">
             <label for="itemOption">Item Description List</label>
             <select class="form-control" id="itemOption">
-                <option value="option1">Mobile</option>
-                <option value="option2">Watch</option>
-                <option value="option3">Lights</option>
+                <option value="Mobile">Mobile</option>
+                <option value="Watch">Watch</option>
+                <option value="Lights">Lights</option>
             </select>
         </div>
         <div class="form-group">
@@ -52,12 +52,12 @@
         <div class="form-group">
             <label for="umo">UMO</label>
             <select class="form-control" id="umo">
-                <option value="umo1">LIT</option>
-                <option value="umo2">KG</option>
-                <option value="umo3">MT</option>
-                <option value="umo1">INCH</option>
-                <option value="umo2">FT</option>
-                <option value="umo3">MG</option>
+                <option value="LIT">LIT</option>
+                <option value="KG">KG</option>
+                <option value="MT">MT</option>
+                <option value="INCH">INCH</option>
+                <option value="FT">FT</option>
+                <option value="MG">MG</option>
             </select>
         </div>
         <div class="form-group">
@@ -79,8 +79,8 @@
         <div class="form-group">
             <label for="stockPosition">Stock Position</label>
             <select class="form-control" id="stockPosition" onchange="toggleRequiredTextbox()">
-                <option value="nil">Nil</option>
-                <option value="required">Required</option>
+                <option value="Nill">Nill</option>
+                <option value="Required">Required</option>
             </select>
             <input type="text" class="form-control required-textbox" id="requiredTextbox" placeholder="Enter details here">
         </div>
@@ -95,105 +95,89 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-
-    <h2 class="mt-5">Submitted Items</h2>
-    <table class="table table-bordered mt-3" id="itemTable">
-        <thead>
-            <tr>
-                <th>Item Code</th>
-                <th>Item Description List</th>
-                <th>Item Description</th>
-                <th>UMO</th>
-                <th>Quantity Required</th>
-                <th>Population</th>
-                <th>Purchase Quantity Till Date</th>
-                <th>Issued Quantity Till Date</th>
-                <th>Stock Position</th>
-                <th>Last Purchase Price</th>
-                <th>Last Purchase Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Dynamic rows will be added here -->
-        </tbody>
-    </table>
-
-
-</div>
-<script>
-    // Function to toggle the visibility of the required textbox based on the dropdown selection
-    function toggleRequiredTextbox() {
-        var stockPosition = document.getElementById("stockPosition").value;
-        var requiredTextbox = document.getElementById("requiredTextbox");
-        if (stockPosition === "required") {
-            requiredTextbox.style.display = "block"; // Show textbox
-        } else {
-            requiredTextbox.style.display = "none"; // Hide textbox
+    <script>
+        // Function to toggle the visibility of the required textbox
+        function toggleRequiredTextbox() {
+            var stockPosition = document.getElementById("stockPosition").value;
+            var requiredTextbox = document.getElementById("requiredTextbox");
+            if (stockPosition === "Required") {
+                requiredTextbox.style.display = "block"; // Show textbox
+            } else {
+                requiredTextbox.style.display = "none"; // Hide textbox
+            }
         }
-    }
 
-    // Function to add a new item to the dropdown list
-    function addItem() {
-        var newItemDescription = document.getElementById("newItemDescription").value;
-        if (newItemDescription !== "") {
-            var itemOptionSelect = document.getElementById("itemOption");
-            var newOption = document.createElement("option");
+        // Function to add a new item to the description list
+        function addItem() {
+            const newItemDescription = document.getElementById('newItemDescription').value;
+            const itemOption = document.getElementById('itemOption');
+            const newOption = document.createElement('option');
+            newOption.value = newItemDescription;
             newOption.text = newItemDescription;
-            newOption.value = "option" + (itemOptionSelect.options.length + 1);
-            itemOptionSelect.add(newOption);
-            document.getElementById("newItemDescription").value = ""; // Clear input field
+            itemOption.add(newOption);
+            document.getElementById('newItemDescription').value = '';
         }
-    }
 
-    // Automatically increment item code (for demonstration purposes)
-        document.addEventListener("DOMContentLoaded", function() {
-        var itemCodeInput = document.getElementById("itemCode");
-        var currentCode = parseInt(itemCodeInput.value);
-        itemCodeInput.value = currentCode + 1;
-    });
-</script>
+        // Retrieve the current item code from local storage
+        let currentCode = localStorage.getItem('currentCode');
+        if (!currentCode) {
+            currentCode = 0;
+        } else {
+            currentCode = parseInt(currentCode);
+        }
 
+        // Generate the initial item code
+        const itemCode = `ITEM-${String(currentCode).padStart(4, '0')}`;
+        document.getElementById('itemCode').value = itemCode;
 
-<script>
-    document.getElementById('itemForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+        document.getElementById('itemForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
 
-    // Get form values
-    const itemCode = document.getElementById('itemCode').value;
-    const itemOption = document.getElementById('itemOption').value;
-    const itemDescription = document.getElementById('itemDescription').value;
-    const umo = document.getElementById('umo').value;
-    const quantityRequired = document.getElementById('quantityRequired').value;
-    const population = document.getElementById('population').value;
-    const purchaseQuantity = document.getElementById('purchaseQuantity').value;
-    const issuedQuantity = document.getElementById('issuedQuantity').value;
-    const stockPosition = document.getElementById('stockPosition').value;
-    const lastPurchasePrice = document.getElementById('lastPurchasePrice').value;
-    const lastPurchaseDate = document.getElementById('lastPurchaseDate').value;
+            // Increment the current item code
+            currentCode += 1;
+            localStorage.setItem('currentCode', currentCode);
 
-    // Create a new table row
-        const newRow = document.createElement('tr');
-        newRow.innerHTML = `
-        <td>${itemCode}</td>
-        <td>${itemOption}</td>
-        <td>${itemDescription}</td>
-        <td>${umo}</td>
-        <td>${quantityRequired}</td>
-        <td>${population}</td>
-        <td>${purchaseQuantity}</td>
-        <td>${issuedQuantity}</td>
-        <td>${stockPosition}</td>
-        <td>${lastPurchasePrice}</td>
-        <td>${lastPurchaseDate}</td>
-    `;
+            // Generate the new item code
+            const newItemCode = `ITEM-${String(currentCode).padStart(4, '0')}`;
+            document.getElementById('itemCode').value = newItemCode;
 
-    // Add the new row to the table
-    document.getElementById('itemTable').getElementsByTagName('tbody')[0].appendChild(newRow);
+            // Get form values
+            const itemOption = document.getElementById('itemOption').value;
+            const itemDescription = document.getElementById('itemDescription').value;
+            const umo = document.getElementById('umo').value;
+            const quantityRequired = document.getElementById('quantityRequired').value;
+            const population = document.getElementById('population').value;
+            const purchaseQuantity = document.getElementById('purchaseQuantity').value;
+            const issuedQuantity = document.getElementById('issuedQuantity').value;
+            const stockPosition = document.getElementById('stockPosition').value;
+            let stockPositionValue;
+            if (stockPosition === "Required") {
+                stockPositionValue = document.getElementById('requiredTextbox').value;
+            } else {
+                stockPositionValue = stockPosition;
+            }
+            const lastPurchasePrice = document.getElementById('lastPurchasePrice').value;
+            const lastPurchaseDate = document.getElementById('lastPurchaseDate').value;
 
-    // Reset form values
-    document.getElementById('itemForm').reset();
-});
-</script>
+            // Save data to local storage
+            localStorage.setItem('itemData', JSON.stringify({
+                itemCode: newItemCode,
+                itemOption,
+                itemDescription,
+                umo,
+                quantityRequired,
+                population,
+                purchaseQuantity,
+                issuedQuantity,
+                stockPositionValue,
+                lastPurchasePrice,
+                lastPurchaseDate
+            }));
+
+            // Redirect to the new HTML page
+            window.location.href = 'table.html';
+        });
+    </script>
 
 </body>
 </html>
