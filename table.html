@@ -34,18 +34,18 @@
 <body>
 
 <div class="container">
-    <button class="btn btn-secondary mb-3" onclick="window.history.back()">Back</button>
-    
+    <button class="btn btn-danger mb-3" onclick="window.history.back()">Back</button>
+    <button class="btn btn-primary mb-3" onclick="printPage()">Print</button>
     <h1 class="text-center text-dark font-weight-bold">Submitted Item Details</h1>
     
     <!-- Nature of Indent Section -->
     <div class="form-group position-relative nature">
         <label for="natureOfIndent">Nature of Indent:</label><br>
-        <input type="checkbox" id="nature1" name="natureOfIndent" value="Nature 1">
+        <input type="checkbox" id="nature1" name="natureOfIndent" value="Nature 1" onclick="toggleCheckboxes(this)">
         <label for="nature1">Most Urgent</label><br>
-        <input type="checkbox" id="nature2" name="natureOfIndent" value="Nature 2">
+        <input type="checkbox" id="nature2" name="natureOfIndent" value="Nature 2" onclick="toggleCheckboxes(this)">
         <label for="nature2">Urgent</label><br>
-        <input type="checkbox" id="nature3" name="natureOfIndent" value="Nature 3">
+        <input type="checkbox" id="nature3" name="natureOfIndent" value="Nature 3" onclick="toggleCheckboxes(this)">
         <label for="nature3">Regular</label>
     </div>
 
@@ -102,7 +102,7 @@
         <div class="col-3"><hr class="border border-dark w-75">
             <label class="ml-5">Indent By</label>
         </div>
-        <div class="col-3"><hr class ="border border-dark w-75">
+        <div class ="col-3"><hr class ="border border-dark w-75">
             <label class="ml-4">Signature of Store Manager</label>
         </div>
         <div class="col-3"><hr class="border border-dark w-75">
@@ -114,6 +114,15 @@
     </div>
 
     <script>
+        function toggleCheckboxes(checkbox) {
+            const checkboxes = document.getElementsByName('natureOfIndent');
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i] !== checkbox) {
+                    checkboxes[i].disabled = checkbox.checked;
+                }
+            }
+        }
+
         // Retrieve data from local storage
         const itemData = JSON.parse(localStorage.getItem('itemData'));
 

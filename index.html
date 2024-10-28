@@ -82,7 +82,7 @@
     const container = document.getElementById('container');
     const overlayBtn = document.getElementById('overlayBtn');
 
-    overlayBtn.addEventListener('click', () => {
+        overlayBtn.addEventListener('click', () => {
         container.classList.toggle('right-panel-active');
         overlayBtn.classList.remove('btnScaled');
         window.requestAnimationFrame(() => {
@@ -91,7 +91,7 @@
     })
 
     // Login form submission handler
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent form submission
 
         // Simulated login logic (replace with actual authentication)
