@@ -11,7 +11,7 @@
             font-family: 'Arial', sans-serif;
         }
         .container {
-            margin-top: 50px;
+            margin-top: 20px;
         }
         .nature {
             top: 20px;
@@ -34,18 +34,16 @@
 <body>
 
 <div class="container">
-    <button class="btn btn-danger mb-3" onclick="window.history.back()">Back</button>
-    <button class="btn btn-primary mb-3" onclick="printPage()">Print</button>
     <h1 class="text-center text-dark font-weight-bold">Submitted Item Details</h1>
     
     <!-- Nature of Indent Section -->
     <div class="form-group position-relative nature">
         <label for="natureOfIndent">Nature of Indent:</label><br>
-        <input type="checkbox" id="nature1" name="natureOfIndent" value="Nature 1" onclick="toggleCheckboxes(this)">
+        <input type="checkbox" id="nature1" name="natureOfIndent" value="Most Urgent" onclick="toggleCheckboxes(this)">
         <label for="nature1">Most Urgent</label><br>
-        <input type="checkbox" id="nature2" name="natureOfIndent" value="Nature 2" onclick="toggleCheckboxes(this)">
+        <input type="checkbox" id="nature2" name="natureOfIndent" value="Urgent" onclick="toggleCheckboxes(this)">
         <label for="nature2">Urgent</label><br>
-        <input type="checkbox" id="nature3" name="natureOfIndent" value="Nature 3" onclick="toggleCheckboxes(this)">
+        <input type="checkbox" id="nature3" name="natureOfIndent" value="Regular" onclick="toggleCheckboxes(this)">
         <label for="nature3">Regular</label>
     </div>
 
@@ -60,11 +58,35 @@
     <div class="form-group row">
         <div class="col-md-8 position-relative bud">
             <label for="budgetHead">Budget Head:</label>
-            <select class="form-control w-25 d-inline" id="budgetHead">
-                <option value="Budget 1">Budget 1</option>
-                <option value="Budget 2">Budget 2</option>
-                <option value="Budget 3">Budget 3</option>
-                <option value="Budget 4">Budget 4</option>
+            <select class="form-control w-50 d-inline" id="budgetHead">
+                <option value="ACC Fan G/Box Spares">ACC Fan G/Box Spares</option>
+                <option value="ACW Pump Spares">ACW Pump Spares</option>
+                <option value="AHP">AHP</option>
+                <option value="Bearing & Accessories">Bearing & Accessories</option>
+                <option value="BFP Pump Spares">BFP Pump Spares</option>
+                <option value="Boiler">Boiler</option>
+                <option value="Bull Machine">Bull Machine</option>
+                <option value="CEP Pump Spares">CEP Pump Spares</option>
+                <option value="CHP">CHP</option>
+                <option value="Consumable">Consumable</option>
+                <option value="Cotton Chip machin">Cotton Chip machin</option>
+                <option value="Crusher">Crusher</option>
+                <option value="CT/PT">CT/PT</option>
+                <option value="DM Plant">DM Plant</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Gearbox & Spares">Gearbox & Spares</option>
+                <option value="Hotwell Pump Spares">Hotwell Pump Spares</option>
+                <option value="HP/LP Dosing Spares">HP/LP Dosing Spares</option>
+                <option value="ID/FD/PA Fan Spares">ID/FD/PA Fan Spares</option>
+                <option value="Instrument">Instrument</option>
+                <option value="Johnson Pump Spares">Johnson Pump Spares</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Oil Cent rifigal Pump Spares">Oil Centrifigal Pump Spares</option>
+                <option value=" Pipe fitting Material">Pipe fitting Material</option>
+                <option value="Safety & Fire">Safety & Fire</option>
+                <option value="Stores">Stores</option>
+                <option value="TG Spares">TG Spares</option>
+                <option value="Valve Spares">Valve Spares</option>
             </select>
         </div>
         <div class="col-md-4 text-right position-relative dtt">
@@ -112,6 +134,7 @@
             <label class="ml-5">Sanctioned</label>
         </div>
     </div>
+    <button type="submit" class="btn btn-primary" onclick="uploadData()">Upload</button>
 
     <script>
         function toggleCheckboxes(checkbox) {
@@ -122,10 +145,10 @@
                 }
             }
         }
-
+    
         // Retrieve data from local storage
         const itemData = JSON.parse(localStorage.getItem('itemData'));
-
+    
         // Create a new table row
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
@@ -141,17 +164,50 @@
             <td>${itemData.lastPurchasePrice}</td>
             <td>${itemData.lastPurchaseDate}</td>
         `;
-
+       
+       
+            
         // Add the new row to the table
         document.getElementById('itemTableBody').appendChild(newRow);
-
+    
         // Generate PR. NO. (for demonstration purposes)
         const prNo = `PR-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}`;
         document.getElementById('prNo').value = prNo;
-
+    
         // Set current date
         const currentDate = new Date().toISOString().split('T')[0]; // Format : YYYY-MM-DD
         document.getElementById('currentDate').value = currentDate;
+    
+        function uploadData() {
+            // Get the selected nature of indent
+            const selectedNature = Array.from(document.getElementsByName('natureOfIndent')).find(checkbox => checkbox.checked).value;
+    
+            // Get the selected budget head
+            const selectedBudgetHead = document.getElementById('budgetHead').value;
+    
+            // Store the necessary data in local storage
+            const data = {
+                itemCode: itemData.itemCode,
+                itemOption: itemData.itemOption,
+                itemDescription: itemData.itemDescription,
+                umo: itemData.umo,
+                quantityRequired: itemData.quantityRequired,
+                population: itemData.population,
+                purchaseQuantity: itemData.purchaseQuantity,
+                issuedQuantity: itemData.issuedQuantity,
+                stockPositionValue: itemData.stockPositionValue,
+                lastPurchasePrice: itemData.lastPurchasePrice,
+                lastPurchaseDate: itemData.lastPurchaseDate
+            };
+            localStorage.setItem('itemData', JSON.stringify(data));
+            localStorage.setItem('selectedNature', selectedNature);
+            localStorage.setItem('selectedBudgetHead', selectedBudgetHead);
+            localStorage.setItem('prNo', prNo);
+            localStorage.setItem('currentDate', currentDate);
+    
+            // Redirect to the display page
+            window.location.href = 'displayData.html';
+        }
     </script>
 
 </body>

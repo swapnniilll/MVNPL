@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Display Data</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center text-dark font-weight-bold">MAHARASHTRA  VIDYUT NIGAM PVT.LTD.</h1>
+    <h3 class="text-center text-dark font-weight-bold">SITE OFFICE: DEOLI (WARDHA)</h3>
+    <h3 class="text-center text-dark font-weight-bold">PURCHASE REQUISITION</h3>
+    <h3 class="text-center text-dark font-weight-bold">(INDENT)</h3>
+    <div class="form-group">
+        <label for="natureOfIndent">Nature of Indent:</label>
+        <p id="displayNatureOfIndent"></p>
+    </div>
+
+    <div class="form-group">
+        <label for="budgetHead">Budget Head:</label>
+        <p id="displayBudgetHead"></p>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="prNo" class="text-right">PR. NO:</label>
+            <p id="displayPrNo" class=""></p>
+        </div>
+        <div class="col-md-6">
+            <label for="currentDate" class="label-right">Date:</label>
+            <p id="displayCurrentDate" class=""></p>
+        </div>
+    </div>
+
+    <table class="table table-bordered mt-3" id="itemTable">
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Item Description List</th>
+                <th>Item Description</th>
+                <th>UMO</th>
+                <th>Quantity Required</th>
+                <th>Population</th>
+                <th>Purchase Quantity Till Date</th>
+                <th>Issued Quantity Till Date</th>
+                <th>Stock Position</th>
+                <th>Last Purchase Price</th>
+                <th>Last Purchase Date</th>
+            </tr>
+        </thead>
+        <tbody id="itemTableBody">
+            <!-- Data will be displayed here -->
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col-3"><hr class="border border-dark w-75">
+            <label class="ml-5">Indent By</label>
+        </div>
+        <div class="col-3"><hr class="border border-dark w-75">
+            <label class="ml-4">Signature of Store Manager</label>
+        </div>
+        <div class="col-3"><hr class="border border-dark w-75">
+            <label class="ml-5">HOD</label>
+        </div>
+        <div class="col-3"><hr class="border border-dark w-75">
+            <label class="ml-5">Sanctioned</label>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" onclick="printPage()">Print</button>
+</div>
+
+<script>
+    // Retrieve data from local storage
+    const selectedNature = localStorage.getItem('selectedNature');
+    const selectedBudgetHead = localStorage.getItem('selectedBudgetHead');
+    const currentDate = localStorage.getItem('currentDate');
+    const prNo = localStorage.getItem('prNo');
+    const itemData = JSON.parse(localStorage.getItem('itemData'));
+
+    // Display the retrieved data
+    document.getElementById('displayNatureOfIndent').innerText = selectedNature;
+    document.getElementById('displayBudgetHead').innerText = selectedBudgetHead;
+    document.getElementById('displayCurrentDate').innerText = currentDate;
+    document.getElementById('displayPrNo').innerText = prNo;
+
+    // Create a new table row for the item data
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+        <td>${itemData.itemCode}</td>
+        <td>${itemData.itemOption}</td>
+        <td>${itemData.itemDescription}</td>
+        <td>${itemData.umo}</td >
+        <td>${itemData.quantityRequired}</td>
+        <td>${itemData.population}</td>
+        <td>${itemData.purchaseQuantity}</td>
+        <td>${itemData.issuedQuantity}</td>
+        <td>${itemData.stockPositionValue}</td>
+        <td>${itemData.lastPurchasePrice}</td>
+        <td>${itemData.lastPurchaseDate}</td>
+    `;
+
+    // Add the new row to the table
+    document.getElementById('itemTableBody').appendChild(newRow);
+
+    function printPage() {
+        window.print();
+    }
+</script>
+
+</body>
+</html>
