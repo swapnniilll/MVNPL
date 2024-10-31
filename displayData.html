@@ -13,51 +13,86 @@
         .container {
             margin-top: 20px;
         }
-        
+        .underline {
+            text-decoration: underline;
+        }
+        table {
+            border: 2px solid black; /* Outer border */
+            border-collapse: collapse; /* Collapse borders */
+        }
+        th, td {
+            border: 1px solid black; /* Inner cell borders */
+        }
+        /* Print styles */
+        @media print {
+            button {
+                display: none; /* Hide the print button */
+            }
+            .container {
+                margin: 0; /* Remove margins for print */
+            }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1 class="text-center text-dark font-weight-bold">MAHARASHTRA  VIDYUT NIGAM PVT.LTD.</h1>
-    <h3 class="text-center text-dark font-weight-bold">SITE OFFICE: DEOLI (WARDHA)</h3>
-    <h3 class="text-center text-dark font-weight-bold">PURCHASE REQUISITION</h3>
-    <h3 class="text-center text-dark font-weight-bold">(INDENT)</h3>
-    <div class="form-group">
-        <label for="natureOfIndent">Nature of Indent:</label>
-        <p id="displayNatureOfIndent"></p>
-    </div>
+    <h1 class="text-center text-dark font-weight-bold">MAHARASHTRA VIDYUT NIGAM PVT.LTD.</h1><br>
+    <h3 class="text-center text-dark font-weight-bold">SITE OFFICE: DEOLI (WARDHA)</h3><br>
+    <h3 class="text-center text-dark font-weight-bold underline">PURCHASE REQUISITION</h3>
+    <h3 class="text-center text-dark font-weight-bold underline">(INDENT)</h3>
 
-    <div class="form-group">
-        <label for="budgetHead">Budget Head:</label>
-        <p id="displayBudgetHead"></p>
-    </div>
-
-    <div class="form-group row">
-        <div class="col-md-6">
-            <label for="prNo" class="text-right">PR. NO:</label>
-            <p id="displayPrNo" class=""></p>
+    <div class="row ml-5">
+        <div class="col">
+            <div class="form-group row">
+                <label for="natureOfIndent" class="col-form-label font-weight-bold">Nature of Indent:</label>
+                <div class="col-sm-6">
+                    <p id="displayNatureOfIndent" class="form-control-plaintext font-weight-bold"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="budgetHead" class="col-form-label font-weight-bold">Budget Head:</label>
+                <div class="col-sm-6">
+                    <p id="displayBudgetHead" class="form-control-plaintext font-weight-bold"></p>
+                </div>
+            </div>
         </div>
         <div class="col-md-6">
-            <label for="currentDate" class="label-right">Date:</label>
-            <p id="displayCurrentDate" class=""></p>
+            <div class="form-group row">
+                <label for="prNo" class="col-form-label font-weight-bold">PR. NO:</label>
+                <div class="col-sm-6">
+                    <p id="displayPrNo" class="form-control-plaintext font-weight-bold"></p>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="currentDate" class="col-form-label font-weight-bold">Date:</label>
+                <div class="col-sm-6">
+                    <p id="displayCurrentDate" class="form-control-plaintext font-weight-bold"></p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <table class="table table-bordered mt-3" id="itemTable">
+    <table class="table border border-dark mt-3" id="itemTable">
         <thead>
             <tr>
-                <th>Item Code</th>
-                <th>Item Description List</th>
-                <th>Item Description</th>
-                <th>UMO</th>
-                <th>Quantity Required</th>
-                <th>Population</th>
-                <th>Purchase Quantity Till Date</th>
-                <th>Issued Quantity Till Date</th>
-                <th>Stock Position</th>
-                <th>Last Purchase Price</th>
-                <th>Last Purchase Date</th>
+                <th colspan="7" class="text-center border border-dark">To be Filled by User</th>
+                <th colspan="5" class="text-center border border-dark">To be Filled by Store Department</th>
+            </tr>
+            <tr>
+                <th class="border border-dark">Sr. No.</th>
+                <th class="border border-dark">Item Code</th>
+                <th class="border border-dark">Item Description List</th>
+                <th class="border border-dark">Item Description</th>
+                <th class="border border-dark">UMO</th>
+                <th class="border border-dark">Quantity Required</th>
+                <th class="border border-dark">Population</th>
+                <th class="border border-dark">Purchase Quantity Till Date</th>
+                <th class="border border-dark">Issued Quantity Till Date</th>
+                <th class="border border-dark">Stock Position</th>
+                <th class="border border-dark">Last Purchase Price</th>
+                <th class="border border-dark">Last Purchase Date</th>
+                <th class="border border-dark">Actions</th>
             </tr>
         </thead>
         <tbody id="itemTableBody">
@@ -65,7 +100,7 @@
         </tbody>
     </table>
 
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-3"><hr class="border border-dark w-75">
             <label class="ml-5">Indent By</label>
         </div>
@@ -73,14 +108,14 @@
             <label class="ml-4">Signature of Store Manager</label>
         </div>
         <div class="col-3"><hr class="border border-dark w-75">
-            <label class="ml-5">HOD</label>
+            <label class="ml-5"> HOD</label>
         </div>
         <div class="col-3"><hr class="border border-dark w-75">
             <label class="ml-5">Sanctioned</label>
         </div>
     </div>
 
-    <button class="btn btn-primary" onclick="printPage()">Print</button>
+    <button class="btn btn-primary mt-5" onclick="printPage()">Print</button>
 </div>
 
 <script>
@@ -100,10 +135,11 @@
     // Create a new table row for the item data
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
+        <td>1</td> <!-- Sr. No. column -->
         <td>${itemData.itemCode}</td>
         <td>${itemData.itemOption}</td>
         <td>${itemData.itemDescription}</td>
-        <td>${itemData.umo}</td >
+        <td>${itemData.umo}</td>
         <td>${itemData.quantityRequired}</td>
         <td>${itemData.population}</td>
         <td>${itemData.purchaseQuantity}</td>
@@ -111,6 +147,10 @@
         <td>${itemData.stockPositionValue}</td>
         <td>${itemData.lastPurchasePrice}</td>
         <td>${itemData.lastPurchaseDate}</td>
+        <td>
+            <button class="btn btn-sm btn-primary" onclick="editRow(this)">Edit</button>
+            <button class="btn btn-sm btn-danger mt-2" onclick="deleteRow(this)">Delete</button>
+        </td>
     `;
 
     // Add the new row to the table
@@ -118,6 +158,39 @@
 
     function printPage() {
         window.print();
+    }
+
+    function editRow(button) {
+        const row = button.parentNode.parentNode;
+        const columns = row.getElementsByTagName('td');
+
+        // Make the columns editable
+        for (let i = 0; i < columns.length - 1; i++) {
+            columns[i].setAttribute('contenteditable', 'true');
+        }
+
+        // Change the button text to "Save"
+        button.textContent = 'Save';
+        button.onclick = saveRow;
+    }
+
+    function saveRow(button) {
+        const row = button.parentNode.parentNode;
+        const columns = row.getElementsByTagName('td');
+
+        // Make the columns non-editable
+        for (let i = 0; i < columns.length - 1; i++) {
+            columns[i].setAttribute('contenteditable', 'false');
+        }
+
+        // Change the button text back to "Edit"
+        button.textContent = 'Edit';
+        button.onclick = editRow;
+    }
+
+    function deleteRow(button) {
+        const row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
     }
 </script>
 

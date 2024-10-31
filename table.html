@@ -13,6 +13,9 @@
         .container {
             margin-top: 20px;
         }
+        .underline {
+            text-decoration: underline;
+        }
         .nature {
             top: 20px;
             left: 70px;
@@ -34,7 +37,11 @@
 <body>
 
 <div class="container">
-    <h1 class="text-center text-dark font-weight-bold">Submitted Item Details</h1>
+    <h1 class="text-center text-dark font-weight-bold">MAHARASHTRA VIDYUT NIGAM PVT.LTD.</h1><br>
+    <h3 class="text-center text-dark font-weight-bold">SITE OFFICE: DEOLI (WARDHA)</h3><br>
+    <h3 class="text-center text-dark font-weight-bold underline">PURCHASE REQUISITION</h3>
+    <h3 class="text-center text-dark font-weight-bold underline">(INDENT)</h3>
+
     
     <!-- Nature of Indent Section -->
     <div class="form-group position-relative nature">
@@ -98,6 +105,7 @@
     <table class="table table-bordered mt-3" id="itemTable">
         <thead>
             <tr>
+                <th>Sr. No.</th>
                 <th>Item Code</th>
                 <th>Item Description List</th>
                 <th>Item Description</th>
@@ -134,7 +142,7 @@
             <label class="ml-5">Sanctioned</label>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary" onclick="uploadData()">Upload</button>
+    <button type="submit" class="btn btn-primary mt-5" onclick="uploadData()">Upload</button>
 
     <script>
         function toggleCheckboxes(checkbox) {
@@ -152,6 +160,7 @@
         // Create a new table row
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
+            <td>1</td> <!-- Sr. No. column -->
             <td>${itemData.itemCode}</td>
             <td>${itemData.itemOption}</td>
             <td>${itemData.itemDescription}</td>
