@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <title>Display Data</title>
+    <title>Ledger Indent</title>
     <style>
         body {
             background-color: #f8f9fa;
@@ -13,33 +13,21 @@
         .container {
             margin-top: 20px;
         }
-        .header-title {
-            text-align: center;
-        }
         .table-section {
             margin-top: 20px;
-        }
-        .print-btn, .submit-btn {
-            margin: 20px 5px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1 class="text-center text-dark font-weight-bold">MAHARASHTRA VIDYUT NIGAM PVT.LTD.</h1><br>
-    <h3 class="text-center text-dark font-weight-bold">SITE OFFICE: DEOLI (WARDHA)</h3><br>
-    <h3 class="text-center text-dark font-weight-bold underline">PURCHASE REQUISITION</h3>
-    <h3 class="text-center text-dark font-weight-bold underline">(INDENT)</h3>
-
-    <!-- Display Nature of Indent, Budget Head, PR No., and Date -->
+    <h1 class="text-center text-dark font-weight-bold">Ledger Indent</h1>
+    <!-- Display PR No. and Date -->
     <div class="row mt-4">
         <div class="col-md-6">
-            <p><strong>Nature of Indent:</strong> <span id="natureOfIndent"></span></p>
-            <p><strong>Budget Head:</strong> <span id="budgetHead"></span></p>
+            <p><strong>PR No.:</strong> <span id="prNo"></span></p>
         </div>
         <div class="col-md-6 text-right">
-            <p><strong>PR No.:</strong> <span id="prNo"></span></p>
             <p><strong>Date:</strong> <span id="currentDate"></span></p>
         </div>
     </div>
@@ -71,29 +59,20 @@
             </tbody>
         </table>
     </div>
-
-    <!-- Buttons for Print and Submit -->
-    <div class="text-left">
-        <button onclick="window.print()" class="btn btn-primary print-btn">Print</button>
-        <button onclick="submitForm()" class="btn btn-success submit-btn">Submit</button>
-    </div>
+    <button onclick="submitForm()" class="btn btn-success submit-btn">Submit</button>
 </div>
 
 <script>
-    // Retrieve data from localStorage
-    const selectedNature = localStorage.getItem('selectedNature');
-    const selectedBudgetHead = localStorage.getItem('selectedBudgetHead');
+    // Retrieve stored data from localStorage
     const prNo = localStorage.getItem('prNo');
     const currentDate = localStorage.getItem('currentDate');
     const items = JSON.parse(localStorage.getItem('items'));
 
     // Display PR details
-    document.getElementById('natureOfIndent').innerText = selectedNature;
-    document.getElementById('budgetHead').innerText = selectedBudgetHead;
     document.getElementById('prNo').innerText = prNo;
     document.getElementById('currentDate').innerText = currentDate;
 
-    // Display items in the table
+    // Populate items table
     function displayItems() {
         const itemTableBody = document.getElementById('itemTableBody');
         items.forEach(item => {
@@ -116,17 +95,6 @@
     }
 
     displayItems();
-
-    // Function to handle submit action
-    function submitForm() {
-        // Store the PR No., date, and items in localStorage to access them in ledger_indent.html
-        localStorage.setItem('prNo', prNo);
-        localStorage.setItem('currentDate', currentDate);
-        localStorage.setItem('items', JSON.stringify(items));
-        
-        // Redirect to ledger_indent.html
-        window.location.href = 'ledger_indent.html';
-    }
 </script>
 
 </body>

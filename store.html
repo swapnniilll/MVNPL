@@ -16,6 +16,9 @@
         .required-textbox {
             display: none; /* Initially hidden */
         }
+        .new-item-fields {
+            display: none; /* Initially hidden */
+        }
     </style>
 </head>
 <body>
@@ -29,729 +32,737 @@
         </div>
         <div class="form-group">
             <label for="itemOption">Item Description List</label>
-            <select class="form-control" id="itemOption">
-                <option value="Output Gear Wheel">Output Gear Wheel</option>
-                <option value="Output Shaft">Output Shaft</option>
-                <option value="PIN Bush Coupling Complete Set EFC-08">PIN Bush Coupling Complete Set EFC-08</option>
-                <option value="Input Pinion Guide Bush">Input Pinion Guide Bush</option>
-                <option value="Impeller MOC-CI For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Impeller MOC-CI For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
-                <option value="Impeller Nut MOC-WCB For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Impeller Nut MOC-WCB For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
-                <option value="Oil Seal(SC Rubber) for ACW">Oil Seal(SC Rubber) for ACW</option>
-                <option value="Shaft With Key MOC-EN8 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Shaft With Key MOC-EN8 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
-                <option value="Sleeve MOC-SS410 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Sleeve MOC-SS410 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
-                <option value="Spacer Sleeve MOC-SS316 Spares for ACW Pump Make-Mather & Plantt, Sl No. 312182198/10/01">Spacer Sleeve MOC-SS316 Spares for ACW Pump Make-Mather & Plantt, Sl No. 312182198/10/01</option>
-                <option value="Specer Sleeve MOC 55316 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Specer Sleeve MOC 55316 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
-                <option value="Air Cylinder of Bore 100MM, Stroke 225mm">Air Cylinder of Bore 100MM, Stroke 225mm</option>
-                <option value="Air Limit Switch 1/4 Model No. ZCNC/1340/14">Air Limit Switch 1/4" Model No. ZCNC/1340/14</option>
-                <option value="Bend ACI 80 NB, 45 Deg">Bend ACI 80 NB, 45 Deg</option>
-                <option value="Bend ACI Cast Basalt 80 NB, 45 Deg, 450R*5D*45Degree">Bend ACI Cast Basalt 80 NB, 45 Deg, 450R*5D*45Degree</option>
-                <option value="MS Deflector for ACW">MS Deflector for ACW</option>
-                <option value="Neck Ring MOC-CI For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Neck Ring MOC-CI For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
-                <option value="Blow Down Valve 50 NB">Blow Down Valve 50 NB</option>
-                <option value="Brass Connector 1/4(Male/Female)">Brass Connector 1/4"(Male/Female)</option>
-                <option value="Dome 200NB Shaped Head With Fitting Accessories">Dome 200NB Shaped Head With Fitting Accessories</option>
-                <option value="Dowel Pin For 200NB Dome (inner & Outer)">Dowel Pin For 200NB Dome (inner & Outer)</option>
-                <option value="EN -8 ESP Rapping Hammer Clamp">EN-8 ESP Rapping Hammer Clamp</option>
-                <option value="Hex Nipple 1/2 ( Bleed Nipple)">Hex Nipple 1/2 ( Bleed Nipple)</option>
-                <option value="Hex Nipple 3/4MM*4MM Hole">Hex Nipple 3/4MM*4MM Hole</option>
-                <option value="Hose Flexible 3/4 *1000MM">Hose Flexible 3/4"*1000MM</option>
-                <option value="NRV 20 NB">NRV 20 NB</option>
-                <option value="NRV 25 NB">NRV 25 NB</option>
-                <option value="NRV 40NB">NRV 40NB</option>
-                <option value="O Ring Part No 035400187">O Ring Part No 035400187</option>
-                <option value="PU Tube 10MM">PU Tube 10MM</option>
-                <option value="Pu Tube 12MM">Pu Tube 12MM</option>
-                <option value="PU Tube 6MM">PU Tube 6MM</option>
-                <option value="Pu Tube 8mm">Pu Tube 8mm</option>
-                <option value="Push fitting Union Straight 10MM OD">Push fitting Union Straight 10MM OD</option>
-                <option value="Push fitting Union Straight 12MM OD">Push fitting Union Straight 12MM OD</option>
-                <option value="Push fitting Union Straight 8MM OD">Push fitting Union Straight 8MM OD</option>
-                <option value="Push In fitting Crome Plated Male Connector 10mm OD*1/4\ BSp">Push In fitting Crome Plated Male Connector 10mm OD*1/4" BSp</option>
-                <option value="Push In fitting Crome Plated Male Connector 10mm OD*3/8\ BSp">Push In fitting Crome Plated Male Connector 10mm OD*3/8" BSp</option>
-                <option value="Push In fitting Crome Plated Male Connector 8mm OD*1/4\ BSp">Push In fitting Crome Plated Male Connector 8mm OD*1/4" BSp</option>
-               <option value="Push In fitting Crome Plated Male Connector 8mm OD*3/8\ BSp">Push In fitting Crome Plated Male Connector 8mm OD*3/8" BSp</option>
-               <option value="Push In fitting Crome Plated Male Elbow 10mm OD*1/2\ BSp">Push In fitting Crome Plated Male Elbow 10mm OD*1/2" BSp</option>
-               <option value="Push In fitting Crome Plated Male Elbow 12mm OD*1/2\ BSp">Push In fitting Crome Plated Male Elbow 12mm OD*1/2" BSp</option>
-               <option value="Push In fitting Crome Plated Male Elbow 6mm OD*1/2\ BSp">Push In fitting Crome Plated Male Elbow 6mm OD*1/2" BSp</option>
-               <option value="Push In fitting Crome Plated Male Elbow 8mm OD*1/2\ BSp">Push In fitting Crome Plated Male Elbow 8mm OD*1/2" BSp</option>
-               <option value="Quick Exhaust Valve 3/4\ Alluminiun Body">Quick Exhaust Valve 3/4" Alluminiun Body</option>
-               <option value="Quick Exhust Valve 1/4\  Opperting Pressure 0.3kg to 180PSI Alluminium Body make Schrader ">Quick Exhust Valve 1/4"  Opperting Pressure 0.3kg to 180PSI Alluminium Body make Schrader </option>
-               <option value="Rapping Hammer For Collecting System">Rapping Hammer For Collecting System</option>
-               <option value="Repair Kit  For 25 NB NRV">Repair Kit  For 25 NB NRV</option>
-               <option>Repair Kit For NRV 20 NB</option> 
-               <option>Seal Kit For Air Cylinder of Bore 100MM, Stroke 225mm</option> 
-               <option>Silicon Seal 200NB</option> 
-               <option>Top Plate 35MM(Thk)</option>
-               <option>HT Allen Bolt 16*75MM</option>
-               <option>Insert Ring For Dome Assembly 200NB</option>
-                  <option>Non Return Valve 50NB Without Flange</option> 
-                  <option>Shaft seal O Ring For 200NB dome Assembly</option> 
-                  <option>Bend ACI 100 NB, 45 Deg</option>
-                   <option>Adaptor Sleeve AHX2320</option>
-                    <option>Adaptor Sleeve H2326</option>
-                     <option>Adaptor Sleeve H311</option>
-                      <option>Adaptor Sleeve H-3126</option>
-                       <option>Adaptor Sleeve H315</option> 
-                       <option>Adaptor Sleeve H316</option> 
-                       <option>Adaptor Sleeve H317</option> 
-                       <option>Adaptor Sleeve H-320</option>
-                        <option>Adaptor Sleeve H322</option>
-                         <option>Bearing No. 22211 E1 K C3</option> 
-                         <option>Bearing No. 22320 E1K W33</option>
-                          <option>Bearing No. 32211 J2Q</option>
-                           <option>Bearing No. 32213</option> 
-                           <option>Bearing No. 3310/C3</option>
-                            <option>Bearing No 6004 ZZ/C3</option>
-                             <option>Bearing No. 6006 2Z</option> 
-                             <option>Bearing No. 6202 2Z</option>
-                              <option>Bearing No. 6212 2Z</option>
-                               <option>Bearing No. 6305 ZZ</option>
-                                <option>Bearing No. 6307 2RSR</option>
-                                 <option>Bearing No. 6308 2RSR</option>
-                                  <option>Bearing No. 6309 2Z/C3</option> 
-                                  <option>Bearing No. 6316 C/4</option>
-                                   <option>Bearing No. 6316 C3</option>
-                                    <option>Bearing No. 6319/C3 VL241</option>
-                                     <option>Bearing No. 6322/C3</option>
-                                      <option>Bearing No. 7206 BECBP SKF</option>
-                                       <option>Bearing no. SA205</option> 
-                                       <option>Bearing No. UCF-211 SKF</option> 
-                                       <option>Bearing No.2201</option> 
-                                       <option>Bearing No.22211BKD1</option>
-                                       <option>Bearing No.22215 E1K/C3</option>
-                                       <option>Bearing No.22216EK/C3</option>
-                                       <option>Bearing No.22217 E1KC3</option>
-                                       <option>Bearing No.22220E1K/C3</option>
-                                       <option>Bearing No.22222E1/C3</option>
-                                        <option>Bearing No.22226E</option> 
-                                        <option>Bearing No.22226E1K/C3</option>
-                                         <option>Bearing No.22320 E1</option> 
-                                         <option>Bearing No.22326 EK</option> 
-                                         <option>Bearing No.23128CCK/W33/C3</option>
-    <option>Bearing No.30204J2Q</option>
-     <option>Bearing No.30205</option> 
-     <option>Bearing No.30206J2/Q</option> 
-     <option>Bearing No.30207J2Q</option>
-      <option>Bearing No.30209</option>
-       <option>Bearing No.30210</option>
-       <option>Bearing No.30212</option>
-        <option>Bearing No.30214J2Q</option>
-         <option>Bearing No.30303J2Q</option>
-          <option>Bearing No.30312J2Q</option>
-           <option>Bearing No.30314J2Q</option>
-            <option>Bearing No.32032X</option> 
-            <option>Bearing No.32208</option> 
-            <option>Bearing No.32309</option> 
-            <option>Bearing No.33208Q</option>
-             <option>Bearing No.6000ZZ</option>
-              <option>Bearing No.6002 ZZ</option>
-               <option>Bearing No.6003ZZ</option> 
-               <option>Bearing No.6004ZZ</option> 
-               <option>Bearing No.6008ZZ</option> 
-               <option>Bearing No.6009ZZ</option> 
-               <option>Bearing No.6013ZZ</option>
-                <option>Bearing No.608ZZ</option>
-                 <option>Bearing No.6201ZZ</option> 
-                 <option>Bearing No.6203 ZZ</option> 
-                 <option>Bearing No.6204 2Z</option> 
-                 <option>Bearing No.6205ZZ</option>
-                  <option>Bearing No.6206ZZ</option> 
-                  <option>Bearing No 3203 BD XL-TVH-L285</option> 
-                  <option>Bearing No.6206ZZ/C3</option>
-                   <option>Bearing No.6207ZZ</option>
-                    <option>Bearing No.6208ZZ</option>
-                     <option>Bearing No.6209/C3</option> 
-                     <option>Bearing No.6213ZZ</option> 
-                     <option>Bearing No.6215/C3</option> 
-                     <option>Bearing No.62305-2RS</option>
-                      <option>Bearing No.6303 ZZ</option> 
-                      <option>Bearing No.6306 2Z /C3</option>
-                       <option>Bearing No.6310N</option>
-                        <option>Bearing No.6310ZZ</option> 
-                        <option>Bearing No.6312/C3</option>
-                         <option>Bearing No.6312ZZ/C3</option> 
-                         <option>Bearing No.6313/C3</option>
-                          <option>Bearing No.6313 2Z</option>
-                           <option>Bearing No.6313ZRS</option> 
-                           <option>Bearing No.6317/C3</option> 
-                           <option>Bearing No.6318</option> 
-                           <option>Bearing No.6318/C3</option>
-                            <option>Bearing No.6319</option>
-                             <option>Bearing No.7202BTVP</option>
-                              <option>Bearing No.7313</option> 
-                              <option>Bearing No.7315</option> 
-                              <option>Bearing No.NJ206E/C3</option>
-                               <option>Bearing No NJ204 E-XLTVP2</option>
-                                <option>Bearing No.NJ2305</option> 
-                                <option>Bearing No.NU305/C3</option>
-                                <option>Bearing No.NU319/C3</option>
-                                 <option>Bearing No.UCF205L</option>
-                                  <option>Bearing No.UCF210</option>
-                                   <option>Bearing No.UCP204</option> 
-                                   <option>Bearing No.UCP206</option> 
-                                   <option>Bearing No.UCP208</option> 
-                                   <option>Bearing No.UCP209</option> 
-                                   <option>Bearing No.UCP218</option>
-                                   <option>Bearing No.UCT207</option> 
-                                   <option>Bearing No.UCT211</option>
-                                   <option>Bearing No.UCT309</option> 
-                                   <option>Plumber Block SNH 516 TL SKF</option>
-                                   <option>Plumber Block SNH 520 TL SKF</option> 
-                                   <option>Plummer Block SN 526 SKF</option>
-                                   <option>Bearing No.6319 C3</option> 
-                                   <option>Bearing No. 6209 ZZ</option>
-                                    <option>Plumber Block SN-510</option> 
-                                    <option>Bearing No 6304</option> 
-                                    <option>Bearing No NJ 2304</option> 
-                                    <option>Bearing No 31312 XL </option>
-                                     <option>Bearing No 6005ZZ</option> 
-                                     <option>Bearing No.3310/C3</option> 
-                                     <option>Bearing Shell Part No.1370 HAD 80/13</option>
-                                      <option>Casing Wear Ring Part No. 1502 HDA80/13 (130/149.2*12MM)</option>
-                                       <option>Circlip Part No.1932 HDA80/13</option> 
-                                       <option>Constant Level Oiler Cup Part No.1638</option> 
-                                       <option>Impeller Part No.HDA80 235/13</option> 
-                                       <option>Labyrinath Ring & HAD/HDB 65&80 Part No.1423 HAD 80/13</option>
-                                        <option>Lubrication Ring Part No. 1644 HAD 80/13</option> 
-                                        <option>Mechanical Seal SBPO Lube 2.5 DE Part No. 1433 HDA80/13</option>
-                                         <option>O-Ring,Part N0.1412,Size:302*4</option>
-                                          <option>Retaining Ring Part No. 1506 HDA80/13(54.5/72Dia20)</option>
-                                           <option>Retaining Ring Part No. 1506 HDA80/13(65/126Dia55)</option>
-                                            <option>Segmental Ring Part No. 1501 HDA80/13</option>
-                                             <option>Set Of Fasters, Stud HAD 80/13</option> 
-                                             <option>Set Of Gasket & O RingHDA80/13</option>
-                                              <option>Spacer Ring Part No. 1504 HDA80/13</option>
-                                               <option>Spacer Sleeve Part No. 1525 HAD 80/13</option> 
-                                               <option>Spacer Sleeve Part No. 1525 HDA80/13 (54/65*66)</option>
-                                                <option>Spacer Sleeve Part No. 1525 HDA80/13 (55/67.7*44)</option> 
-                                                <option>Spacer Sleeve Part No. 1525.01 HAD 80/13</option>
-                                                 <option>Spring Had 40-150 Part No. 1950 HAD 80/13</option>
-                                                  <option>Tie Bolts Part No. 905 HDA80/13</option>
-                                                   <option>Wear Ring Part No.1512 HDA80/13</option>                                     
-<option>Air Nozzle MOC Body With SS304 Tail (3mm)</option> <option>Bed Coil With Stud SA210, Gr A1, 51mm OD, 6.35mm Thk, 4689 mm Length</option> <option>Bed Coil With Stud SA210, Gr A1, 51mm OD, 6.35mm Thk, 3407 mm Length</option> <option>Cap Plate SS 304, 325mm OD ,19,, thick for 6" Coal Nozzel</option> <option>Coal Nozzle Assembly 6"</option> <option>Cross 6" For 50Tph Wind Box</option> <option>CS Seamles Pipe 3" Thk-5mm, Sch-40</option> <option>CS Seamless Pipe 5" 125MM,SCH-40</option> <option>CS Seamless Pipe SA106 GR. B, IBR, SIZE - 1"SCH - 40</option> <option>Fire Bricks 230*115*75</option> <option>High temprtature Fabric Furance Bottom Bellow 500MM (W)*25Mtr (L)</option> <option>High temprtature Fabric Economiser ID FD PA Fan Bellow 300MM (W)*12Mtr (L)</option> <option>High temprtature Fabric Economiser Inlet Bellow 500MM (W)*15Mtr (L)</option> <option>High temprtature Fabric Economiser Spreader Rotor Intel Duct 500MM (W)*1Mtr (L)</option> <option>HT J Hook With Double Nut 16*145, Thread -12MM</option> <option>Mixing Nozzle Assembly 6"</option> <option>Steam Trap Valve 1" With Inbuilt Strainer Socket Weld, Class-1500</option> <option>Supply Of Air Nozzle For 50 TPH AFSC Boiler (2.5mm)</option> <option>Supply Of Boiler Bank Ash Chute Assembly</option> <option>THERMODYNAMIC STEAM TRAP VALVE 1/2" WITH INBUILT STRAINER SOCKET WELD, CLASS-800 MAKE FORBEMARSHERL</option> <option>Dia 45 U Cup Seal</option> <option>OUTER BUSH 40</option> <option>Constant Level Oiler</option> <option>Impeller With Gasket & Disc CPK 65-315</option> <option>Lantern Ring Part No.1458 for CEP,Make-KSB,Model No.CPKEC65-315, SL NO.: 511041156/100/01</option> <option>Neck Ring</option> <option>Set of O-Ring & Gasket Part No.STD for CEP,Make-KSB,Model No.CPKEC65-315, SL NO.: 511041156/100</option> <option>Single Cartridge Mechanical Seal 55MM, CPK EC 65-315, Drg. No. MS/19/0196 (CEP Pump)</option> <option>SHAFT PROT SLEEVE PART NO.: 1524 FOR KSB MAKE CEP, MODEL NO. CPKEC65-315, SL NO.: 511041156/100/01</option> <option>Angle Clit 100mm*90mm</option> <option>Anti Vibration Mount Rubber Pad</option> <option>Bearing Cover</option> <option>Bearing Cover Part No. 1.02.2031.0.04 </option> <option>Bearing Flange With Pipe Make-Sayaji</option> <option>Belt Conveyor 500MM, 315/3, TC-5MM, BC-3MM, GRADE-M24, Thick-10mm</option> <option>Box Plate 270MM*220MM*1345 MM(Top Bottom)</option> <option>Carrying Idler 88.9*200*3.5mm(Thk)</option> <option>Carrying Idler 89x250MM</option> <option>Coupling Pin Bush BC4</option> <option>Gravity Take Up pully</option> <option>Guide Roller 76*145mm</option> <option>Helical Spring OD-140MM, ID-105MM, L-265MM, THK-18M</option> <option>Horizontal Box 1345mm*150mm</option> <option>Impact Idler 114*235*265 mm, 3.5mm Thk</option> <option>Impact Idler Roller Pipe Dia 76.2*114MM*L-200MM*3.5Thik</option> <option>Impact Idler Roller Pipe Dia 76.2*114MM*L-235MM*3.5Thik</option> <option>Labyrinth Ring-1.02.2032.008.R1</option> <option>Return Idler 114*700*750 mm, 3.5mm thk</option> <option>Shaft Make-Sayaji V-12*30-II</option> <option>Side Clit 130mm*130mm</option> <option>Snub puuly Dia 114.3*L-700 MM*3.5THK* MS SHELL SHAFT DIA 30MM</option> <option>Snub puuly Dia 88.9*L-600 MM*3.5THK* MS SHELL SHAFT DIA 30MM</option> <option>Tyre For Coupling F-50</option> <option>Vertical Support Angle 1000mm</option> <option>Vertical Support Flat 1000mm</option> <option>Wire Mesh SS Screen Cloth Panel 1300MM*1050MM, 5MM Wire Dia, Opening 8MM</option> <option>Wire Mesh SS Screen Cloth Panel 2000MM*680MM, 5MM Wire Dia, Opening 8MM</option> <option>Allen Bolt HT 6*100mm Half Threaded</option> <option>Allen Bolt HT 6*40</option> <option>Allen Bolt HT 8*100mm Half Threaded</option> <option>Allen Bolt HT 8*75mm Half Threaded</option> <option>Allen Grub Screw 10*25MM</option> <option>Allen Grub Screw 12*25MM</option> <option>Asbestos Rope 8mm</option> <option>Ball Valve 1 1/2"</option> <option>Ball Valve Brass 1 1/4"</option> <option>Ball Valve Brass 1"</option> <option>Ball Valve Brass 1/2"</option> <option>Ball Valve Brass 2"</option> <option>Bolt HT 10*40MM With Nut & Washer</option> <option>Bolt HT 12*100MM Full Threaded</option> <option>Bolt HT 12*50MM Full Threaded</option> <option>Bolt HT 12*65MM</option> <option>Bolt HT 16*100mm Full Threaded</option> <option>Bolt HT 16*50MM Full Threaded</option> <option>Bolt HT 16*70MM Half Threaded</option> <option>Bolt HT 16*75mm Full Threaded</option> <option>Bolt HT 20*100MM Full Threaded</option> <option>Bolt HT 20*150MM Full Threaded</option> <option>Bolt HT 20*200MM Full Threaded</option> <option>Bolt HT 20*50MM Half Threaded</option> <option>Bolt HT 20*75MM Full Threaded</option> <option>Circlip External 45MM Ø</option> <option>Circlip External 50MM Ø</option> <option>Circlip Internal 100MM Ø</option> <option>Circlip Internal 45MM Ø</option> <option>Cotton Waste</option> <option>Cutting Nozzle B1/ 16</option> <option>Cutting Nozzle B3/64</option> <option>Flash Back Arrestor LPG</option> <option>Flash Back Arrestor Oxygen</option> <option>Gasket Non Metalik 5MM</option> <option>Gear Oil 320</option> <option>GI Hose Clamp ½"</option> <option>GI Hose Clamp 1"</option> <option>GI Hose Clamp 2"</option> <option>GI Hose Clamp 2½"</option> <option>GI Hose Clamp 3"</option> <option>Hardner Compound For TC-310 Cold Solution 45 ML</option> <option>HT Bolt Full Threaded 10*50MM</option> <option>HT Nut M12</option> <option>HT Nut M16</option> <option>HT Stud 18*150,Double Nut With Washer</option> <option>HT Stud 24*160,Double Nut With Washer</option> <option>Lighter</option> <option>Loctite 638</option> <option>MS Bolt 12*100MM</option> <option>MS Bolt 12*150MM</option> <option>MS Bolt 20*150MM</option> <option>MS Bolt 20*200MM</option> <option>MS Bolt 6*50MM</option> <option>MS Bolt 8*50MM</option> <option>MS Bolt M10*50MM</option> <option>MS Bolt M10*75MM</option> <option>MS Bolt M12*50MM</option> <option>MS Bolt M12*75MM</option> <option>MS Bolt M16*100MM</option> <option>MS Bolt M16*75MM</option> <option>MS Bolt M16X50MM</option> <option>MS Bolt M6*30MM</option> <option>MS Bolt M8*30 With Nut</option> <option>Oil Seal 40*52*7</option> <option>Oil Seal 12*25*7</option> <option>Oil Seal 13*25*7</option> <option>Oil Seal 15*24*7</option> <option>Oil Seal 15*30*7</option> <option>Oil Seal 160*190*15</option> <option>Oil Seal 162*287*50</option> <option>Oil Seal 30*47*7</option> <option>Oil Seal 30*50*7</option> <option>Oil Seal 30*60*7</option> <option>Oil Seal 35*72*10</option> <option>Oil Seal 40*62*7</option> <option>Oil Seal 40*62*8</option> <option>Oil Seal 44.5*69.85*7.93</option> <option>Oil Seal 45*52*7</option> <option>Oil Seal 45*60*8</option> <option>Oil Seal 45*62*10</option> <option>Oil Seal 50*62*8</option> <option>Oil Seal 50*65*8</option> <option>Oil Seal 50*70*10</option> <option>Oil Seal 50*85*10</option> <option>Oil Seal 52*72*8</option> <option>Oil Seal 55*72*10</option> <option>Oil Seal 55*72*7</option> <option>Oil Seal 55*72*8</option> <option>Oil Seal 60*80*10</option> <option>Oil Seal 60*85*8</option> <option>Oil Seal 65*80*8</option> <option>Oil Seal 65*85*10</option> <option>Oil Seal 68*90*10</option> <option>Plastic Tarpoline</option> <option>PTFE Gland Packing 10mm</option> <option>PTFE Gland Packing 12mm</option> <option>PTFE Gland Packing 6mm</option> <option>Rubber Spider L-100</option> <option>Rubber Spider L-110</option> <option>Rubber Spider L-150</option> <option>Rubber Spider L-190</option> <option>Rubber Spider L -75</option> <option>Rubber Spider L-95</option> <option>Rubber Spider SW 225/140</option> <option>Rust Cleaner WD-40</option> <option>SS Bolt M10*75MM</option> <option>SS Bolt M12*50MM</option> <option>SS Bolt M12*70MM</option> <option>SS Nut M10</option> <option>SS Nut M12</option> <option>SS Washer Flat M10</option> <option>SS Washer Flat M12</option> <option>V Belt A-51</option> <option>V Belt B43</option> <option>V Belt B45</option> <option>V Belt B73</option> <option>V Belt B78</option> <option>V Belt B79</option> <option>V Belt B80</option> <option>V Belt B85</option> <option>V Belt B94</option> <option>V Belt B95</option> <option>V Belt C112</option> <option>V Belt C200</option> <option>V Belt C240</option> <option>V Belt C62</option> <option>V Belt C75</option> <option>V Belt C-93</option> <option>V Belt D180</option> <option>V Belt SPA850</option> <option>V Belt SPC6000</option> <option>Welding Cable Copper 400 Amp</option> <option>Welding Electrodes 6013, 2.5MM</option> <option>Welding Electrodes 6013, 3.15MM</option> <option>Welding Electrodes 6013, 4MM</option> <option>Welding Electrodes E309L,3.20MM</option> <option>Welding Electrodes HF6,4.00mm</option> <option>Welding Electrodes HF7,4.00MM</option> <option>Welding Electrodes RMG 2011 4,,*350mm</option> <option>Welding Holder 600Amp</option> <option>V Belt B64</option> <option>External Circlip 95MM</option> <option>External Circlip 80MM</option> <option>External Circlip 40MM</option> <option>External Circlip 15MM</option> <option>Rubber Cord 3MM</option> <option>Rubber Cord 4MM</option> <option>Rubber Cord 5MM</option> <option>Rubber Cord 6MM</option> <option>Rubber Cord 8MM</option> <option>Rubber Cord 10MM</option> <option>Bolt HT 12*75MM Full Threaded</option> <option>Bolt HT 20*70MM Half Threaded</option> <option>Rubber Cord 1MM</option> <option>Rubber Cord 2MM</option> <option>Rubber Cord 15MM</option> <option>Allen Bolt HT 6*60mm Half Threaded</option> <option>Allen Bolt HT 6*75mm Half Threaded</option> <option>Blade (Cotton Chip cutter)</option> <option>Mouth Peace Frame</option> <option>Oil Seal (Cotton Chip cutter)</option> <option>Grinding Gib Curved MN GR-III (1set=4)</option> <option>Grinding Gib Nut Bolts 30*100MM With Spring Washer</option> <option>Grinding Gib Straight (1Set*4Nos)</option> <option>HT Square Head Bolt 20*100MM With Double Nut & Washer</option> <option>Impact Blade Mn Gr-II 1000X1000 MM</option> <option>Liner Plate For Lower Housing Part No 5522072.02.01</option> <option>Liner Plates Bolt 16*65MM With Spring Washer (60 nos)</option> <option>Perforated Plate Moc-FE410S, Part No 960211902.01</option> <option>Upper Housing Liner Plate & Bracket</option> <option>Control Transformer Indoor Dry Type-2 KVA,Input Voltage : 440V,Output Voltage(Dual O/P) 110V/230VAC</option> <option>Current Transformer Ratio:100/1-1-1-1AMP</option> <option>Current Transformer Ratio :70/1AMP</option> <option>Current Transformer Ratio-800/1-1-1A</option> <option>Potential Transformer Earthed Type-50HZ,Ratio:11KV,110V,Nos od Core :3,Rating:30VA/PH,Insulation Lav</option> <option>Voltage Transformer, 145kv, type Veot:- 145/650/50 insulation glass 275 kv Ratio 132KV/V3/110V/V3 , Make;-Crompton Greaves Ltd</option> <option>SS Nut Bolt 16*65MM With Washer</option> <option>SS Nut M16</option> <option>SS Washer M16</option> <option>SS Stud 10*160MM With Double Nut</option> <option>SS Stud 8*160MM With Double Nut</option> <option>1465 (A) Flexiguard (SHP-IND) Black 700 Ml</option> <option>150 Watt LED Light Crompton</option> <option>16 Way ETPN Make-Legrand</option> <option>200 Watt LED Food Light Crompton</option> <option>3 core*2.5 sqmm Alluminium Armoured Cable</option> <option>3 core*2.5 sqmm Copper Armoured Cable</option> <option>3 core*6 sqmm Alluminium Armoured Cable</option> <option>35 Watt LED Light Well Glass Crompton</option> <option>40 Watt LED Light Well Glass Crompton</option> <option>6084 Red Insulation Varnish 500Ml</option> <option>70 Watt LED Street Light Crompton</option> <option>8060 Safety Solvent CO2 700Ml</option> <option>ABB VCB AUXILARY CONTACT BB1 (3NO+2NC) SR NO. V 104792 MODEL VD4 12.12.40, 1250AMP, RATED VOLTAGE 12KV</option> <option>ABB VCB AUXILARY CONTACT BB2 (2NO+3NC) SR NO. V 104792 MODEL VD4 12.12.40, 1250AMP, RATED VOLTAGE 12KV</option> <option>ABB VCB AUXILARY CONTACT BB3 (3NO+2NC) SR NO. V 104792 MODEL VD4 12.12.40, 1250AMP, RATED VOLTAGE 12KV</option> <option>Aux. Switch 3RV, 3RV2901 1B</option> <option>Auxiliary Contact Block KH1-11</option> <option>Bulb 100 Watt</option> <option>Capacitor 10 UF</option> <option>Capacitor 2.5 MFD</option> <option>Capacitor 33 MFD</option> <option>Capacitor 6 MFD</option> <option>Capacitor 8 MFD</option> <option>Cast Alluminium Fan For Sutaible Dor ND315, CGL ND315, ID 90MM</option> <option>Contactor 3pole, 1NC type AL9-30-01, Coil 110VDC, R86 ABB make</option> <option>Contactor Coil 220V, 50HZ, MNX 32</option> <option>Contactor Coil 220V, 50HZ, MNX 70</option> <option>Contactor Kit Type MNX-25, 220 V</option> <option>Contactor Kit Type MNX-32, 220 V</option> <option>Copper Armord Cable 4 core*2.5 Sqmm</option> <option>Copper Cable Flexible 16Sqmm*1C</option> <option>Copper Cable Flexible 25Sqmm*1C</option> <option>Copper Cable Flexible 35Sqmm*1C</option> <option>Copper Flexible Cable 4 Sqmm*4 Core</option> <option>CRC 226 Spray (Online Contact Cleaner)</option> <option>DB Box 20 Amp</option> <option>Elmax Terminal Block 10sqmm</option> <option>Elmax Terminal Block 16sqmm</option> <option>Elmax Terminal Block 2.5sqmm</option> <option>Elmax Terminal Block 4sqmm</option> <option>ETPN 12WAY</option> <option>Ex haust Fan Motor 24", RPM-900</option> <option>Exhaust Fan Blade 24"</option> <option>Fan Cover ND-132</option> <option>Fan Cover ND-225 For CGL Motor 45Kw, 60HP, RPM2955</option> <option>Fuze Link HG size F1,2A Bolted</option> <option>Fuze Link HG size F1,4A Bolted</option> <option>Grease Unirex N3 Mobil</option> <option>Halogen Fitting 1000Watt</option> <option>HPSV Lamp 150 Watt</option> <option>HPSV Lamp 250 Watt</option> <option>HPSV Lamp 400 Watt</option> <option>HRC Fuze link HN 00 125Amp</option> <option>Fuse Link 125Amp</option> <option>HRC Fuze link 63Amp</option> <option>HT Bolt M18*100 With Nut</option> <option>HT Para Tape</option> <option>Induction Motor 1/2" Make-Kirloskar</option> <option>Labrynth Seal For DE Side Inside</option> <option>Labrynth Seal For DE Side Outside</option> <option>LED Foodlight Fitting 100Watt</option> <option>LED Indication Lamp Blue 110V AC</option> <option>LED Indication Lamp Green 110V AC</option> <option>LED Indication Lamp Red 110V AC</option> <option>LED Indication Lamp White 110V AC</option> <option>LED Indication Lamp Yellow 110V AC</option> <option>LED Rechargeble Bulb 9Watt</option> <option>MCB 1 pole 10Amp</option> <option>MCB 1 pole, 16Amp</option> <option>MCB 1 pole, 20Amp</option> <option>MCB 10Amp, 2 Pole</option> <option>MCB 2 pole, 63Amp</option> <option>MCB 20Amp, 4pole</option> <option>MCB 3 pole, 32Amp</option> <option>MCB 4 pole, 32Amp</option> <option>MCB 4 pole, 63Amp</option>
-<option value="MCB 4 pole, 63Amp">MCB 4 pole, 63Amp</option>
-<option value="MCB AC Box 32Amp">MCB AC Box 32Amp</option>
-<option value="Motor Terminal Plate M16 Make-ABB">Motor Terminal Plate M16 Make-ABB</option>
-<option value="MPCB 0.9-1.25A, 3RV2111 1KA10">MPCB 0.9-1.25A, 3RV2111 1KA10</option>
-<option value="MPCB 1.4-2A, 3RV2111 0BA10">MPCB 1.4-2A, 3RV2111 0BA10</option>
-<option value="MPCB 2.8-4A, 3RV2111 1EA10">MPCB 2.8-4A, 3RV2111 1EA10</option>
-<option value="MPCB 3.5-5A, 3RV2111 1FA10">MPCB 3.5-5A, 3RV2111 1FA10</option>
-<option value="MPCB ms116.1.6 AMP 1SAM250000r1006 ABB">MPCB ms116.1.6 AMP 1SAM250000r1006 ABB</option>
-<option value="Oil Seal 17*27*5">Oil Seal 17*27*5</option>
-<option value="Overload Relay Make-L&T,MN2, Range:14~23 AMP">Overload Relay Make-L&T,MN2, Range:14~23 AMP</option>
-<option value="Overload Relay Make-L&T,MN5, Range:20~33 AMP">Overload Relay Make-L&T,MN5, Range:20~33 AMP</option>
-<option value="Overload Relay Make-L&T,MN5, Range:45~75 AMP">Overload Relay Make-L&T,MN5, Range:45~75 AMP</option>
-<option value="Overload Relay Make-L&T,MN5, Range:66~110 AMP">Overload Relay Make-L&T,MN5, Range:66~110 AMP</option>
-<option value="Overload Relay Make-Siemens 3UA5000-0K, 0.8-1.25AMP">Overload Relay Make-Siemens 3UA5000-0K, 0.8-1.25AMP</option>
-<option value="Overload Relay Make-Siemens 3UA5000-1E, 2.5-4AMP">Overload Relay Make-Siemens 3UA5000-1E, 2.5-4AMP</option>
-<option value="Overload Relay Make-Siemens 3UA5000-1F, 3.2-5AMP">Overload Relay Make-Siemens 3UA5000-1F, 3.2-5AMP</option>
-<option value="Overload Relay Make-Siemens 3UA5200-2A, 10-16AMP">Overload Relay Make-Siemens 3UA5200-2A, 10-16AMP</option>
-<option value="Overload Relay Make-Siemens 3UA5500-2R, 32-40AMP">Overload Relay Make-Siemens 3UA5500-2R, 32-40AMP</option>
-<option value="Overload Relay Make-Siemens 3UA 5800-2PZ1, 50-63AMP">Overload Relay Make-Siemens 3UA5800-2PZ1, 50-63AMP</option>
-<option value="Overload Relay Make-Siemens 3UC5830-5G, 40-63AMP">Overload Relay Make-Siemens 3UC5830-5G, 40-63AMP</option>
-<option value="Overload Relay Make-Siemens 3UC6230-5A, 100-160AMP">Overload Relay Make-Siemens 3UC6230-5A, 100-160AMP</option>
-<option value="Overload Relay Make-Softhard, Range 1-10Amp, Type 27, Micro-mpd-wod, 230V">Overload Relay Make-Softhard, Range 1-10Amp, Type 27, Micro-mpd-wod, 230V</option>
-<option value="Pendent Holder">Pendent Holder</option>
-<option value="Porceline Holder Threaded Type 250Watt">Porceline Holder Threaded Type 250Watt</option>
-<option value="Porciline Holder E-27">Porciline Holder E-27</option>
-<option value="RCCB 63Amp, 100MA">RCCB 63Amp, 100MA</option>
-<option value="SFU 63A, 3KL8221 5TA00">SFU 63A, 3KL8221 5TA00</option>
-<option value="Silica Gel For Transformer">Silica Gel For Transformer</option>
-<option value="Silicon Diode SKR 240/16 L150 H13(240A/1600V) Make-Semikron">Silicon Diode SKR 240/16 L150 H13(240A/1600V) Make-Semikron</option>
-<option value="Starter For Tubelight">Starter For Tubelight</option>
-<option value="Terminal Plate For 3Hp Induction Motor Flange mounted Make-CGL M/c No. NADW-96068 DV Frame Size-ND315S">Terminal Plate For 3Hp Induction Motor Flange mounted Make-CGL M/c No. NADW-96068 DV Frame Size-ND315S</option>
-<option value="Terminal Plate STAMFORD AC GENERATOR TERMINAL PLATE  TORQUE 20-30Nm, 450-15617,">Terminal Plate STAMFORD AC GENERATOR TERMINAL PLATE  TORQUE 20-30Nm, 450-15617,</option>
-<option value="Transformer Oil HP">Transformer Oil HP</option>
-<option value="Tube Rod 18 Watt">Tube Rod 18 Watt</option>
-<option value="PT Fuse 12KV 3.15 A 45 KA">PT Fuse 12KV 3.15 A 45 KA</option>
-<option value="Power Contactor 3TF 3110-0AP0,12Amp 230V">Power Contactor 3TF 3110-0AP0,12Amp 230V</option>
-<option value="Power Contactor 3TF 3200-0AP0,16Amp 230V">Power Contactor 3TF 3200-0AP0,16Amp 230V</option>
-<option value="Power Contactor 3TF 3400-0AP0,32Amp 230V">Power Contactor 3TF 3400-0AP0,32Amp 230V</option>
-<option value="Power Contactor 3TF 4822-0AP01,75Amp 230V">Power Contactor 3TF 4822-0AP01,75Amp 230V</option>
-<option value="Power Contactor 3TF 5002-0AP0,110Amp 230V">Power Contactor 3TF 5002-0AP0,110Amp 230V</option>
-<option value="Power Contactor 3TF 5302-0AP0,205Amp 230V">Power Contactor 3TF 5302-0AP0,205Amp 230V</option>
-<option value="Fuse 170M,1564D 50A 690V, DIN000 Make-Bussmann">Fuse 170M,1564D 50A 690V, DIN000 Make-Bussmann</option>
-<option value="Metal Clad Plug,3Pin,20A">Metal Clad Plug ,3Pin,20A</option>
-<option value="Metal Clad Top,3Pin,20A">Metal Clad Top,3Pin,20A</option>
-<option value="Single Phase Preventor SM-301">Single Phase Preventor SM-301</option>
-<option value="Relay PSU14N-2X 1MYN563620-DBA">Relay PSU14N-2X 1MYN563620-DBA</option>
-<option value="Plug Relay With Base CR-M4SS (1SVR405651R3000) Make-ABB">Plug Relay With Base CR-M4SS (1SVR405651R3000) Make-ABB</option>
-<option value="Add On Block 1NO,CA5-01">Add On Block 1NO,CA5-01</option>
-<option value="Add On Block 1NO,CA5-10">Add On Block 1NO,CA5-10</option>
-<option value="MCCB 2P-15KA 150A-DC, Part No. 48622150015">MCCB 2P-15KA 150A-DC, Part No. 48622150015</option>
-<option value="MCCB 3P, 10KA,75A AC, Part No. 48631100007">MCCB 3P, 10KA,75A AC, Part No. 48631100007</option>
-<option value="Cable Gland CGS 45MM (1.3/4)">Cable Gland CGS 45MM (1.3/4")</option>
-<option value="AUX SW FOR CS3A2/CS3B2 PART NO. 48697100018">AUX SW FOR CS3A2/CS3B2 PART NO. 48697100018</option>
-<option value="AUX SWITCH 1C/O-4,CS2A3,CS2A4-20A, PART NO. 48697100021">AUX SWITCH 1C/O-4,CS2A3,CS2A4-20A, PART NO. 48697100021</option>
-<option value="AUX SW FOR CS3A3/A4,CS3B3/B4,,PART NO:8697100019">AUX SW FOR CS3A3/A4,CS3B3/B4,,PART NO:8697100019</option>
-<option value="Power Supply Unit CP-e 24/5.0 1SVR427034R0000">Power Supply Unit CP-e 24/5.0 1SVR427034R0000</option>
-<option value="MCCB 200Amp, 3Pole, 25KA">MCCB 200Amp, 3Pole, 25KA</option>
-<option value="LED Tube Lighting Fitting 20Watt">LED Tube Lighting Fitting 20Watt</option>
-<option value="Rotory Compressor 1.5Tr, Splite Model No 1.5tr, Vertis Clasic, Power Supply 1Ph, 230v, 50Hz, Refrigerent R-22 Make-Voltas">Rotory Compressor 1.5Tr, Splite Model No 1.5tr, Vertis Clasic, Power Supply 1Ph, 230v, 50Hz, Refrigerent R-22 Make-Voltas</option>
-<option value="Reprocess Plasitc Sheet">Reprocess Plasitc Sheet</option>
-<option value="Metallic Green Start Push Button 20mm With Actuator">Metallic Green Start Push Button 20mm With Actuator</option>
-<option value="Metallic Red Stop Push Button 20mm Latching With key with Actuator">Metallic Red Stop Push Button 20mm Latching With key with Actuator</option>
-<option value="Metallic Red Start Push Button 20mm With Actuator">Metallic Red Start Push Button 20mm With Actuator</option>
-<option value="Normaly Close Contact (NC) IEC947-5-1 Element Red">Normaly Close Contact (NC) IEC947-5-1 Element Red</option>
-<option value="Normaly Open Contact (NC) IEC947-5-1 Element Green">Normaly Open Contact (NC) IEC947-5-1 Element Green</option>
-<option value="Gear Motor Type 30 DPP/71 Sl. No. 168290210001, Make:BONFIGLIOLI GROUP">Gear Motor Type 30 DPP/ 71 Sl. No. 168290210001, Make:BONFIGLIOLI GROUP</option>
-<option value="Gear Motor Type 55 DPP/100,SR NO.168290180001,Make:BONFIGLIOLI GROUP">Gear Motor Type 55 DPP/100,SR NO.168290180001,Make:BONFIGLIOLI GROUP</option>
-<option value="Gearbox SNU 7&quot;, Ratio 70:01:00, Sl No. 631883,Make Elecon (Shaft Ø IP 40MM, OP 70MM)">Gearbox SNU 7&quot;, Ratio 70:01:00, Sl No. 631883,Make Elecon (Shaft Ø IP 40MM, OP 70MM)</option>
-<option value="Worm Shaft 50:1SNGL Sr No. NPW48302/003 Make-Shanthi Gear">Worm Shaft 50:1SNGL Sr No. NPW48302/003 Make-Shanthi Gear</option>
-<option value="Worm Wheel 50:1 UO &amp; V Sr No. NPW3831/016 Make-Shanthi Gear">Worm Wheel 50:1 UO &amp; V Sr No. NPW3831/016 Make-Shanthi Gear</option>
-<option value="Circlip Part No.932,62*2 for Hotwell Pump">Circlip Part No.932,62*2 for Hotwell Pump</option>
-<option value="Impeller Nut Part No.1922,for Hotwell Pump">Impeller Nut Part No.1922,for Hotwell Pump</option>
-<option value="Impeller Part No.1230 for Hotwell Pump ,Make-KSB,Model No.CPKEC50-200, SL NO.: 511041156/100/01">Impeller Part No.1230 for Hotwell Pump ,Make-KSB,Model No.CPKEC50-200, SL NO.: 511041156/100/01</option>
-<option value="Shaft Part No.1210,CPKP25-65S for Hotwell Pump">Shaft Part No.1210,CPKP25-65S for Hotwell Pump</option>
-<option value="Shaft Prot Sleeve Part No.1524,Fpr Hotwell Pump">Shaft Prot Sleeve Part No.1524,Fpr Hotwell Pump</option>
-<option value="Shaft Seal Ring Part No.1421 for Hotwell Pump">Shaft Seal Ring Part No.1421 for Hotwell Pump</option>
-<option value="Oil Seal Part No. WH-1125/16">Oil Seal Part No. WH-1125/16</option>
-<option value="Worm Wheel Part No. 1125/12">Worm Wheel Part No. 1125/12</option>
-<option value="Coupling Complete Set With Gear Coupling LFG102,LFG103 &amp; 140MM Spacer Nut,Bolt &amp; Washer ,Make-LOVE JOY">Coupling Complete Set With Gear Coupling LFG102,LFG103 &amp; 140MM Spacer Nut,Bolt &amp; Washer ,Make-LOVE JOY</option>
-<option value="Grid Coupling Complete Set FRC-13-Z">Grid Coupling Complete Set FRC-13-Z</option>
-<option value="Grid Coupling S10,H110,ZN455/ZN456,Coupling Flange No.-10MC 110 ZN217,Make-CVL">Grid Coupling S10,H110,ZN455/ZN456,Coupling Flange No.-10MC 110 ZN217,Make-CVL</option>
-<option value="Grid Coupling S11 H111 ZN500,Coupling Flange No.-11FC 111 ZN212,Make-CVL">Grid Coupling S11 H111 ZN500,Coupling Flange No.-11FC 111 ZN212,Make-CVL</option>
-<option value="Spring For Grid Coupling FRC-10Z">Spring For Grid Coupling FRC-10Z</option>
-<option value="Spring For Grid Coupling FRC-11-Z">Spring For Grid Coupling FRC-11-Z</option>
-<option value="Spring For Grid Coupling FRC-13Z">Spring For Grid Coupling FRC-13Z</option>
-<option value="Air Lubricator 15NB">Air Lubricator 15NB</option>
-<option value="Air Regulator 1/2&quot;NPT,Range:0-7Kgs/cm2">Air Regulator 1/2&quot;NPT,Range:0-7Kgs /cm2</option>
-<option value="Battery For Motorola XIRP 3688">Battery For Motorola XIRP 3688</option>
-<option value="Belt Sway Switch 2NO+2NC">Belt Sway Switch 2NO+2NC</option>
-<option value="Control Valve Packing Set , Stem,Actuator Diaphragm SR. NO. 115T2943 MAKE KOSO">Control Valve Packing Set , Stem,Actuator Diaphragm SR. NO. 115T2943 MAKE KOSO</option>
-<option value="Control Valve Packing Set,Stem,Actuator Diaphragm SR. NO. 115T2945 MAKE KOSO">Control Valve Packing Set,Stem,Actuator Diaphragm SR. NO. 115T2945 MAKE KOSO</option>
-<option value="Cooling Fan With Motor For Air Dryer Mottor Watt 2.25Amp RPM-1350">Cooling Fan With Motor For Air Dryer Mottor Watt 2.25Amp RPM-1350</option>
-<option value="Different Pressure Switch DPI-180 Sr. No. DPI949G19">Different Pressure Switch DPI-180 Sr. No. DPI949G19</option>
-<option value="Double Acting Air Lock Relay">Double Acting Air Lock Relay</option>
-<option value="Positioner EPT-002 FOR PC">Positioner EPT-002 FOR PC</option>
-<option value="Extension Cable FW-202FA-85 For Vibration Monitoring System">Extension Cable FW-202FA-85 For Vibration Monitoring System</option>
-<option value="Fan for DCS Door Ventilation,Make-Sunon,DP201A2123HST, 240V, 50Hz">Fan for DCS Door Ventilation,Make-Sunon,DP201A2123HST, 240V, 50Hz</option>
-<option value="Gather With Hose Clips">Gather With Hose Clips</option>
-<option value="Hinges For PS, ES &amp; DK Range 130 Degree Make-Rittal">Hinges For PS, ES &amp; DK Range 130 Degree Make-Rittal</option>
-<option value="I To P Convertor TEIP-11 Input-4-20MA, Output-0.2To1Kgs/cm2">I To P Convertor TEIP-11 Input-4-20MA, Output-0.2To1Kgs/cm2</option>
-<option value="K Type Compensating Cable 3/26 FG">K Type Compensating Cable 3/26 FG</option>
-<option value="Level Switch Model No. 40H-WP/545/SDW/C3-IV Make V Automat">Level Switch Model No. 40H-WP/545/SDW/C3-IV Make V Automat</option>
-<option value="Level Switch Model No. 40YWP/5DW/EA-U1 Make V Automat">Level Switch Model No. 40YWP/5DW/EA-U1 Make V Automat</option>
-<option value="Level Transmitter Type-3051 CD2A22A1AM5B4DF504,SUPPLY 10.5~55V DC, OUTPUT 4~20mA,MWP3626PSI/250BAR">Level Transmitter Type-3051 CD2A22A1AM5B4DF504,SUPPLY 10.5~55V DC, OUTPUT 4~20mA,MWP3626PSI/250BAR</option>
-<option value="Limit Switch JLSL BC-9, IP67">Limit Switch JLSL BC-9, IP67</option>
-<option value="Oil Seal &amp; O Ring For Motorized Valve K150 Make-Rotork">Oil Seal &amp; O Ring For Motorized Valve K150 Make-Rotork</option>
-<option value="Positioner Pneumatic Model No. 7401-800 Make-MIL">Positioner Pneumatic Model No. 7401-800 Make-MIL</option>
-<option value="Pressure Gauge SS304,100mm,Range 0-6Kgs,Model No.EN-837-1">Pressure Gauge SS304,100mm,Range 0-6Kgs,Model No.EN-837-1</option>
-<option value="Pressure Switch RT-112 Make-Indfos">Pressure Switch RT-112 Make-Indfos</option>
-<option value="Pull Card Rope">Pull Card Rope</option>
-<option value="Pull Cord Switch 2NO+2NC">Pull Cord Switch 2NO+2NC</option>
-<option value=" PVC CONDUIT PIPE 1&quot; STEEL WIRE REINFORCED">PVC CONDUIT PIPE 1&quot; STEEL WIRE REINFORCED</option>
-<option value="Reed Switch">Reed Switch</option>
-<option value="RTD Cable 3 Core teflon">RTD Cable 3 Core teflon</option>
-<option value="RTD Duplex Dia-6mm, Length-285 MM, With 1/2&quot; BSP">RTD Duplex Dia-6mm, Length-285 MM, With 1/2&quot; BSP</option>
-<option value="Rubber For Pipe Coupling 2 1/2&quot; B56XX05">Rubber For Pipe Coupling 2 1/2&quot; B56XX05</option>
-<option value="Seal kit For PC-6*16">Seal kit For PC-6*16</option>
-<option value="Seal Kit For Pnuematic Cylinder SPC 80/200">Seal Kit For Pnuematic Cylinder SPC 80/200</option>
-<option value="Seal Kit For Pnuematic Cylinder SPC 80/300">Seal Kit For Pnuematic Cylinder SPC 80/300</option>
-<option value="Seal Kit For Solenoid Valve Rotex 98-51432-1620-4G/6G-M6">Seal Kit For Solenoid Valve Rotex 98-51432-1620-4G/6G-M6</option>
-<option value="Seal Kit For Solenoid Valve Rotex 98-57400-6-2Z-B1">Seal Kit For Solenoid Valve Rotex 98-57400-6-2Z-B1</option>
-<option value="Service Kit for MOV CBD Valve Make-Rotork,Torque,Sl No.Z6974BA9A9;Type-K60-GOA">Service Kit for MOV CBD Valve Make-Rotork,Torque,Sl No.Z6974BA9A9;Type-K60-GOA</option>
-<option value="Service Kit for MOV Feed Water Bypass Valve Make-Rotork,Torque,Sl No.9B01940301;Type-K600-F14A">Service Kit for MOV Feed Water Bypass Valve Make-Rotork,Torque,Sl No.9B01940301;Type-K600-F14A</option>
-<option value="Service Kit for MOV IBD Valve Make-Rotork,Torque Sl No.1C01860601;Type-K150-GOA">Service Kit for MOV IBD Valve Make-Rotork,Torque Sl No.1C01860601;Type-K150-GOA</option>
-<option value="Service Kit for MOV MSSV Make-Rotork,Torque-150 Sl No.77369BE3">Service Kit for MOV MSSV Make-Rotork,Torque-150 Sl No.77369BE3</option>
-<option value="Service Kit for MOV Startup Vent Valve,Make-Rotork,Torque,Sl No.Z5935BC2;TYPE-PGV 203">Service Kit for MOV Startup Vent Valve,Make-Rotork,Torque,Sl No.Z5935BC2;TYPE-PGV 203</option>
-<option value="Single Acting Air Lock Relay">Single Acting Air Lock Relay</option>
-<option value="Single Solenoid Valve 1/4&quot;BSP,  5/2 Way, Coil Voltage 230VA VAQ213G-220VAC">Single Solenoid Valve 1/4&quot;BSP,  5/2 Way, Coil Voltage 230VA VAQ213G-220VAC</option>
-<option value="Straight Male Connector 10mm*3/4&quot;Bsp">Straight Male Connector 10mm*3/4&quot;Bsp</option>
-<option value="Tee Male 12MM*1/2&quot; BSp">Tee Male 12MM*1/2&quot; BSp</option>
-<option value="Temperature Controller Model TC 544 C Make-Selec">Temperature Controller Model TC 544 C Make-Selec</option>
-<option value="Themowell SS-310, OD-22MM, Length-580MM, ID-10MM Outer Thread 1/2&quot;">Themowell SS-310, OD-22MM, Length-580MM, ID-10MM Outer Thread 1/2&quot;</option>
-<option value="Themowell SS-310, OD-22MM, Length-680MM, ID-10MM Outer Thread 1/2&quot;">Themowell SS-310, OD-22MM, Length-680MM, ID-10 MM Outer Thread 1/2&quot;</option>
-<option value="Thermocouple Duplex 'K' Type Dia-6MM, Temp. 0 To 1200 Deg. Length-400MM With 1/2&quot; Connector">Thermocouple Duplex 'K' Type Dia-6MM, Temp. 0 To 1200 Deg. Length-400MM With 1/2&quot; Connector</option>
-<option value="Thermocouple Duplex K type SS-310, Dia-10MM, length-385Mm, Tem-1200 Deg">Thermocouple Duplex K type SS-310, Dia-10MM, length-385Mm, Tem-1200 Deg</option>          
-<option value="Thermocouple Duplex K Type SS-310, Dia-6mm, Tem. 0 To 1200 Deg, Length-3000MM">Thermocouple Duplex K Type SS-310, Dia-6mm, Tem. 0 To 1200 Deg, Length-3000MM</option>
-  <option value="Thermocouple Duplex 'K' Type SS-310, Dia-6MM, Temp. 0 To 1200 Deg. Length-700MM">Thermocouple Duplex 'K' Type SS-310, Dia-6MM, Temp. 0 To 1200 Deg. Length-700MM</option>
-  <option value="Trust Bearing Set For 6&quot; CL-900 Gate Valve">Trust Bearing Set For 6&quot; CL-900 Gate Valve</option>
-  <option value="Zero Speed Swich Range 10 To 100">Zero Speed Swich Range 10 To 100</option>
-  <option value="Sensor RTD Duplex Type-3 Wire, Length-10MM*350MM, SS-316">Sensor RTD Duplex Type-3 Wire, Length-10MM*350MM, SS-316</option>
-  <option value="Non Contact Type Sensor FL202F08A-M2-00-12-05 For Vibration Monitoring System">Non Contact Type Sensor FL202F08A-M2-00-12-05 For Vibration Monitoring System</option>
-  <option value="Non Contact Type Sensor FL202F08A-M2-00-25-05 For Vibration Monitoring System">Non Contact Type Sensor FL202F08A-M2-00-25-05 For Vibration Monitoring System</option>
-  <option value="Gland Packing Set">Gland Packing Set</option>
-  <option value="Plug Stem">Plug Stem</option>
-  <option value="Seat Ring">Seat Ring</option>
-  <option value="Actuator Packing Set">Actuator Packing Set</option>
-  <option value="Actuator Diaphragm">Actuator Diaphragm</option>
-  <option value="Seat Gasket">Seat Gasket</option>
-  <option value="ADC Card 9830FR02">ADC Card 9830FR02</option>
-  <option value="Key Pad 4*4">Key Pad 4*4</option>
-  <option value="Line Filter EP-42-1">Line Filter EP-42-1</option>
-  <option value="Pressure Transmitter R-3051TG2A2B21AB4K5D4M5q4">Pressure Transmitter R-3051TG2A2B21AB4K5D4M5q4</option>
-  <option value="Syphon Tube 1/2&quot; PIG Tail Type">Syphon Tube 1/2&quot; PIG Tail Type</option>
-  <option value="Pneumatic Cylinder SPC-D BG-80/300 Make-Rotex">Pneumatic Cylinder SPC-D BG-80/300 Make-Rotex</option>
-  <option value="Pneumatic Cylinder SPC-D BG-80/200 Make-Rotex">Pneumatic Cylinder SPC-D BG-80/200 Make-Rotex</option>
-  <option value="Position Transmitter Model No.PT 200W, MAKE-KOSO">Position Transmitter Model No.PT 200W, MAKE-KOSO</option>
-  <option value="Vibration Monitoring System Driver Transducer FK202F-2-4-2">Vibration Monitoring System Driver Transducer FK202F-2-4-2</option>
-  <option value="Auto Drain Valve 1/2&quot; 24101TM-12-4G-B13-230VAC-25">Auto Drain Valve 1/2&quot; 24101TM-12-4G-B13-230VAC-25</option>
-  <option value="Tube Cutter 2MM">Tube Cutter 2MM</option>
-  <option value="Battery Assembly S9129FA Yokogawa">Battery Assembly S9129FA Yokogawa</option>
-  <option value="Tube Copper PVC Coated 6MM OD *4MM(ID)">Tube Copper PVC Coated 6MM OD *4MM(ID)</option>
-  <option value="External Circlip Part No. 1100,Make:Johnson">External Circlip Part No. 1100,Make:Johnson</option>
-  <option value="Flapper Valve Assembly Part No. 0210,Make:Johnson">Flapper Valve Assembly Part No. 0210,Make:Johnson</option>
-  <option value="Gasket Part No. 0250,Make: Johnson">Gasket Part No. 0250,Make:Johnson</option>
-  <option value="Impeller Type CCR-32-160R6m2L3(W212163088)">Impeller Type CCR-32-160R6m2L3(W212163088)</option>
-  <option value="Internal Circlip Part No. 1100,Make:Johnson">Internal Circlip Part No. 1100,Make:Johnson</option>
-  <option value="Mechanical Seal Part No. 0310+0320,Make:Johnson">Mechanical Seal Part No. 0310+0320,Make:Johnson</option>
-  <option value="Shaft EN8 Part No. 1050,Make:Johnson">Shaft EN8 Part No. 1050,Make:Johnson</option>
-  <option value="Mechanical Seal For Johnson Pump Model No CN 40-160 G1 (MG/12Type) RPM 2900">Mechanical Seal For Johnson Pump Model No CN 40-160 G1 (MG/12Type) RPM 2900</option>
-  <option value="ACW Pump-MAKE-Mather Plat,SR.No.-31218219/10/01,Q-215 m³/hr,H-48,RPM-1480,ET ISO NO.-26 (CAT-A1)">ACW Pump-MAKE-Mather Plat,SR.No.-31218219/10/01,Q-215 m³/hr,H-48,RPM-1480,ET ISO NO.-26 (CAT-A1)</option>
-  <option value="Angle Grinder AG-7">Angle Grinder AG-7</option>
-  <option value="Asbestos Rope 20MMM">Asbestos Rope 20MMM</option>
-  <option value="Asbestos Rope 6MM">Asbestos Rope 6MM</option>
-  <option value="Belt Fastner 2 1/2&quot;">Belt Fastner 2 1/2&quot;</option>
-  <option value="Belt Fastner 2&quot;">Belt Fastner 2&quot;</option>
-  <option value="Belt Fastner 3&quot;">Belt Fastner 3&quot;</option>
-  <option value="Brass Connector for Cutting Hose">Brass Connector for Cutting Hose</option>
-  <option value="Brasso Chemical 100Ml">Brasso Chemical 100Ml</option>
-  <option value="Bush for Taper Lock Pully 150X2XA">Bush for Taper Lock Pully 150X2XA</option>
-  <option value="Bush for Taper Lock Pully 200X2XA">Bush for Taper Lock Pully 200X2XA</option>
-  <option value="Butterfly Valve Gear Operated 200mm (8&quot;)">Butterfly Valve Gear Operated 200mm (8&quot;)</option>
-  <option value="Carrying Idler 114*250*280 mm, 3.5mm thk">Carrying Idler 114*250*280 mm, 3.5mm thk</option>
-  <option value="Chain Duplex 1&quot; Pitch">Chain Duplex 1&quot; Pitch</option>
-  <option value="Chain Link Simplex 1&quot;">Chain Link Simplex 1&quot;</option>
-  <option value="Chain Link Simplex 1/2&quot;">Chain Link Simplex 1/2&quot;</option>
-  <option value="Chain Link Simplex 3/4&quot;">Chain Link Simplex 3/4&quot;</option>
-  <option value="Chain Simplex ¾&quot; Pitch">Chain Simplex ¾&quot; Pitch</option>
-  <option value="Chain Sprocket Duplex 1&quot; X 20Teeth">Chain Sprocket Duplex 1&quot; X 20Teeth</option>
-  <option value="Chain Sprocket Duplex 1&quot; X 38Teeth">Chain Sprocket Duplex 1&quot; X 38Teeth</option>
-  <option value="Chain Sprocket Simplex  3/4&quot;*28teeth">Chain Sprocket Simplex  3/4&quot;*28teeth</option>
-  <option value="CI Gate Valve Flange Type 80NB,WCB 300">CI Gate Valve Flange Type 80NB,WCB 300</option>
-  <option value="CI NRV Flange Type 80NB,WCB 300">CI NRV Flange Type 80NB,WCB 300</option>
-  <option value="Cold Vulcanising Solution TC310">Cold Vulcanising Solution TC310</option>
-  <option value="Colour Coated Sheet">Colour Coated Sheet</option>
-  <option value=" Coupling Alluminium R-75">Coupling Alluminium R-75</option>
-  <option value="Coupling Alluminium Spacer SW/RRS 225/140">Coupling Alluminium Spacer SW/RRS 225/140</option>
-  <option value="Coupling Love Joy L-150">Coupling Love Joy L-150</option>
-  <option value="Coupling Love Joy L-75">Coupling Love Joy L-75</option>
-  <option value="Coupling Lovejoy L-100">Coupling Lovejoy L-100</option>
-  <option value="Coupling Lovejoy L-110">Coupling Lovejoy L-110</option>
-  <option value="Coupling RRL-190">Coupling RRL-190</option>
-  <option value="Coupling SW 95ES100">Coupling SW 95ES100</option>
-  <option value="Cutting Hose Blue">Cutting Hose Blue</option>
-  <option value="Cutting Hose Red">Cutting Hose Red</option>
-  <option value="Cutting Torch">Cutting Torch</option>
-  <option value="Cutting Wheel AG-7">Cutting Wheel AG-7</option>
-  <option value="Dial Guage 0 To 0.8">Dial Guage 0 To 0.8</option>
-  <option value="Dial Guage 0 To 50MM">Dial Guage 0 To 50MM</option>
-  <option value="Gasket Metalic 3MM Style-54">Gasket Metalic 3MM Style-54</option>
-  <option value="Gasket Metalic 5MM Style-54">Gasket Metalic 5MM Style-54</option>
-  <option value="Gasket Metalik 3MM Klinger-1000 Size-1500mm*2000MM">Gasket Metalik 3MM Klinger-1000 Size-1500mm*2000MM</option>
-  <option value="Gasket Metalik 5MM Klinger-1000 Size-1500mm*2000MM">Gasket Metalik 5MM Klinger-1000 Size-1500mm*2000MM</option>
-  <option value="Gasket Non Metalic 2MM">Gasket Non Metalic 2MM</option>
-  <option value="Gasket Non Metalik 1MM">Gasket Non Metalik 1MM</option>
-  <option value="Gate Valve IBR 15MM, Class-1500, A-105">Gate Valve IBR 15MM, Class-1500, A-105</option>
-  <option value="Gate Valve IBR 15MM, Class-1500, F-22">Gate Valve IBR 15MM, Class-1500, F-22</option>
-  <option value="Gate Valve IBR 25MM, Class-1500, A-105">Gate Valve IBR 25MM, Class-1500, A-105</option>
-  <option value="Gate Valve IBR 50MM, Class-1500, A-105">Gate Valve IBR 50MM, Class-1500, A-105</option>
-  <option value="Gear Coupling LFG-100">Gear Coupling LFG-100</option>
-  <option value="Gear Coupling UFG-103">Gear Coupling UFG-103</option>
-  <option value="GI turn Buckle 12MM">GI turn Buckle 12MM</option>
-  <option value="Gland Rope 8MM Style 1960">Gland Rope 8MM Style 1960</option>
-  <option value="Gate Valve 11/2&quot;Class-800#,A105">Gate Valve 11/2&quot;Class-800#,A105</option>
-  <option value="Globe Valve IBR 15MM, Class-1500, A-105 T-5">Globe Valve IBR 15MM, Class-1500, A-105 T-5</option>
-  <option value="Globe Valve IBR 2&quot;, Class-1500">Globe Valve IBR 2&quot;, Class-1500</option>
-  <option value="Globe Valve IBR 25MM, Class-1500, A-105 T-5">Globe Valve IBR 25MM, Class-1500, A-105 T-5</option>
-  <option value="Globe Valve IBR 40NB, F-22 SW Class-1500">Globe Valve IBR 40NB, F-22 SW Class-1500</option>
-  <option value="Grease MP3">Grease MP3</option>
-  <option value="Grinding Wheel AG-7">Grinding Wheel AG-7</option>
-  <option value="Grinnding Stone">Grinnding Stone</option>
-  <option value="Grub Screw 8*30">Grub Screw 8*30</option>
-  <option value="Guage Blocks Guage (1Set*87Pc) Type-BM1-87.1/PD, Sr No. 2004394 (Slip Guage)">Guage Blocks Guage (1Set*87Pc) Type-BM1-87.1/PD, Sr No. 2004394 (Slip Guage)</option>
-  <option value="Gumetal Bush 35*27*40MM">Gumetal Bush 35*27*40MM</option>
-  <option value="HP Parthan EP-220">HP Parthan EP-220</option>
-  <option value="HT Bolt 14*90 MM With Double Nut &amp; Washer">HT Bolt 14*90 MM With Double Nut &amp; Washer</option>
-  <option value="HT Bolt 24*180 MM With Double Nut &amp; Washer">HT Bolt 24*180 MM With Double Nut &amp; Washer</option>
-  <option value="HT Bolt 24*50 MM With Double Nut &amp; Washer">HT Bolt 24*50 MM With Double Nut &amp; Washer</option>
-  <option value="HT Bolt Full Threaded 18*200MM With Double Nut &amp; Spring Washer">HT Bolt Full Threaded 18*200MM With Double Nut &amp; Spring Washer</option>
-  <option value="HT Cup Square Head Bolt LG M 16*130MM">HT Cup Square Head Bolt LG M 16*130MM</option>
-  <option value="Hydroulic Hose Pipe 3/8&quot;*400mm">Hydroulic Hose Pipe 3/8&quot;*400mm</option>
-  <option value="Hydroulic Oil 68">Hydroulic Oil 68</option>
-  <option value="IBR Globe Valve 1/2&quot; Class-1500 f-22">IBR Globe Valve 1/2&quot; Class-1500 f-22</option>
-  <option value="IBR Short Bend 1/2&quot; Socket Weld Class-1500">IBR Short Bend 1/2&quot; Socket Weld Class-1500</option>
-  <option value="Lapping Paste 400Grm Smooth">Lapping Paste 400Grm Smooth</option>
-  <option value="Lead Wire 0.5MM">Lead Wire 0.5MM</option>
-  <option value="LPG Cylinder 19 Kgs">LPG Cylinder 19 Kgs</option>
-  <option value="Magnetic Stand For 0-50MM Dail Guage">Magnetic Stand For 0-50MM Dail Guage</option>
-  <option value="Measuring Range Mini Digital Level &amp; Protector FMDL360">Measuring Range Mini Digital Level &amp; Protector FMDL360</option>
-  <option value="Molykote  Spray Bottel 450Ml">Molykote  Spray Bottel 450Ml</option>
-  <option value="Molykot Paste 1000Grm">Molykot Paste 1000Grm</option>
-  <option value="Mouting Stone For Flexible Shaft Grinder">Mouting Stone For Flexible Shaft Grinder</option>
-  <option value="MS Angle 65X65X5MM">MS Angle 65X65X5MM</option>
-  <option value="MS Angle 75X75X6MM">MS Angle 75X75X6MM</option>
-  <option value="MS Bolt M10*100MM">MS Bolt M10*100MM</option>
-  <option value="MS Bolt M16*65MM">MS Bolt M16*65MM</option>
-  <option value="MS Bolt M20*50MM">MS Bolt M20*50MM</option>
-  <option value="MS Bolt M20*75mm">MS Bolt M20*75mm</option>
-  <option value="MS Flange 3&quot;">MS Flange 3&quot;</option>
-  <option value="MS Flange 4&quot;">MS Flange 4&quot;</option>
-  <option value="MS Plate 3MM">MS Plate 3MM</option>
-  <option value="MS Straight Seamless Equal Tee 5&quot; Sch-40">MS Straight Seamless Equal Tee 5&quot; Sch-40</option>
-  <option value="MS Tee 1 1/2&quot; A Class">MS Tee 1 1/2&quot; A Class</option>
-  <option value="Oil Can (Kuppi)">Oil Can (Kuppi)</option>
-  <option value="Oil Gasket Non Metalic 1.5 mm, 1500*1800mm style-59">Oil Gasket Non Metalic 1.5 mm, 1500*1800mm style-59</option>
-  <option value="Oil Gasket Non Metalic 2 mm, 1500*1800mm style-59">Oil Gasket Non Metalic 2 mm, 1500*1800mm style-59</option>
-  <option value="Oil Gasket Non Metalic 3 mm, 1500*1800mm style-59">Oil Gasket Non Metalic 3 mm, 1500*1800mm style-59</option>
-  <option value="Oil Gasket Sheet 0.8MM">Oil Gasket Sheet 0.8MM</option>
-  <option value="Oil Gasket Sheet Non Metalic 3MM">Oil Gasket Sheet Non Metalic 3MM</option>
-  <option value="Oil Seal 20*35*7">Oil Seal 20*35*7</option>
-  <option value="Oil Seal 30*62*7">Oil Seal 30*62*7</option>
-  <option value="Oil Seal 35*52*7">Oil Seal 35*52*7</option>
-  <option value="Oil Seal 35*52*8">Oil Seal 35*52*8</option>
-  <option value="Oil Seal 45*60*8">Oil Seal 45*60*8</option>
-  <option value="Oil Seal 45*65*8">Oil Seal 45*65*8</option>
-  <option value="Oil Seal 50*62*7">Oil Seal 50*62*7</option>
-  <option value="Oil Seal 50*65*8">Oil Seal 50*65*8</option>
-  <option value="Oil Seal 50*68*8">Oil Seal 50*68*8</option>
-  <option value="Oil Seal 55*80*8">Oil Seal 55*80*8</option>
-  <option value="Oil Seal 70*85*8">Oil Seal 70*85*8</option>
-  <option value="OMVAL Make CI Butterly Valve 8&quot;,200MM">OMVAL Make CI Butterly Valve 8&quot;,200MM</option>
-  <option value="Oxygen Regulator With Pressure Guage">Oxygen Regulator With Pressure Guage</option>
-  <option value="PIPE MS 5&quot;">PIPE MS 5&quot;</option>
-  <option value="Pipe MS 6&quot;">Pipe MS 6&quot;</option>
-  <option value="Plastic Tarpauline 24*36">Plastic Tarpauline 24*36</option>
-  <option value="Plumber Block SN-522">Plumber Block SN-522</option>
-  <option value="Pulley Taper Lock For A-51 V-Belt,Nos of Groove:2,Size:A200">Pulley Taper Lock For A-51 V-Belt,Nos of Groove:2,Size:A200</option>
-  <option value="Return Idler 88.9*500*3.5mm(Thk)">Return Idler 88.9*500*3.5mm(Thk)</option>
-  <option value="Return Idler 88.9*600*3.5mm(Thk)">Return Idler 88.9*600*3.5mm(Thk)</option>
-  <option value="Rubber Cord 12MM">Rubber Cord 12MM</option>
-  <option value="Rubber Sheet Neoprime 5MM">Rubber Sheet Neoprime 5MM</option>
-  <option value="Rustoline Liquid 1Ltr">Rustoline Liquid 1Ltr</option>
-  <option value="Shim SS 0.05 MM Width 600MM*1Mtr">Shim SS 0.05 MM Width 600MM*1Mtr</option>
-  <option value="Shim SS 0.1 MM Width 600MM*1Mtr">Shim SS 0.1 MM Width 600MM*1Mtr</option>
-  <option value="Shim SS 0.2 MM Width 600MM*1Mtr">Shim SS 0.2 MM Width 600MM*1Mtr</option>
-  <option value="Shim SS 0.3 MM Width 600MM*1Mtr">Shim SS 0.3 MM Width 600MM*1Mtr</option>
-  <option value="Shim SS 0.5 MM Width 600MM*1Mtr">Shim SS 0.5 MM Width 600MM*1Mtr</option>
-  <option value="Short Bend MS 1 1/2&quot; Class-A">Short Bend MS 1 1/2&quot; Class-A</option>
-  <option value="Socket GI 50MM">Socket GI 50MM</option>
-  <option value="Sprocket Simplex Pitch 3/4&quot;*27teeth">Sprocket Simplex Pitch 3/4&quot;*27teeth</option>
-  <option value="Sprocket Simplex Pitch 3/4&quot;*58TTeeth">Sprocket Simplex Pitch 3/4&quot;*58TTeeth</option>
-  <option value="SS 304 Hex Nipple With 2Side Nut &amp; Sleeve">SS 304 Hex Nipple With 2Side Nut &amp; Sleeve</option>
-  <option value="Stud HT 10*250mm With Double Nut">Stud HT 10*250mm With Double Nut</option>
-  <option value="Stud HT 12*250mm With Double Nut">Stud HT 12*250mm With Double Nut</option>
-  <option value="Stud HT 16*250mm With Double Nut">Stud HT 16*250mm With Double Nut</option>
-  <option value="Stud HT 20*500mm With Double Nut">Stud HT 20*500mm With Double Nut</option>
-  <option value="Stud HT 24*500mm With Double Nut">Stud HT 24*500mm With Double Nut</option>
-  <option value="Stud HT 30*300mm With Double Nut">Stud HT 30*300mm With Double Nut</option>
-  <option value="Stud HT 8*250mm With Double Nut">Stud HT 8*250mm With Double Nut</option>
-  <option value="Taper Lock Pully 355 X 3C">Taper Lock Pully 355 X 3C</option>
-  <option value="Tube Cleaning Brush 10mm">Tube Cleaning Brush 10mm</option>
-  <option value="Tube Cleaning Brush 12mm">Tube Cleaning Brush 12mm</option>
-  <option value="Tube Cleaning Brush 14mm">Tube Cleaning Brush 14mm</option>
-  <option value="Tube Cleaning Brush 6mm">Tube Cleaning Brush 6mm</option>
-  <option value="Tube Cleaning Brush 8mm">Tube Cleaning Brush 8mm</option>
-  <option value="Tyre For Coupling F-60">Tyre For Coupling F-60</option>
-  <option value="V Block 65x65x50 Magnetic">V Block 65x65x50 Magnetic</option>
-  <option value="V Block 85x655x60 Magnetic">V Block 85x655x60 Magnetic</option>
-  <option value="Welding Cable Alluminium 400 Amp">Welding Cable Alluminium 400 Amp</option>
-  <option value="Welding Electrodes 7018, 2.5MM">Welding Electrodes 7018, 2.5MM</option>
-  <option value="Welding Electrodes 7018, 3.15MM*450MM">Welding Electrodes 7018, 3.15MM*450MM</option>
-  <option value="Welding Electrodes CI-2, 3.15MM">Welding Electrodes CI-2, 3.15MM</option>
-  <option value="Welding Hand Screen">Welding Hand Screen</option>
-  <option value="Welding Socket Plug">Welding Socket Plug</option>
-  <option value="Bearing No 2208 2ZR">Bearing No 2208 2ZR</option>
-  <option value="GLAND PACKING METALLIC GRAPHITE 3MM">GLAND PACKING METALLIC GRAPHITE 3MM</option>
-  <option value="GLAND PACKING METALLIC GRAPHITE 4MM">GLAND PACKING METALLIC GRAPHITE 4MM</option>
-  <option value="GLAND PACKING METALLIC GRAPHITE 5MM">GLAND PACKING METALLIC GRAPHITE 5MM</option>
-  <option value="Coupling F-60">Coupling F-60</option>
-  <option value="Tyre Coupling Set F-50">Tyre Coupling Set F-50</option>
-  <option value="Rotor Shaft For 100 0*1000 Impactor">Rotor Shaft For 1000*1000 Impactor</option>
-  <option value="Dia 45 Wiper Seal">Dia 45 Wiper Seal</option>
-  <option value="Sprocket Simplex Pitch 1&quot;* 16Teeth">Sprocket Simplex Pitch 1&quot;* 16Teeth</option>
-  <option value="Sprocket Simplex Pitch 1&quot;* 18Teeth">Sprocket Simplex Pitch 1&quot;* 18Teeth</option>
-  <option value="Sprocket Simplex Pitch 3/4&quot;*19teeth">Sprocket Simplex Pitch 3/4&quot;*19teeth</option>
-  <option value="Sprocket Simplex Pitch 3/4&quot;*42teeth">Sprocket Simplex Pitch 3/4&quot;*42teeth</option>
-    <option value="sprocket_simplex_13teeth">Sprocket Simplex Pitch 1" - 13 Teeth</option>
-    <option value="sprocket_simplex_52teeth">Sprocket Simplex Pitch 1" - 52 Teeth</option>
-    <option value="oil_seal_25_52_7">Oil Seal 25*52*7</option>
-    <option value="ms_pipe_1_1_2_class_c">MS Pipe 1 1/2" Class-C</option>
-    <option value="ms_pipe_3_class_c">MS Pipe 3" Class-C</option>
-    <option value="bolt_ht_24_150mm">Bolt HT 24*150MM</option>
-    <option value="bolt_ht_16_65mm_half_threaded">Bolt HT 16*65MM Half Threaded</option>
-    <option value="nrv_50mm_class_800_a_105">NRV 50MM Class-800, A-105</option>
-    <option value="asbestos_rope_16mm">Asbestos Rope 16MMM</option>
-    <option value="ht_bolt_full_threaded_16_120mm">HT Bolt Full Threaded 16*120MM With Nut & Washer</option>
-    <option value="ss_stud_12_200mm">SS Stud 12*200MM With Double Nut</option>
-    <option value="ss_stud_10_200mm">SS Stud 10*200MM With Double Nut</option>
-    <option value="ss_stud_12_65mm">SS Stud 12*65MM With Double Nut</option>
-    <option value="ss_stud_12_100mm">SS Stud 12*100MM With Double Nut</option>
-    <option value="ibr_pipe_4">IBR Pipe 4" (100MM), HPS-206, SA106, GRB-40 With TC</option>
-    <option value="ball_valve_ci_4">Ball Valve CI 4" Class-150, Max Pressure 170PSI, Pressure 12Kg/cm²</option>
-    <option value="oil_seal_35_62_7">Oil Seal 35*62*7</option>
-    <option value="ibr_short_bend_cs_a105">IBR Short Bend CS A105, 1½"*3000# Socket Weld</option>
-    <option value="shim_ss_1mm_1mtr">Shim SS 1MM*1 Mtr</option>
-    <option value="gi_bend_3_4">GI Bend 3/4"</option>
-    <option value="gland_rope_10mm">Gland Rope 10MM Style 1960</option>
-    <option value="gland_rope_6mm">Gland Rope 6MM</option>
-    <option value="sprocket_simplex_36teeth">Sprocket Simplex Pitch 1" - 36 Teeth</option>
-    <option value="ms_flange_4_class_150">MS Flange 4", Class-150</option>
-    <option value="welding_electrodes_hf7">Welding Electrodes HF7, 3.15mm</option>
-    <option value="bolt_ht_12_90mm">Bolt HT 12*90MM</option>
-    <option value="gi_reducer_2_1_2">GI Reducer 2"*1/2"</option>
-    <option value="glydring_45">GLYDRING 45</option>
-    <option value="glydring_hard_90">GLYDRING HARD 90</option>
-    <option value="slydring_90">SLYDRING 90</option>
-    <option value="middle_arm_cylinder_piston_rod_assembly">MIDDLE ARM CYLINDER PISTON ROD ASSEMBLY</option>
-    <option value="base_arm_cylinder_piston_rod_assembly">BASE ARM CYLINDER PISTON ROD ASSEMBLY</option>
-    <option value="filter_element_tie">FILTER ELEMENT TIE</option>
-    <option value="o_ring_90_3">O RING 90X3</option>
-    <option value="back_up_seal_90">BACK UP SEAL 90</option>
-    <option value="step_seal_45">STEP SEAL 45</option>
-    <option value="suction_strainer_filter">SUCTION STRAINER FILTER</option>
-    <option value="metal_breather">METAL BREATHER</option>
-    <option value="o_ring_seal_100_4">O RING SEAL 100X4</option>
-    <option value="glydring_big_45">GLYDRING BIG 45</option>
-    <option value="base_arm_cylinder_head">BASE ARM CYLINDER HEAD</option>
-    <option value="dia_63_compact_seal">Dia 63 Compact Seal</option>
-    <option value="ball_bearing_part_no_12174">Ball Bearing Part No. 12174</option>
-    <option value="ball_bearing_part_no_233213_50">Ball Bearing Part No. 233213-50</option>
-    <option value="cap_nut_part_no_522997_01">Cap Nut Part No. 522997-01</option>
-    <option value="gravaty_disc_part_no_522993_02">Gravaty Disc Part No.522993-02</option>
-    <option value="gravaty_disc_part_no_522993_03">Gravaty Disc Part No.522993-03</option>
-    <option value="gravaty_disc_part_no_522993_04">Gravaty Disc Part No.522993-04</option>
-    <option value="gravaty_disc_part_no_522993_06">Gravaty Disc Part No.522993-06</option>
-    <option value="gravaty_disc_part_no_522993_07">Gravaty Disc Part No.522993-07</option>
-    <option value="gravaty_disc_part_no_528138_03">Gravaty Disc Part No.528138-03</option>
-    <option value="gravaty_disc_part_no_528138_07">Gravaty Disc Part No.528138-07</option>
-    <option value="gravity_disc_522993_09">Gravity Disc 522993-09</option>
-    <option value="pin_part_no_323">Pin Part No.323</option>
-    <option value="seal_ring_part_no_223521_17">Seal Ring Part No. 223521-17</option>
-    <option value="shear_pin_coupling_part_no_529207_01">Shear Pin Coupling Part No. 529207-01</option>
-    <option value="sight_glass_part_no_37166">Sight Glass Part No. 37166</option>
-    <option value="tubler_pin_part_no_222119_10">Tubler Pin Part No.222119-10</option>
-    <option value="worm_wheel_part_no_63292">Worm Wheel Part No. 63292</option>
-    <option value="worn_wheel_shaft_mab103_part_no_531430_80">Worn Wheel Shaft MAB103 Part No 531430-80</option>
-    <option value="bushing_part_no_545511_01">Bushing Part No 545511-01</option>
-    <option value="impeller_part_no_545514_02">Impeller Part No 545514-02</option>
-    <option value="impeller_part_no_545515_03">Impeller Part No 545515-03</option>
-    <option value="bushing_part_no_545512_01">Bushing Part No 545512-01</option>
-    <option value="gasket_part_no_62013">Gasket Part No 62013</option>
-    <option value="gasket_part_no_37402">Gasket Part No 37402</option>
-    <option value="gasket_part_no_8392">Gasket Part No 8392</option>
-    <option value="gasket_part_no_14161">Gasket Part No 14161</option>
-    <option value="o_ring_no_223402_54">O Ring No 223402-54</option>
-    <option value="o_ring_no_223406_13">O Ring No 223406-13</option>
-    <option value="o_ring_no_709402">O Ring No 709402</option>
-    <option value="o_ring_no_64100">O Ring No 64100</option>
-    <option value="o_ring_no_223406_20">O Ring No 223406-20</option>
-    <option value="o_ring_no_223406_26">O Ring No 223406-26</option>
-    <option value="o_ring_no_223406_24">O Ring No 223406-24</option>
-    <option value="o_ring_no_223406_44"> O Ring No 223406-44</option>
-    <option value="o_ring_no_65395">O Ring No 65395</option>
-    <option value="gasket_part_no_8821">Gasket Part No 8821</option>
-    <option value="bushing_part_no_545513_01">Bushing Part No 545513-01</option>
-    <option value="rectanguler_ring_223436_19">Rectanguler Ring 223436-19</option>
-    <option value="ms_pipe_4_class_c">MS Pipe 4" Class-C</option>
-    <option value="reducer_upvc_1_1_2">Reducer UPVC 1*1/2</option>
-    <option value="reducer_upvc_11_4_1">Reducer UPVC 11/4"*1"</option>
-    <option value="reducer_upvc_11_4_1_2">Reducer UPVC 11/4"*1/2"</option>
-    <option value="socket_upvc_1_2">Socket UPVC 1/2"</option>
-    <option value="socket_upvc_3_4">Socket UPVC 3/4"</option>
-    <option value="tee_gi_1">Tee GI 1"</option>
-    <option value="tee_upvc_11_4_1_2">Tee UPVC 11/4"*1/2"</option>
-    <option value="upvc_ball_valve_1_1_2">UPVC Ball Valve 1 1/2"</option>
-    <option value="upvc_ball_valve_2">UPVC Ball Valve 2"</option>
-    <option value="upvc_brass_fta_1_1_2">UPVC Brass FTA 1 1/2"</option>
-    <option value="upvc_brass_fta_1_1_4">UPVC Brass FTA 1 1/4"</option>
-    <option value="upvc_brass_fta_1">UPVC Brass FTA 1"</option>
-    <option value="upvc_brass_fta_2">UPVC Brass FTA 2"</option>
-    <option value="upvc_elbow_3_4">UPVC Elbow 3/4"</option>
-    <option value="upvc_elbow_1_1_2">UPVC Elbow 1 1/2"</option>
-    <option value="upvc_elbow_1_1_4">UPVC Elbow 1 1/4"</option>
-    <option value="upvc_elbow_2">UPVC Elbow 2"</option >
-    <option value="upvc_flange_3">UPVC Flange 3"</option>
-    <option value="upvc_brass_fta_1_2">UPVC Brass FTA 1/2"</option>
-    <option value="upvc_long_bend_1_1_2">UPVC Long Bend 1 1/2"</option>
-    <option value="upvc_long_bend_1_1_4">UPVC Long Bend 1 1/4"</option>
-    <option value="upvc_long_bend_2">UPVC Long Bend 2"</option>
-    <option value="upvc_pipe_1_1_4">UPVC Pipe 1 1/4"</option>
-    <option value="upvc_pipe_1_1_2">UPVC Pipe 1 1/2"</option>
-    <option value="upvc_pipe_2">UPVC Pipe 2"</option>
-    <option value="upvc_pipe_2_1_2">UPVC Pipe 2 1/2"</option>
-    <option value="upvc_pipe_3">UPVC Pipe 3"</option>
-    <option value="upvc_reducer_1_1_4_1_1_2">UPVC Reducer 1 1/4"*1 1/2"</option>
-    <option value="upvc_reducer_11_2_1">UPVC Reducer 11/2"*1"</option>
-    <option value="upvc_reducer_21_2_x2">UPVC Reducer 21/2"X2"</option>
-    <option value="upvc_reducer_2_x1_1_2">UPVC Reducer 2X1 1/2"</option>
-    <option value="upvc_reducer_3_x2">UPVC Reducer 3"X2"</option>
-    <option value="upvc_fta_reducer_socket_3_4_1_2">UPVC FTA Reducer Socket 3/4"*1/2"</option>
-    <option value="upvc_socket_1_1_2">UPVC Socket 1 1/2"</option>
-    <option value="upvc_socket_1_1_4">UPVC Socket 1 1/4"</option>
-    <option value="upvc_socket_2">UPVC Socket 2"</option>
-    <option value="upvc_solution_118ml">UPVC Solution 118Ml</option>
-    <option value="upvc_stub_end_with_flange_1">UPVC Stub End With Flange 1 "</option>
-    <option value="upvc_stub_end_with_flange_1_1_2">UPVC Stub End With Flange 1 1/2"</option>
-    <option value="upvc_stub_end_with_flange_1_1_4">UPVC Stub End With Flange 1 1/4"</option>
-    <option value="upvc_stub_end_with_flange_2">UPVC Stub End With Flange 2"</option>
-    <option value="upvc_stub_end_with_flange_21_2">UPVC Stub End With Flange 21/2"</option>
-    <option value="upvc_tee_1_1_2">UPVC Tee 1 1/2"</option>
-    <option value="upvc_tee_1">UPVC Tee 1"</option>
-    <option value="upvc_tee_2">UPVC Tee 2"</option>
-    <option value="upvc_tee_3_4">UPVC Tee 3/4"</option>
-    <option value="upvc_union_1_1_2">UPVC Union 1 1/2"</option>
-    <option value="upvc_union_1_1_4">UPVC Union 1 1/4"</option>
-    <option value="upvc_tee_11_4">UPVC Tee 11/4"</option>
-    <option value="upvc_tee_2_1_2">UPVC Tee 2 1/2"</option>
-    <option value="upvc_elbow_2_1_2">UPVC Elbow 2 1/2"</option>
-    <option value="tee_gi_2">Tee GI 2"</option>
-    <option value="ear_plug_make_venus">Ear Plug Make-Venus</option>
-    <option value="nose_mask">Nose Mask</option>
-    <option value="ppe_kit_90gsm_20gsm">PPE Kit 90GSM+20GSM</option>
-    <option value="ht_nut_m10">HT Nut M10</option>
-    <option value="mechanical_seal_for_three_screw_pump">Mechanical Seal For Three Screw Pump sr No. 101097/0947,0948 Model No T3ST-80/54 Make-Tushaco</option>
-    <option value="safety_block_complete_assly">Safety Block Complete Assly.1CYJ414438,Part No.105383445</option>
-    <option value="spiral_wound_gasket_72_25_5mm">Spiral Wound Gasket 72*25*5MM SS304 With Graphoil Filler Centering Ring Gasket As Per ANSI B 16.5 Class-1500 Pressure Rating Size 75*25*5MM</option>
-    <option value="spiral_wound_gasket_76_46_3_5mm">Spiral Wound Gasket 76*46*3.5MM Class-1500</option>
-    <option value="spiral_wound_metalic_gasket_72_25_5mm">Spiral Wound Metalic Gasket 72*25*5mm Class-1500</option>
-    <option value="spiral_wound_metalic_gasket_154_192_3_5mm">Spiral Wound Metalic Gasket 154*192*3.5mm(Thk) Class-1500</option>
-    <option value="spiral_wound_metalik_gasket_285_155_5mm">Spiral Wound Metalik Gasket 285*155*5MM Thik, Class-1500</option>
-    <option value="turbine_oil_t_46">Turbine Oil T-46</option>
-    <option value="spiral_wound_copper_gasket_154_192_3mm">Spiral Wound Copper Gasket 154*192*3mm Class-1500</option>
-    <option value="spiral_wound_copper_gasket_155_285_5mm">Spiral Wound Copper Gasket 155*285*5mm Class-1500</option>
-    <option value="spiral_wound_copper_gasket_165_220_5mm">Spiral Wound Copper Gasket 165*220*5mm Class-1500</option>
-    <option value="fastner_set_for_ksb_make_gate_valve">Fastner Set For KSB Make-Gate Valve CL-900 100MM</option>
-    <option value="fastner_set_b16_4_7_for_ksb_make_gate_valve">Fastner Set (B16/4/7) For KSB Make-Gate Valve CL-900 100MM</option>
-    <option value="fastner_set_b16_4_7_part_no_920_1_902_1">Fastner Set (B16/4/7) Part No. 920.1/902.1 For Gate Valve 6" CL-900 Make KSB</option>
-    <option value="fastner_set_b7_2h_for_ksb_make_gate_valve">Fastner Set (B7/2H) For KSB Make-Gate Valve CL-900 100MM</option>
-    <option value="fastner_set_b7_2h_part_no_920_1_902_1">Fastner Set (B7/2H) Part No. 920.1/902.1 For Gate Valve 6" CL-900 Make KSB</option>
-    <option value="fastner_set_gland_for_ksb_make_gate_valve">Fastner Set (Gland) For KSB Make-Gate Valve CL-900 100MM</option>
-    <option value="fastner_set_gland_part_no_920_2_902_2">Fastner Set (Gland) Part No. 920.2/902.2 For Gate Valve 6" CL-900 Make KSB</option>
-    <option value="fastner_set_part_no_920_3_902_2">Fastner Set Part No. 920.3/902.2 For Gate Valve 6" CL-900 Make KSB</option>
-    <option value="gland_bush_for_ksb_make_gate_valve">Gland Bush For KSB Make-Gate Valve CL-900 100MM</option>
-    <option value="gland_flange_for_ksb_make_gate_valve">Gland Flange For KSB Make-Gate Valve CL-900 100MM</option>
-    <option value="gland_flange_part_no_452">Gland Flange Part No. 452 For Gate Valve 6" CL-900 Make KSB</option>
-    <option value="gland _packing_set_part_no_461">Gland Packing Set Part No. 461 For Gate Valve 6" CL-900 Make KSB</option>
-    <option value="graphite_packing_ring_163mm">Graphite Packing Ring 163MM(OD)X152MM(ID)X15MM(THK)</option>
-    <option value="grub_screw_part_no_904">Grub Screw Part No. 904 For Gate Valve 6" CL-900 Make KSB</option>
-    <option value="hand_wheel_part_no_921">Hand Wheel Part No. 921 For Gate Valve 6" CL-900 Make KSB</option>
-    <option value="joint_ring_for_ksb_make_gate_valve">Joint Ring For KSB Make Gate Valve 6" CL-900 100MM</option>
-    <option value="neck_bush_for_ksb_make_gate_valve">Neck Bush For KSB Make Gate Valve 6" CL-900 150MM (Graphite Ring)</option>
-    <option value="neck_ring_for_ksb_make_gate_valve">Neck Ring For KSB Make Gate Valve 6" CL-900 100MM</option>
-    <option value="neck_ring_for_ksb_make_gate_valve_150mm">Neck Ring For KSB Make Gate Valve 6" CL-900 150MM</option>
-    <option value="packing_ring_for_ksb_make_gate_valve">Packing Ring For KSB Make-Gate Valve CL-900 100MM</option>
-    <option value="stem_for_ksb_make_gate_valve">Stem For KSB Make-Gate Valve CL-900 100MM</option>
-    <option value="stop_nut_part_no_920">Stop Nut Part No. 920 For Gate Valve 6" CL-900 Make KSB</option>
-    <option value="graphite_packing_ring_for_mssv_valve">Graphite Packing Ring For MSSV Valve 150NB Class-1500, WCB Stem,Pin-CR13, 3750PSI AT100 Deg.FASME B16,34SPL, Ring 31.7MM (ID), 47.5MM (OD), 8MM (Thk), Make-KSB</option>
-
-</select>
-        </div>
-        <div class="form-group">
-            <label for="newItemDescription">Add New Item in Description List</label>
             <div class="input-group">
-                <input type="text" class="form-control w-75" id="newItemDescription" placeholder="Enter new item description">
+                <select class="form-control" id="itemOption">
+                    <option value="Output Gear Wheel">Output Gear Wheel</option>
+                    <option value="Output Shaft">Output Shaft</option>
+                    <option value="PIN Bush Coupling Complete Set EFC-08">PIN Bush Coupling Complete Set EFC-08</option> 
+                    <option value="Input Pinion Guide Bush">Input Pinion Guide Bush</option>
+                    <option value="Impeller MOC-CI For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Impeller MOC-CI For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
+                    <option value="Impeller Nut MOC-WCB For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Impeller Nut MOC-WCB For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
+                    <option value="Oil Seal(SC Rubber) for ACW">Oil Seal(SC Rubber) for ACW</option>
+                    <option value="Shaft With Key MOC-EN8 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Shaft With Key MOC-EN8 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
+                    <option value="Sleeve MOC-SS410 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Sleeve MOC-SS410 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
+                    <option value="Spacer Sleeve MOC-SS316 Spares for ACW Pump Make-Mather & Plantt, Sl No. 312182198/10/01">Spacer Sleeve MOC-SS316 Spares for ACW Pump Make-Mather & Plantt, Sl No. 312182198/10/01</option>
+                    <option value="Specer Sleeve MOC 55316 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Specer Sleeve MOC 55316 For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
+                    <option value="Air Cylinder of Bore 100MM, Stroke 225mm">Air Cylinder of Bore 100MM, Stroke 225mm</option>
+                    <option value="Air Limit Switch 1/4 Model No. ZCNC/1340/14">Air Limit Switch 1/4" Model No. ZCNC/1340/14</option>
+                    <option value="Bend ACI 80 NB, 45 Deg">Bend ACI 80 NB, 45 Deg</option>
+                    <option value="Bend ACI Cast Basalt 80 NB, 45 Deg, 450R*5D*45Degree">Bend ACI Cast Basalt 80 NB, 45 Deg, 450R*5D*45Degree</option>
+                    <option value="MS Deflector for ACW">MS Deflector for ACW</option>
+                    <option value="Neck Ring MOC-CI For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01">Neck Ring MOC-CI For Wilo Mather & Platt Make- Centrifugal Pump Model ET ISO-26, Sr No. 81218218/10/01</option>
+                    <option value="Blow Down Valve 50 NB">Blow Down Valve 50 NB</option>
+                    <option value="Brass Connector 1/4(Male/Female)">Brass Connector 1/4"(Male/Female)</option>
+                    <option value="Dome 200NB Shaped Head With Fitting Accessories">Dome 200NB Shaped Head With Fitting Accessories</option>
+                    <option value="Dowel Pin For 200NB Dome (inner & Outer)">Dowel Pin For 200NB Dome (inner & Outer)</option>
+                    <option value="EN -8 ESP Rapping Hammer Clamp">EN-8 ESP Rapping Hammer Clamp</option>
+                    <option value="Hex Nipple 1/2 ( Bleed Nipple)">Hex Nipple 1/2 ( Bleed Nipple)</option>
+                    <option value="Hex Nipple 3/4MM*4MM Hole">Hex Nipple 3/4MM*4MM Hole</option>
+                    <option value="Hose Flexible 3/4 *1000MM">Hose Flexible 3/4"*1000MM</option>
+                    <option value="NRV 20 NB">NRV 20 NB</option>
+                    <option value="NRV 25 NB">NRV 25 NB</option>
+                    <option value="NRV 40NB">NRV 40NB</option>
+                    <option value="O Ring Part No 035400187">O Ring Part No 035400187</option>
+                    <option value="PU Tube 10MM">PU Tube 10MM</option>
+                    <option value="Pu Tube 12MM">Pu Tube 12MM</option>
+                    <option value="PU Tube 6MM">PU Tube 6MM</option>
+                    <option value="Pu Tube 8mm">Pu Tube 8mm</option>
+                    <option value="Push fitting Union Straight 10MM OD">Push fitting Union Straight 10MM OD</option>
+                    <option value="Push fitting Union Straight 12MM OD">Push fitting Union Straight 12MM OD</option>
+                    <option value="Push fitting Union Straight 8MM OD">Push fitting Union Straight 8MM OD</option>
+                    <option value="Push In fitting Crome Plated Male Connector 10mm OD*1/4\ BSp">Push In fitting Crome Plated Male Connector 10mm OD*1/4" BSp</option>
+                    <option value="Push In fitting Crome Plated Male Connector 10mm OD*3/8\ BSp">Push In fitting Crome Plated Male Connector 10mm OD*3/8" BSp</option>
+                    <option value="Push In fitting Crome Plated Male Connector 8mm OD*1/4\ BSp">Push In fitting Crome Plated Male Connector 8mm OD*1/4" BSp</option>
+                   <option value="Push In fitting Crome Plated Male Connector 8mm OD*3/8\ BSp">Push In fitting Crome Plated Male Connector 8mm OD*3/8" BSp</option>
+                   <option value="Push In fitting Crome Plated Male Elbow 10mm OD*1/2\ BSp">Push In fitting Crome Plated Male Elbow 10mm OD*1/2" BSp</option>
+                   <option value="Push In fitting Crome Plated Male Elbow 12mm OD*1/2\ BSp">Push In fitting Crome Plated Male Elbow 12mm OD*1/2" BSp</option>
+                   <option value="Push In fitting Crome Plated Male Elbow 6mm OD*1/2\ BSp">Push In fitting Crome Plated Male Elbow 6mm OD*1/2" BSp</option>
+                   <option value="Push In fitting Crome Plated Male Elbow 8mm OD*1/2\ BSp">Push In fitting Crome Plated Male Elbow 8mm OD*1/2" BSp</option>
+                   <option value="Quick Exhaust Valve 3/4\ Alluminiun Body">Quick Exhaust Valve 3/4" Alluminiun Body</option>
+                   <option value="Quick Exhust Valve 1/4\  Opperting Pressure 0.3kg to 180PSI Alluminium Body make Schrader ">Quick Exhust Valve 1/4"  Opperting Pressure 0.3kg to 180PSI Alluminium Body make Schrader </option>
+                   <option value="Rapping Hammer For Collecting System">Rapping Hammer For Collecting System</option>
+                   <option value="Repair Kit  For 25 NB NRV">Repair Kit  For 25 NB NRV</option>
+                   <option>Repair Kit For NRV 20 NB</option> 
+                   <option>Seal Kit For Air Cylinder of Bore 100MM, Stroke 225mm</option> 
+                   <option>Silicon Seal 200NB</option> 
+                   <option>Top Plate 35MM(Thk)</option>
+                   <option>HT Allen Bolt 16*75MM</option>
+                   <option>Insert Ring For Dome Assembly 200NB</option>
+                      <option>Non Return Valve 50NB Without Flange</option> 
+                      <option>Shaft seal O Ring For 200NB dome Assembly</option> 
+                      <option>Bend ACI 100 NB, 45 Deg</option>
+                       <option>Adaptor Sleeve AHX2320</option>
+                        <option>Adaptor Sleeve H2326</option>
+                         <option>Adaptor Sleeve H311</option>
+                          <option>Adaptor Sleeve H-3126</option>
+                           <option>Adaptor Sleeve H315</option> 
+                           <option>Adaptor Sleeve H316</option> 
+                           <option>Adaptor Sleeve H317</option> 
+                           <option>Adaptor Sleeve H-320</option>
+                            <option>Adaptor Sleeve H322</option>
+                             <option>Bearing No. 22211 E1 K C3</option> 
+                             <option>Bearing No. 22320 E1K W33</option>
+                              <option>Bearing No. 32211 J2Q</option>
+                               <option>Bearing No. 32213</option> 
+                               <option>Bearing No. 3310/C3</option>
+                                <option>Bearing No 6004 ZZ/C3</option>
+                                 <option>Bearing No. 6006 2Z</option> 
+                                 <option>Bearing No. 6202 2Z</option>
+                                  <option>Bearing No. 6212 2Z</option>
+                                   <option>Bearing No. 6305 ZZ</option>
+                                    <option>Bearing No. 6307 2RSR</option>
+                                     <option>Bearing No. 6308 2RSR</option>
+                                      <option>Bearing No. 6309 2Z/C3</option> 
+                                      <option>Bearing No. 6316 C/4</option>
+                                       <option>Bearing No. 6316 C3</option>
+                                        <option>Bearing No. 6319/C3 VL241</option>
+                                         <option>Bearing No. 6322/C3</option>
+                                          <option>Bearing No. 7206 BECBP SKF</option>
+                                           <option>Bearing no. SA205</option> 
+                                           <option>Bearing No. UCF-211 SKF</option> 
+                                           <option>Bearing No.2201</option> 
+                                           <option>Bearing No.22211BKD1</option>
+                                           <option>Bearing No.22215 E1K/C3</option>
+                                           <option>Bearing No.22216EK/C3</option>
+                                           <option>Bearing No.22217 E1KC3</option>
+                                           <option>Bearing No.22220E1K/C3</option>
+                                           <option>Bearing No.22222E1/C3</option>
+                                            <option>Bearing No.22226E</option> 
+                                            <option>Bearing No.22226E1K/C3</option>
+                                             <option>Bearing No.22320 E1</option> 
+                                             <option>Bearing No.22326 EK</option> 
+                                             <option>Bearing No.23128CCK/W33/C3</option>
+        <option>Bearing No.30204J2Q</option>
+         <option>Bearing No.30205</option> 
+         <option>Bearing No.30206J2/Q</option> 
+         <option>Bearing No.30207J2Q</option>
+          <option>Bearing No.30209</option>
+           <option>Bearing No.30210</option>
+           <option>Bearing No.30212</option>
+            <option>Bearing No.30214J2Q</option>
+             <option>Bearing No.30303J2Q</option>
+              <option>Bearing No.30312J2Q</option>
+               <option>Bearing No.30314J2Q</option>
+                <option>Bearing No.32032X</option> 
+                <option>Bearing No.32208</option> 
+                <option>Bearing No.32309</option> 
+                <option>Bearing No.33208Q</option>
+                 <option>Bearing No.6000ZZ</option>
+                  <option>Bearing No.6002 ZZ</option>
+                   <option>Bearing No.6003ZZ</option> 
+                   <option>Bearing No.6004ZZ</option> 
+                   <option>Bearing No.6008ZZ</option> 
+                   <option>Bearing No.6009ZZ</option> 
+                   <option>Bearing No.6013ZZ</option>
+                    <option>Bearing No.608ZZ</option>
+                     <option>Bearing No.6201ZZ</option> 
+                     <option>Bearing No.6203 ZZ</option> 
+                     <option>Bearing No.6204 2Z</option> 
+                     <option>Bearing No.6205ZZ</option>
+                      <option>Bearing No.6206ZZ</option> 
+                      <option>Bearing No 3203 BD XL-TVH-L285</option> 
+                      <option>Bearing No.6206ZZ/C3</option>
+                       <option>Bearing No.6207ZZ</option>
+                        <option>Bearing No.6208ZZ</option>
+                         <option>Bearing No.6209/C3</option> 
+                         <option>Bearing No.6213ZZ</option> 
+                         <option>Bearing No.6215/C3</option> 
+                         <option>Bearing No.62305-2RS</option>
+                          <option>Bearing No.6303 ZZ</option> 
+                          <option>Bearing No.6306 2Z /C3</option>
+                           <option>Bearing No.6310N</option>
+                            <option>Bearing No.6310ZZ</option> 
+                            <option>Bearing No.6312/C3</option>
+                             <option>Bearing No.6312ZZ/C3</option> 
+                             <option>Bearing No.6313/C3</option>
+                              <option>Bearing No.6313 2Z</option>
+                               <option>Bearing No.6313ZRS</option> 
+                               <option>Bearing No.6317/C3</option> 
+                               <option>Bearing No.6318</option> 
+                               <option>Bearing No.6318/C3</option>
+                                <option>Bearing No.6319</option>
+                                 <option>Bearing No.7202BTVP</option>
+                                  <option>Bearing No.7313</option> 
+                                  <option>Bearing No.7315</option> 
+                                  <option>Bearing No.NJ206E/C3</option>
+                                   <option>Bearing No NJ204 E-XLTVP2</option>
+                                    <option>Bearing No.NJ2305</option> 
+                                    <option>Bearing No.NU305/C3</option>
+                                    <option>Bearing No.NU319/C3</option>
+                                     <option>Bearing No.UCF205L</option>
+                                      <option>Bearing No.UCF210</option>
+                                       <option>Bearing No.UCP204</option> 
+                                       <option>Bearing No.UCP206</option> 
+                                       <option>Bearing No.UCP208</option> 
+                                       <option>Bearing No.UCP209</option> 
+                                       <option>Bearing No.UCP218</option>
+                                       <option>Bearing No.UCT207</option> 
+                                       <option>Bearing No.UCT211</option>
+                                       <option>Bearing No.UCT309</option> 
+                                       <option>Plumber Block SNH 516 TL SKF</option>
+                                       <option>Plumber Block SNH 520 TL SKF</option> 
+                                       <option>Plummer Block SN 526 SKF</option>
+                                       <option>Bearing No.6319 C3</option> 
+                                       <option>Bearing No. 6209 ZZ</option>
+                                        <option>Plumber Block SN-510</option> 
+                                        <option>Bearing No 6304</option> 
+                                        <option>Bearing No NJ 2304</option> 
+                                        <option>Bearing No 31312 XL </option>
+                                         <option>Bearing No 6005ZZ</option> 
+                                         <option>Bearing No.3310/C3</option> 
+                                         <option>Bearing Shell Part No.1370 HAD 80/13</option>
+                                          <option>Casing Wear Ring Part No. 1502 HDA80/13 (130/149.2*12MM)</option>
+                                           <option>Circlip Part No.1932 HDA80/13</option> 
+                                           <option>Constant Level Oiler Cup Part No.1638</option> 
+                                           <option>Impeller Part No.HDA80 235/13</option> 
+                                           <option>Labyrinath Ring & HAD/HDB 65&80 Part No.1423 HAD 80/13</option>
+                                            <option>Lubrication Ring Part No. 1644 HAD 80/13</option> 
+                                            <option>Mechanical Seal SBPO Lube 2.5 DE Part No. 1433 HDA80/13</option>
+                                             <option>O-Ring,Part N0.1412,Size:302*4</option>
+                                              <option>Retaining Ring Part No. 1506 HDA80/13(54.5/72Dia20)</option>
+                                               <option>Retaining Ring Part No. 1506 HDA80/13(65/126Dia55)</option>
+                                                <option>Segmental Ring Part No. 1501 HDA80/13</option>
+                                                 <option>Set Of Fasters, Stud HAD 80/13</option> 
+                                                 <option>Set Of Gasket & O RingHDA80/13</option>
+                                                  <option>Spacer Ring Part No. 1504 HDA80/13</option>
+                                                   <option>Spacer Sleeve Part No. 1525 HAD 80/13</option> 
+                                                   <option>Spacer Sleeve Part No. 1525 HDA80/13 (54/65*66)</option>
+                                                    <option>Spacer Sleeve Part No. 1525 HDA80/13 (55/67.7*44)</option> 
+                                                    <option>Spacer Sleeve Part No. 1525.01 HAD 80/13</option>
+                                                     <option>Spring Had 40-150 Part No. 1950 HAD 80/13</option>
+                                                      <option>Tie Bolts Part No. 905 HDA80/13</option>
+                                                       <option>Wear Ring Part No.1512 HDA80/13</option>                                     
+    <option>Air Nozzle MOC Body With SS304 Tail (3mm)</option> <option>Bed Coil With Stud SA210, Gr A1, 51mm OD, 6.35mm Thk, 4689 mm Length</option> <option>Bed Coil With Stud SA210, Gr A1, 51mm OD, 6.35mm Thk, 3407 mm Length</option> <option>Cap Plate SS 304, 325mm OD ,19,, thick for 6" Coal Nozzel</option> <option>Coal Nozzle Assembly 6"</option> <option>Cross 6" For 50Tph Wind Box</option> <option>CS Seamles Pipe 3" Thk-5mm, Sch-40</option> <option>CS Seamless Pipe 5" 125MM,SCH-40</option> <option>CS Seamless Pipe SA106 GR. B, IBR, SIZE - 1"SCH - 40</option> <option>Fire Bricks 230*115*75</option> <option>High temprtature Fabric Furance Bottom Bellow 500MM (W)*25Mtr (L)</option> <option>High temprtature Fabric Economiser ID FD PA Fan Bellow 300MM (W)*12Mtr (L)</option> <option>High temprtature Fabric Economiser Inlet Bellow 500MM (W)*15Mtr (L)</option> <option>High temprtature Fabric Economiser Spreader Rotor Intel Duct 500MM (W)*1Mtr (L)</option> <option>HT J Hook With Double Nut 16*145, Thread -12MM</option> <option>Mixing Nozzle Assembly 6"</option> <option>Steam Trap Valve 1" With Inbuilt Strainer Socket Weld, Class-1500</option> <option>Supply Of Air Nozzle For 50 TPH AFSC Boiler (2.5mm)</option> <option>Supply Of Boiler Bank Ash Chute Assembly</option> <option>THERMODYNAMIC STEAM TRAP VALVE 1/2" WITH INBUILT STRAINER SOCKET WELD, CLASS-800 MAKE FORBEMARSHERL</option> <option>Dia 45 U Cup Seal</option> <option>OUTER BUSH 40</option> <option>Constant Level Oiler</option> <option>Impeller With Gasket & Disc CPK 65-315</option> <option>Lantern Ring Part No.1458 for CEP,Make-KSB,Model No.CPKEC65-315, SL NO.: 511041156/100/01</option> <option>Neck Ring</option> <option>Set of O-Ring & Gasket Part No.STD for CEP,Make-KSB,Model No.CPKEC65-315, SL NO.: 511041156/100</option> <option>Single Cartridge Mechanical Seal 55MM, CPK EC 65-315, Drg. No. MS/19/0196 (CEP Pump)</option> <option>SHAFT PROT SLEEVE PART NO.: 1524 FOR KSB MAKE CEP, MODEL NO. CPKEC65-315, SL NO.: 511041156/100/01</option> <option>Angle Clit 100mm*90mm</option> <option>Anti Vibration Mount Rubber Pad</option> <option>Bearing Cover</option> <option>Bearing Cover Part No. 1.02.2031.0.04 </option> <option>Bearing Flange With Pipe Make-Sayaji</option> <option>Belt Conveyor 500MM, 315/3, TC-5MM, BC-3MM, GRADE-M24, Thick-10mm</option> <option>Box Plate 270MM*220MM*1345 MM(Top Bottom)</option> <option>Carrying Idler 88.9*200*3.5mm(Thk)</option> <option>Carrying Idler 89x250MM</option> <option>Coupling Pin Bush BC4</option> <option>Gravity Take Up pully</option> <option>Guide Roller 76*145mm</option> <option>Helical Spring OD-140MM, ID-105MM, L-265MM, THK-18M</option> <option>Horizontal Box 1345mm*150mm</option> <option>Impact Idler 114*235*265 mm, 3.5mm Thk</option> <option>Impact Idler Roller Pipe Dia 76.2*114MM*L-200MM*3.5Thik</option> <option>Impact Idler Roller Pipe Dia 76.2*114MM*L-235MM*3.5Thik</option> <option>Labyrinth Ring-1.02.2032.008.R1</option> <option>Return Idler 114*700*750 mm, 3.5mm thk</option> <option>Shaft Make-Sayaji V-12*30-II</option> <option>Side Clit 130mm*130mm</option> <option>Snub puuly Dia 114.3*L-700 MM*3.5THK* MS SHELL SHAFT DIA 30MM</option> <option>Snub puuly Dia 88.9*L-600 MM*3.5THK* MS SHELL SHAFT DIA 30MM</option> <option>Tyre For Coupling F-50</option> <option>Vertical Support Angle 1000mm</option> <option>Vertical Support Flat 1000mm</option> <option>Wire Mesh SS Screen Cloth Panel 1300MM*1050MM, 5MM Wire Dia, Opening 8MM</option> <option>Wire Mesh SS Screen Cloth Panel 2000MM*680MM, 5MM Wire Dia, Opening 8MM</option> <option>Allen Bolt HT 6*100mm Half Threaded</option> <option>Allen Bolt HT 6*40</option> <option>Allen Bolt HT 8*100mm Half Threaded</option> <option>Allen Bolt HT 8*75mm Half Threaded</option> <option>Allen Grub Screw 10*25MM</option> <option>Allen Grub Screw 12*25MM</option> <option>Asbestos Rope 8mm</option> <option>Ball Valve 1 1/2"</option> <option>Ball Valve Brass 1 1/4"</option> <option>Ball Valve Brass 1"</option> <option>Ball Valve Brass 1/2"</option> <option>Ball Valve Brass 2"</option> <option>Bolt HT 10*40MM With Nut & Washer</option> <option>Bolt HT 12*100MM Full Threaded</option> <option>Bolt HT 12*50MM Full Threaded</option> <option>Bolt HT 12*65MM</option> <option>Bolt HT 16*100mm Full Threaded</option> <option>Bolt HT 16*50MM Full Threaded</option> <option>Bolt HT 16*70MM Half Threaded</option> <option>Bolt HT 16*75mm Full Threaded</option> <option>Bolt HT 20*100MM Full Threaded</option> <option>Bolt HT 20*150MM Full Threaded</option> <option>Bolt HT 20*200MM Full Threaded</option> <option>Bolt HT 20*50MM Half Threaded</option> <option>Bolt HT 20*75MM Full Threaded</option> <option>Circlip External 45MM Ø</option> <option>Circlip External 50MM Ø</option> <option>Circlip Internal 100MM Ø</option> <option>Circlip Internal 45MM Ø</option> <option>Cotton Waste</option> <option>Cutting Nozzle B1/ 16</option> <option>Cutting Nozzle B3/64</option> <option>Flash Back Arrestor LPG</option> <option>Flash Back Arrestor Oxygen</option> <option>Gasket Non Metalik 5MM</option> <option>Gear Oil 320</option> <option>GI Hose Clamp ½"</option> <option>GI Hose Clamp 1"</option> <option>GI Hose Clamp 2"</option> <option>GI Hose Clamp 2½"</option> <option>GI Hose Clamp 3"</option> <option>Hardner Compound For TC-310 Cold Solution 45 ML</option> <option>HT Bolt Full Threaded 10*50MM</option> <option>HT Nut M12</option> <option>HT Nut M16</option> <option>HT Stud 18*150,Double Nut With Washer</option> <option>HT Stud 24*160,Double Nut With Washer</option> <option>Lighter</option> <option>Loctite 638</option> <option>MS Bolt 12*100MM</option> <option>MS Bolt 12*150MM</option> <option>MS Bolt 20*150MM</option> <option>MS Bolt 20*200MM</option> <option>MS Bolt 6*50MM</option> <option>MS Bolt 8*50MM</option> <option>MS Bolt M10*50MM</option> <option>MS Bolt M10*75MM</option> <option>MS Bolt M12*50MM</option> <option>MS Bolt M12*75MM</option> <option>MS Bolt M16*100MM</option> <option>MS Bolt M16*75MM</option> <option>MS Bolt M16X50MM</option> <option>MS Bolt M6*30MM</option> <option>MS Bolt M8*30 With Nut</option> <option>Oil Seal 40*52*7</option> <option>Oil Seal 12*25*7</option> <option>Oil Seal 13*25*7</option> <option>Oil Seal 15*24*7</option> <option>Oil Seal 15*30*7</option> <option>Oil Seal 160*190*15</option> <option>Oil Seal 162*287*50</option> <option>Oil Seal 30*47*7</option> <option>Oil Seal 30*50*7</option> <option>Oil Seal 30*60*7</option> <option>Oil Seal 35*72*10</option> <option>Oil Seal 40*62*7</option> <option>Oil Seal 40*62*8</option> <option>Oil Seal 44.5*69.85*7.93</option> <option>Oil Seal 45*52*7</option> <option>Oil Seal 45*60*8</option> <option>Oil Seal 45*62*10</option> <option>Oil Seal 50*62*8</option> <option>Oil Seal 50*65*8</option> <option>Oil Seal 50*70*10</option> <option>Oil Seal 50*85*10</option> <option>Oil Seal 52*72*8</option> <option>Oil Seal 55*72*10</option> <option>Oil Seal 55*72*7</option> <option>Oil Seal 55*72*8</option> <option>Oil Seal 60*80*10</option> <option>Oil Seal 60*85*8</option> <option>Oil Seal 65*80*8</option> <option>Oil Seal 65*85*10</option> <option>Oil Seal 68*90*10</option> <option>Plastic Tarpoline</option> <option>PTFE Gland Packing 10mm</option> <option>PTFE Gland Packing 12mm</option> <option>PTFE Gland Packing 6mm</option> <option>Rubber Spider L-100</option> <option>Rubber Spider L-110</option> <option>Rubber Spider L-150</option> <option>Rubber Spider L-190</option> <option>Rubber Spider L -75</option> <option>Rubber Spider L-95</option> <option>Rubber Spider SW 225/140</option> <option>Rust Cleaner WD-40</option> <option>SS Bolt M10*75MM</option> <option>SS Bolt M12*50MM</option> <option>SS Bolt M12*70MM</option> <option>SS Nut M10</option> <option>SS Nut M12</option> <option>SS Washer Flat M10</option> <option>SS Washer Flat M12</option> <option>V Belt A-51</option> <option>V Belt B43</option> <option>V Belt B45</option> <option>V Belt B73</option> <option>V Belt B78</option> <option>V Belt B79</option> <option>V Belt B80</option> <option>V Belt B85</option> <option>V Belt B94</option> <option>V Belt B95</option> <option>V Belt C112</option> <option>V Belt C200</option> <option>V Belt C240</option> <option>V Belt C62</option> <option>V Belt C75</option> <option>V Belt C-93</option> <option>V Belt D180</option> <option>V Belt SPA850</option> <option>V Belt SPC6000</option> <option>Welding Cable Copper 400 Amp</option> <option>Welding Electrodes 6013, 2.5MM</option> <option>Welding Electrodes 6013, 3.15MM</option> <option>Welding Electrodes 6013, 4MM</option> <option>Welding Electrodes E309L,3.20MM</option> <option>Welding Electrodes HF6,4.00mm</option> <option>Welding Electrodes HF7,4.00MM</option> <option>Welding Electrodes RMG 2011 4,,*350mm</option> <option>Welding Holder 600Amp</option> <option>V Belt B64</option> <option>External Circlip 95MM</option> <option>External Circlip 80MM</option> <option>External Circlip 40MM</option> <option>External Circlip 15MM</option> <option>Rubber Cord 3MM</option> <option>Rubber Cord 4MM</option> <option>Rubber Cord 5MM</option> <option>Rubber Cord 6MM</option> <option>Rubber Cord 8MM</option> <option>Rubber Cord 10MM</option> <option>Bolt HT 12*75MM Full Threaded</option> <option>Bolt HT 20*70MM Half Threaded</option> <option>Rubber Cord 1MM</option> <option>Rubber Cord 2MM</option> <option>Rubber Cord 15MM</option> <option>Allen Bolt HT 6*60mm Half Threaded</option> <option>Allen Bolt HT 6*75mm Half Threaded</option> <option>Blade (Cotton Chip cutter)</option> <option>Mouth Peace Frame</option> <option>Oil Seal (Cotton Chip cutter)</option> <option>Grinding Gib Curved MN GR-III (1set=4)</option> <option>Grinding Gib Nut Bolts 30*100MM With Spring Washer</option> <option>Grinding Gib Straight (1Set*4Nos)</option> <option>HT Square Head Bolt 20*100MM With Double Nut & Washer</option> <option>Impact Blade Mn Gr-II 1000X1000 MM</option> <option>Liner Plate For Lower Housing Part No 5522072.02.01</option> <option>Liner Plates Bolt 16*65MM With Spring Washer (60 nos)</option> <option>Perforated Plate Moc-FE410S, Part No 960211902.01</option> <option>Upper Housing Liner Plate & Bracket</option> <option>Control Transformer Indoor Dry Type-2 KVA,Input Voltage : 440V,Output Voltage(Dual O/P) 110V/230VAC</option> <option>Current Transformer Ratio:100/1-1-1-1AMP</option> <option>Current Transformer Ratio :70/1AMP</option> <option>Current Transformer Ratio-800/1-1-1A</option> <option>Potential Transformer Earthed Type-50HZ,Ratio:11KV,110V,Nos od Core :3,Rating:30VA/PH,Insulation Lav</option> <option>Voltage Transformer, 145kv, type Veot:- 145/650/50 insulation glass 275 kv Ratio 132KV/V3/110V/V3 , Make;-Crompton Greaves Ltd</option> <option>SS Nut Bolt 16*65MM With Washer</option> <option>SS Nut M16</option> <option>SS Washer M16</option> <option>SS Stud 10*160MM With Double Nut</option> <option>SS Stud 8*160MM With Double Nut</option> <option>1465 (A) Flexiguard (SHP-IND) Black 700 Ml</option> <option>150 Watt LED Light Crompton</option> <option>16 Way ETPN Make-Legrand</option> <option>200 Watt LED Food Light Crompton</option> <option>3 core*2.5 sqmm Alluminium Armoured Cable</option> <option>3 core*2.5 sqmm Copper Armoured Cable</option> <option>3 core*6 sqmm Alluminium Armoured Cable</option> <option>35 Watt LED Light Well Glass Crompton</option> <option>40 Watt LED Light Well Glass Crompton</option> <option>6084 Red Insulation Varnish 500Ml</option> <option>70 Watt LED Street Light Crompton</option> <option>8060 Safety Solvent CO2 700Ml</option> <option>ABB VCB AUXILARY CONTACT BB1 (3NO+2NC) SR NO. V 104792 MODEL VD4 12.12.40, 1250AMP, RATED VOLTAGE 12KV</option> <option>ABB VCB AUXILARY CONTACT BB2 (2NO+3NC) SR NO. V 104792 MODEL VD4 12.12.40, 1250AMP, RATED VOLTAGE 12KV</option> <option>ABB VCB AUXILARY CONTACT BB3 (3NO+2NC) SR NO. V 104792 MODEL VD4 12.12.40, 1250AMP, RATED VOLTAGE 12KV</option> <option>Aux. Switch 3RV, 3RV2901 1B</option> <option>Auxiliary Contact Block KH1-11</option> <option>Bulb 100 Watt</option> <option>Capacitor 10 UF</option> <option>Capacitor 2.5 MFD</option> <option>Capacitor 33 MFD</option> <option>Capacitor 6 MFD</option> <option>Capacitor 8 MFD</option> <option>Cast Alluminium Fan For Sutaible Dor ND315, CGL ND315, ID 90MM</option> <option>Contactor 3pole, 1NC type AL9-30-01, Coil 110VDC, R86 ABB make</option> <option>Contactor Coil 220V, 50HZ, MNX 32</option> <option>Contactor Coil 220V, 50HZ, MNX 70</option> <option>Contactor Kit Type MNX-25, 220 V</option> <option>Contactor Kit Type MNX-32, 220 V</option> <option>Copper Armord Cable 4 core*2.5 Sqmm</option> <option>Copper Cable Flexible 16Sqmm*1C</option> <option>Copper Cable Flexible 25Sqmm*1C</option> <option>Copper Cable Flexible 35Sqmm*1C</option> <option>Copper Flexible Cable 4 Sqmm*4 Core</option> <option>CRC 226 Spray (Online Contact Cleaner)</option> <option>DB Box 20 Amp</option> <option>Elmax Terminal Block 10sqmm</option> <option>Elmax Terminal Block 16sqmm</option> <option>Elmax Terminal Block 2.5sqmm</option> <option>Elmax Terminal Block 4sqmm</option> <option>ETPN 12WAY</option> <option>Ex haust Fan Motor 24", RPM-900</option> <option>Exhaust Fan Blade 24"</option> <option>Fan Cover ND-132</option> <option>Fan Cover ND-225 For CGL Motor 45Kw, 60HP, RPM2955</option> <option>Fuze Link HG size F1,2A Bolted</option> <option>Fuze Link HG size F1,4A Bolted</option> <option>Grease Unirex N3 Mobil</option> <option>Halogen Fitting 1000Watt</option> <option>HPSV Lamp 150 Watt</option> <option>HPSV Lamp 250 Watt</option> <option>HPSV Lamp 400 Watt</option> <option>HRC Fuze link HN 00 125Amp</option> <option>Fuse Link 125Amp</option> <option>HRC Fuze link 63Amp</option> <option>HT Bolt M18*100 With Nut</option> <option>HT Para Tape</option> <option>Induction Motor 1/2" Make-Kirloskar</option> <option>Labrynth Seal For DE Side Inside</option> <option>Labrynth Seal For DE Side Outside</option> <option>LED Foodlight Fitting 100Watt</option> <option>LED Indication Lamp Blue 110V AC</option> <option>LED Indication Lamp Green 110V AC</option> <option>LED Indication Lamp Red 110V AC</option> <option>LED Indication Lamp White 110V AC</option> <option>LED Indication Lamp Yellow 110V AC</option> <option>LED Rechargeble Bulb 9Watt</option> <option>MCB 1 pole 10Amp</option> <option>MCB 1 pole, 16Amp</option> <option>MCB 1 pole, 20Amp</option> <option>MCB 10Amp, 2 Pole</option> <option>MCB 2 pole, 63Amp</option> <option>MCB 20Amp, 4pole</option> <option>MCB 3 pole, 32Amp</option> <option>MCB 4 pole, 32Amp</option> <option>MCB 4 pole, 63Amp</option>
+    <option value="MCB 4 pole, 63Amp">MCB 4 pole, 63Amp</option>
+    <option value="MCB AC Box 32Amp">MCB AC Box 32Amp</option>
+    <option value="Motor Terminal Plate M16 Make-ABB">Motor Terminal Plate M16 Make-ABB</option>
+    <option value="MPCB 0.9-1.25A, 3RV2111 1KA10">MPCB 0.9-1.25A, 3RV2111 1KA10</option>
+    <option value="MPCB 1.4-2A, 3RV2111 0BA10">MPCB 1.4-2A, 3RV2111 0BA10</option>
+    <option value="MPCB 2.8-4A, 3RV2111 1EA10">MPCB 2.8-4A, 3RV2111 1EA10</option>
+    <option value="MPCB 3.5-5A, 3RV2111 1FA10">MPCB 3.5-5A, 3RV2111 1FA10</option>
+    <option value="MPCB ms116.1.6 AMP 1SAM250000r1006 ABB">MPCB ms116.1.6 AMP 1SAM250000r1006 ABB</option>
+    <option value="Oil Seal 17*27*5">Oil Seal 17*27*5</option>
+    <option value="Overload Relay Make-L&T,MN2, Range:14~23 AMP">Overload Relay Make-L&T,MN2, Range:14~23 AMP</option>
+    <option value="Overload Relay Make-L&T,MN5, Range:20~33 AMP">Overload Relay Make-L&T,MN5, Range:20~33 AMP</option>
+    <option value="Overload Relay Make-L&T,MN5, Range:45~75 AMP">Overload Relay Make-L&T,MN5, Range:45~75 AMP</option>
+    <option value="Overload Relay Make-L&T,MN5, Range:66~110 AMP">Overload Relay Make-L&T,MN5, Range:66~110 AMP</option>
+    <option value="Overload Relay Make-Siemens 3UA5000-0K, 0.8-1.25AMP">Overload Relay Make-Siemens 3UA5000-0K, 0.8-1.25AMP</option>
+    <option value="Overload Relay Make-Siemens 3UA5000-1E, 2.5-4AMP">Overload Relay Make-Siemens 3UA5000-1E, 2.5-4AMP</option>
+    <option value="Overload Relay Make-Siemens 3UA5000-1F, 3.2-5AMP">Overload Relay Make-Siemens 3UA5000-1F, 3.2-5AMP</option>
+    <option value="Overload Relay Make-Siemens 3UA5200-2A, 10-16AMP">Overload Relay Make-Siemens 3UA5200-2A, 10-16AMP</option>
+    <option value="Overload Relay Make-Siemens 3UA5500-2R, 32-40AMP">Overload Relay Make-Siemens 3UA5500-2R, 32-40AMP</option>
+    <option value="Overload Relay Make-Siemens 3UA 5800-2PZ1, 50-63AMP">Overload Relay Make-Siemens 3UA5800-2PZ1, 50-63AMP</option>
+    <option value="Overload Relay Make-Siemens 3UC5830-5G, 40-63AMP">Overload Relay Make-Siemens 3UC5830-5G, 40-63AMP</option>
+    <option value="Overload Relay Make-Siemens 3UC6230-5A, 100-160AMP">Overload Relay Make-Siemens 3UC6230-5A, 100-160AMP</option>
+    <option value="Overload Relay Make-Softhard, Range 1-10Amp, Type 27, Micro-mpd-wod, 230V">Overload Relay Make-Softhard, Range 1-10Amp, Type 27, Micro-mpd-wod, 230V</option>
+    <option value="Pendent Holder">Pendent Holder</option>
+    <option value="Porceline Holder Threaded Type 250Watt">Porceline Holder Threaded Type 250Watt</option>
+    <option value="Porciline Holder E-27">Porciline Holder E-27</option>
+    <option value="RCCB 63Amp, 100MA">RCCB 63Amp, 100MA</option>
+    <option value="SFU 63A, 3KL8221 5TA00">SFU 63A, 3KL8221 5TA00</option>
+    <option value="Silica Gel For Transformer">Silica Gel For Transformer</option>
+    <option value="Silicon Diode SKR 240/16 L150 H13(240A/1600V) Make-Semikron">Silicon Diode SKR 240/16 L150 H13(240A/1600V) Make-Semikron</option>
+    <option value="Starter For Tubelight">Starter For Tubelight</option>
+    <option value="Terminal Plate For 3Hp Induction Motor Flange mounted Make-CGL M/c No. NADW-96068 DV Frame Size-ND315S">Terminal Plate For 3Hp Induction Motor Flange mounted Make-CGL M/c No. NADW-96068 DV Frame Size-ND315S</option>
+    <option value="Terminal Plate STAMFORD AC GENERATOR TERMINAL PLATE  TORQUE 20-30Nm, 450-15617,">Terminal Plate STAMFORD AC GENERATOR TERMINAL PLATE  TORQUE 20-30Nm, 450-15617,</option>
+    <option value="Transformer Oil HP">Transformer Oil HP</option>
+    <option value="Tube Rod 18 Watt">Tube Rod 18 Watt</option>
+    <option value="PT Fuse 12KV 3.15 A 45 KA">PT Fuse 12KV 3.15 A 45 KA</option>
+    <option value="Power Contactor 3TF 3110-0AP0,12Amp 230V">Power Contactor 3TF 3110-0AP0,12Amp 230V</option>
+    <option value="Power Contactor 3TF 3200-0AP0,16Amp 230V">Power Contactor 3TF 3200-0AP0,16Amp 230V</option>
+    <option value="Power Contactor 3TF 3400-0AP0,32Amp 230V">Power Contactor 3TF 3400-0AP0,32Amp 230V</option>
+    <option value="Power Contactor 3TF 4822-0AP01,75Amp 230V">Power Contactor 3TF 4822-0AP01,75Amp 230V</option>
+    <option value="Power Contactor 3TF 5002-0AP0,110Amp 230V">Power Contactor 3TF 5002-0AP0,110Amp 230V</option>
+    <option value="Power Contactor 3TF 5302-0AP0,205Amp 230V">Power Contactor 3TF 5302-0AP0,205Amp 230V</option>
+    <option value="Fuse 170M,1564D 50A 690V, DIN000 Make-Bussmann">Fuse 170M,1564D 50A 690V, DIN000 Make-Bussmann</option>
+    <option value="Metal Clad Plug,3Pin,20A">Metal Clad Plug ,3Pin,20A</option>
+    <option value="Metal Clad Top,3Pin,20A">Metal Clad Top,3Pin,20A</option>
+    <option value="Single Phase Preventor SM-301">Single Phase Preventor SM-301</option>
+    <option value="Relay PSU14N-2X 1MYN563620-DBA">Relay PSU14N-2X 1MYN563620-DBA</option>
+    <option value="Plug Relay With Base CR-M4SS (1SVR405651R3000) Make-ABB">Plug Relay With Base CR-M4SS (1SVR405651R3000) Make-ABB</option>
+    <option value="Add On Block 1NO,CA5-01">Add On Block 1NO,CA5-01</option>
+    <option value="Add On Block 1NO,CA5-10">Add On Block 1NO,CA5-10</option>
+    <option value="MCCB 2P-15KA 150A-DC, Part No. 48622150015">MCCB 2P-15KA 150A-DC, Part No. 48622150015</option>
+    <option value="MCCB 3P, 10KA,75A AC, Part No. 48631100007">MCCB 3P, 10KA,75A AC, Part No. 48631100007</option>
+    <option value="Cable Gland CGS 45MM (1.3/4)">Cable Gland CGS 45MM (1.3/4")</option>
+    <option value="AUX SW FOR CS3A2/CS3B2 PART NO. 48697100018">AUX SW FOR CS3A2/CS3B2 PART NO. 48697100018</option>
+    <option value="AUX SWITCH 1C/O-4,CS2A3,CS2A4-20A, PART NO. 48697100021">AUX SWITCH 1C/O-4,CS2A3,CS2A4-20A, PART NO. 48697100021</option>
+    <option value="AUX SW FOR CS3A3/A4,CS3B3/B4,,PART NO:8697100019">AUX SW FOR CS3A3/A4,CS3B3/B4,,PART NO:8697100019</option>
+    <option value="Power Supply Unit CP-e 24/5.0 1SVR427034R0000">Power Supply Unit CP-e 24/5.0 1SVR427034R0000</option>
+    <option value="MCCB 200Amp, 3Pole, 25KA">MCCB 200Amp, 3Pole, 25KA</option>
+    <option value="LED Tube Lighting Fitting 20Watt">LED Tube Lighting Fitting 20Watt</option>
+    <option value="Rotory Compressor 1.5Tr, Splite Model No 1.5tr, Vertis Clasic, Power Supply 1Ph, 230v, 50Hz, Refrigerent R-22 Make-Voltas">Rotory Compressor 1.5Tr, Splite Model No 1.5tr, Vertis Clasic, Power Supply 1Ph, 230v, 50Hz, Refrigerent R-22 Make-Voltas</option>
+    <option value="Reprocess Plasitc Sheet">Reprocess Plasitc Sheet</option>
+    <option value="Metallic Green Start Push Button 20mm With Actuator">Metallic Green Start Push Button 20mm With Actuator</option>
+    <option value="Metallic Red Stop Push Button 20mm Latching With key with Actuator">Metallic Red Stop Push Button 20mm Latching With key with Actuator</option>
+    <option value="Metallic Red Start Push Button 20mm With Actuator">Metallic Red Start Push Button 20mm With Actuator</option>
+    <option value="Normaly Close Contact (NC) IEC947-5-1 Element Red">Normaly Close Contact (NC) IEC947-5-1 Element Red</option>
+    <option value="Normaly Open Contact (NC) IEC947-5-1 Element Green">Normaly Open Contact (NC) IEC947-5-1 Element Green</option>
+    <option value="Gear Motor Type 30 DPP/71 Sl. No. 168290210001, Make:BONFIGLIOLI GROUP">Gear Motor Type 30 DPP/ 71 Sl. No. 168290210001, Make:BONFIGLIOLI GROUP</option>
+    <option value="Gear Motor Type 55 DPP/100,SR NO.168290180001,Make:BONFIGLIOLI GROUP">Gear Motor Type 55 DPP/100,SR NO.168290180001,Make:BONFIGLIOLI GROUP</option>
+    <option value="Gearbox SNU 7&quot;, Ratio 70:01:00, Sl No. 631883,Make Elecon (Shaft Ø IP 40MM, OP 70MM)">Gearbox SNU 7&quot;, Ratio 70:01:00, Sl No. 631883,Make Elecon (Shaft Ø IP 40MM, OP 70MM)</option>
+    <option value="Worm Shaft 50:1SNGL Sr No. NPW48302/003 Make-Shanthi Gear">Worm Shaft 50:1SNGL Sr No. NPW48302/003 Make-Shanthi Gear</option>
+    <option value="Worm Wheel 50:1 UO &amp; V Sr No. NPW3831/016 Make-Shanthi Gear">Worm Wheel 50:1 UO &amp; V Sr No. NPW3831/016 Make-Shanthi Gear</option>
+    <option value="Circlip Part No.932,62*2 for Hotwell Pump">Circlip Part No.932,62*2 for Hotwell Pump</option>
+    <option value="Impeller Nut Part No.1922,for Hotwell Pump">Impeller Nut Part No.1922,for Hotwell Pump</option>
+    <option value="Impeller Part No.1230 for Hotwell Pump ,Make-KSB,Model No.CPKEC50-200, SL NO.: 511041156/100/01">Impeller Part No.1230 for Hotwell Pump ,Make-KSB,Model No.CPKEC50-200, SL NO.: 511041156/100/01</option>
+    <option value="Shaft Part No.1210,CPKP25-65S for Hotwell Pump">Shaft Part No.1210,CPKP25-65S for Hotwell Pump</option>
+    <option value="Shaft Prot Sleeve Part No.1524,Fpr Hotwell Pump">Shaft Prot Sleeve Part No.1524,Fpr Hotwell Pump</option>
+    <option value="Shaft Seal Ring Part No.1421 for Hotwell Pump">Shaft Seal Ring Part No.1421 for Hotwell Pump</option>
+    <option value="Oil Seal Part No. WH-1125/16">Oil Seal Part No. WH-1125/16</option>
+    <option value="Worm Wheel Part No. 1125/12">Worm Wheel Part No. 1125/12</option>
+    <option value="Coupling Complete Set With Gear Coupling LFG102,LFG103 &amp; 140MM Spacer Nut,Bolt &amp; Washer ,Make-LOVE JOY">Coupling Complete Set With Gear Coupling LFG102,LFG103 &amp; 140MM Spacer Nut,Bolt &amp; Washer ,Make-LOVE JOY</option>
+    <option value="Grid Coupling Complete Set FRC-13-Z">Grid Coupling Complete Set FRC-13-Z</option>
+    <option value="Grid Coupling S10,H110,ZN455/ZN456,Coupling Flange No.-10MC 110 ZN217,Make-CVL">Grid Coupling S10,H110,ZN455/ZN456,Coupling Flange No.-10MC 110 ZN217,Make-CVL</option>
+    <option value="Grid Coupling S11 H111 ZN500,Coupling Flange No.-11FC 111 ZN212,Make-CVL">Grid Coupling S11 H111 ZN500,Coupling Flange No.-11FC 111 ZN212,Make-CVL</option>
+    <option value="Spring For Grid Coupling FRC-10Z">Spring For Grid Coupling FRC-10Z</option>
+    <option value="Spring For Grid Coupling FRC-11-Z">Spring For Grid Coupling FRC-11-Z</option>
+    <option value="Spring For Grid Coupling FRC-13Z">Spring For Grid Coupling FRC-13Z</option>
+    <option value="Air Lubricator 15NB">Air Lubricator 15NB</option>
+    <option value="Air Regulator 1/2&quot;NPT,Range:0-7Kgs/cm2">Air Regulator 1/2&quot;NPT,Range:0-7Kgs /cm2</option>
+    <option value="Battery For Motorola XIRP 3688">Battery For Motorola XIRP 3688</option>
+    <option value="Belt Sway Switch 2NO+2NC">Belt Sway Switch 2NO+2NC</option>
+    <option value="Control Valve Packing Set , Stem,Actuator Diaphragm SR. NO. 115T2943 MAKE KOSO">Control Valve Packing Set , Stem,Actuator Diaphragm SR. NO. 115T2943 MAKE KOSO</option>
+    <option value="Control Valve Packing Set,Stem,Actuator Diaphragm SR. NO. 115T2945 MAKE KOSO">Control Valve Packing Set,Stem,Actuator Diaphragm SR. NO. 115T2945 MAKE KOSO</option>
+    <option value="Cooling Fan With Motor For Air Dryer Mottor Watt 2.25Amp RPM-1350">Cooling Fan With Motor For Air Dryer Mottor Watt 2.25Amp RPM-1350</option>
+    <option value="Different Pressure Switch DPI-180 Sr. No. DPI949G19">Different Pressure Switch DPI-180 Sr. No. DPI949G19</option>
+    <option value="Double Acting Air Lock Relay">Double Acting Air Lock Relay</option>
+    <option value="Positioner EPT-002 FOR PC">Positioner EPT-002 FOR PC</option>
+    <option value="Extension Cable FW-202FA-85 For Vibration Monitoring System">Extension Cable FW-202FA-85 For Vibration Monitoring System</option>
+    <option value="Fan for DCS Door Ventilation,Make-Sunon,DP201A2123HST, 240V, 50Hz">Fan for DCS Door Ventilation,Make-Sunon,DP201A2123HST, 240V, 50Hz</option>
+    <option value="Gather With Hose Clips">Gather With Hose Clips</option>
+    <option value="Hinges For PS, ES &amp; DK Range 130 Degree Make-Rittal">Hinges For PS, ES &amp; DK Range 130 Degree Make-Rittal</option>
+    <option value="I To P Convertor TEIP-11 Input-4-20MA, Output-0.2To1Kgs/cm2">I To P Convertor TEIP-11 Input-4-20MA, Output-0.2To1Kgs/cm2</option>
+    <option value="K Type Compensating Cable 3/26 FG">K Type Compensating Cable 3/26 FG</option>
+    <option value="Level Switch Model No. 40H-WP/545/SDW/C3-IV Make V Automat">Level Switch Model No. 40H-WP/545/SDW/C3-IV Make V Automat</option>
+    <option value="Level Switch Model No. 40YWP/5DW/EA-U1 Make V Automat">Level Switch Model No. 40YWP/5DW/EA-U1 Make V Automat</option>
+    <option value="Level Transmitter Type-3051 CD2A22A1AM5B4DF504,SUPPLY 10.5~55V DC, OUTPUT 4~20mA,MWP3626PSI/250BAR">Level Transmitter Type-3051 CD2A22A1AM5B4DF504,SUPPLY 10.5~55V DC, OUTPUT 4~20mA,MWP3626PSI/250BAR</option>
+    <option value="Limit Switch JLSL BC-9, IP67">Limit Switch JLSL BC-9, IP67</option>
+    <option value="Oil Seal &amp; O Ring For Motorized Valve K150 Make-Rotork">Oil Seal &amp; O Ring For Motorized Valve K150 Make-Rotork</option>
+    <option value="Positioner Pneumatic Model No. 7401-800 Make-MIL">Positioner Pneumatic Model No. 7401-800 Make-MIL</option>
+    <option value="Pressure Gauge SS304,100mm,Range 0-6Kgs,Model No.EN-837-1">Pressure Gauge SS304,100mm,Range 0-6Kgs,Model No.EN-837-1</option>
+    <option value="Pressure Switch RT-112 Make-Indfos">Pressure Switch RT-112 Make-Indfos</option>
+    <option value="Pull Card Rope">Pull Card Rope</option>
+    <option value="Pull Cord Switch 2NO+2NC">Pull Cord Switch 2NO+2NC</option>
+    <option value=" PVC CONDUIT PIPE 1&quot; STEEL WIRE REINFORCED">PVC CONDUIT PIPE 1&quot; STEEL WIRE REINFORCED</option>
+    <option value="Reed Switch">Reed Switch</option>
+    <option value="RTD Cable 3 Core teflon">RTD Cable 3 Core teflon</option>
+    <option value="RTD Duplex Dia-6mm, Length-285 MM, With 1/2&quot; BSP">RTD Duplex Dia-6mm, Length-285 MM, With 1/2&quot; BSP</option>
+    <option value="Rubber For Pipe Coupling 2 1/2&quot; B56XX05">Rubber For Pipe Coupling 2 1/2&quot; B56XX05</option>
+    <option value="Seal kit For PC-6*16">Seal kit For PC-6*16</option>
+    <option value="Seal Kit For Pnuematic Cylinder SPC 80/200">Seal Kit For Pnuematic Cylinder SPC 80/200</option>
+    <option value="Seal Kit For Pnuematic Cylinder SPC 80/300">Seal Kit For Pnuematic Cylinder SPC 80/300</option>
+    <option value="Seal Kit For Solenoid Valve Rotex 98-51432-1620-4G/6G-M6">Seal Kit For Solenoid Valve Rotex 98-51432-1620-4G/6G-M6</option>
+    <option value="Seal Kit For Solenoid Valve Rotex 98-57400-6-2Z-B1">Seal Kit For Solenoid Valve Rotex 98-57400-6-2Z-B1</option>
+    <option value="Service Kit for MOV CBD Valve Make-Rotork,Torque,Sl No.Z6974BA9A9;Type-K60-GOA">Service Kit for MOV CBD Valve Make-Rotork,Torque,Sl No.Z6974BA9A9;Type-K60-GOA</option>
+    <option value="Service Kit for MOV Feed Water Bypass Valve Make-Rotork,Torque,Sl No.9B01940301;Type-K600-F14A">Service Kit for MOV Feed Water Bypass Valve Make-Rotork,Torque,Sl No.9B01940301;Type-K600-F14A</option>
+    <option value="Service Kit for MOV IBD Valve Make-Rotork,Torque Sl No.1C01860601;Type-K150-GOA">Service Kit for MOV IBD Valve Make-Rotork,Torque Sl No.1C01860601;Type-K150-GOA</option>
+    <option value="Service Kit for MOV MSSV Make-Rotork,Torque-150 Sl No.77369BE3">Service Kit for MOV MSSV Make-Rotork,Torque-150 Sl No.77369BE3</option>
+    <option value="Service Kit for MOV Startup Vent Valve,Make-Rotork,Torque,Sl No.Z5935BC2;TYPE-PGV 203">Service Kit for MOV Startup Vent Valve,Make-Rotork,Torque,Sl No.Z5935BC2;TYPE-PGV 203</option>
+    <option value="Single Acting Air Lock Relay">Single Acting Air Lock Relay</option>
+    <option value="Single Solenoid Valve 1/4&quot;BSP,  5/2 Way, Coil Voltage 230VA VAQ213G-220VAC">Single Solenoid Valve 1/4&quot;BSP,  5/2 Way, Coil Voltage 230VA VAQ213G-220VAC</option>
+    <option value="Straight Male Connector 10mm*3/4&quot;Bsp">Straight Male Connector 10mm*3/4&quot;Bsp</option>
+    <option value="Tee Male 12MM*1/2&quot; BSp">Tee Male 12MM*1/2&quot; BSp</option>
+    <option value="Temperature Controller Model TC 544 C Make-Selec">Temperature Controller Model TC 544 C Make-Selec</option>
+    <option value="Themowell SS-310, OD-22MM, Length-580MM, ID-10MM Outer Thread 1/2&quot;">Themowell SS-310, OD-22MM, Length-580MM, ID-10MM Outer Thread 1/2&quot;</option>
+    <option value="Themowell SS-310, OD-22MM, Length-680MM, ID-10MM Outer Thread 1/2&quot;">Themowell SS-310, OD-22MM, Length-680MM, ID-10 MM Outer Thread 1/2&quot;</option>
+    <option value="Thermocouple Duplex 'K' Type Dia-6MM, Temp. 0 To 1200 Deg. Length-400MM With 1/2&quot; Connector">Thermocouple Duplex 'K' Type Dia-6MM, Temp. 0 To 1200 Deg. Length-400MM With 1/2&quot; Connector</option>
+    <option value="Thermocouple Duplex K type SS-310, Dia-10MM, length-385Mm, Tem-1200 Deg">Thermocouple Duplex K type SS-310, Dia-10MM, length-385Mm, Tem-1200 Deg</option>          
+    <option value="Thermocouple Duplex K Type SS-310, Dia-6mm, Tem. 0 To 1200 Deg, Length-3000MM">Thermocouple Duplex K Type SS-310, Dia-6mm, Tem. 0 To 1200 Deg, Length-3000MM</option>
+      <option value="Thermocouple Duplex 'K' Type SS-310, Dia-6MM, Temp. 0 To 1200 Deg. Length-700MM">Thermocouple Duplex 'K' Type SS-310, Dia-6MM, Temp. 0 To 1200 Deg. Length-700MM</option>
+      <option value="Trust Bearing Set For 6&quot; CL-900 Gate Valve">Trust Bearing Set For 6&quot; CL-900 Gate Valve</option>
+      <option value="Zero Speed Swich Range 10 To 100">Zero Speed Swich Range 10 To 100</option>
+      <option value="Sensor RTD Duplex Type-3 Wire, Length-10MM*350MM, SS-316">Sensor RTD Duplex Type-3 Wire, Length-10MM*350MM, SS-316</option>
+      <option value="Non Contact Type Sensor FL202F08A-M2-00-12-05 For Vibration Monitoring System">Non Contact Type Sensor FL202F08A-M2-00-12-05 For Vibration Monitoring System</option>
+      <option value="Non Contact Type Sensor FL202F08A-M2-00-25-05 For Vibration Monitoring System">Non Contact Type Sensor FL202F08A-M2-00-25-05 For Vibration Monitoring System</option>
+      <option value="Gland Packing Set">Gland Packing Set</option>
+      <option value="Plug Stem">Plug Stem</option>
+      <option value="Seat Ring">Seat Ring</option>
+      <option value="Actuator Packing Set">Actuator Packing Set</option>
+      <option value="Actuator Diaphragm">Actuator Diaphragm</option>
+      <option value="Seat Gasket">Seat Gasket</option>
+      <option value="ADC Card 9830FR02">ADC Card 9830FR02</option>
+      <option value="Key Pad 4*4">Key Pad 4*4</option>
+      <option value="Line Filter EP-42-1">Line Filter EP-42-1</option>
+      <option value="Pressure Transmitter R-3051TG2A2B21AB4K5D4M5q4">Pressure Transmitter R-3051TG2A2B21AB4K5D4M5q4</option>
+      <option value="Syphon Tube 1/2&quot; PIG Tail Type">Syphon Tube 1/2&quot; PIG Tail Type</option>
+      <option value="Pneumatic Cylinder SPC-D BG-80/300 Make-Rotex">Pneumatic Cylinder SPC-D BG-80/300 Make-Rotex</option>
+      <option value="Pneumatic Cylinder SPC-D BG-80/200 Make-Rotex">Pneumatic Cylinder SPC-D BG-80/200 Make-Rotex</option>
+      <option value="Position Transmitter Model No.PT 200W, MAKE-KOSO">Position Transmitter Model No.PT 200W, MAKE-KOSO</option>
+      <option value="Vibration Monitoring System Driver Transducer FK202F-2-4-2">Vibration Monitoring System Driver Transducer FK202F-2-4-2</option>
+      <option value="Auto Drain Valve 1/2&quot; 24101TM-12-4G-B13-230VAC-25">Auto Drain Valve 1/2&quot; 24101TM-12-4G-B13-230VAC-25</option>
+      <option value="Tube Cutter 2MM">Tube Cutter 2MM</option>
+      <option value="Battery Assembly S9129FA Yokogawa">Battery Assembly S9129FA Yokogawa</option>
+      <option value="Tube Copper PVC Coated 6MM OD *4MM(ID)">Tube Copper PVC Coated 6MM OD *4MM(ID)</option>
+      <option value="External Circlip Part No. 1100,Make:Johnson">External Circlip Part No. 1100,Make:Johnson</option>
+      <option value="Flapper Valve Assembly Part No. 0210,Make:Johnson">Flapper Valve Assembly Part No. 0210,Make:Johnson</option>
+      <option value="Gasket Part No. 0250,Make: Johnson">Gasket Part No. 0250,Make:Johnson</option>
+      <option value="Impeller Type CCR-32-160R6m2L3(W212163088)">Impeller Type CCR-32-160R6m2L3(W212163088)</option>
+      <option value="Internal Circlip Part No. 1100,Make:Johnson">Internal Circlip Part No. 1100,Make:Johnson</option>
+      <option value="Mechanical Seal Part No. 0310+0320,Make:Johnson">Mechanical Seal Part No. 0310+0320,Make:Johnson</option>
+      <option value="Shaft EN8 Part No. 1050,Make:Johnson">Shaft EN8 Part No. 1050,Make:Johnson</option>
+      <option value="Mechanical Seal For Johnson Pump Model No CN 40-160 G1 (MG/12Type) RPM 2900">Mechanical Seal For Johnson Pump Model No CN 40-160 G1 (MG/12Type) RPM 2900</option>
+      <option value="ACW Pump-MAKE-Mather Plat,SR.No.-31218219/10/01,Q-215 m³/hr,H-48,RPM-1480,ET ISO NO.-26 (CAT-A1)">ACW Pump-MAKE-Mather Plat,SR.No.-31218219/10/01,Q-215 m³/hr,H-48,RPM-1480,ET ISO NO.-26 (CAT-A1)</option>
+      <option value="Angle Grinder AG-7">Angle Grinder AG-7</option>
+      <option value="Asbestos Rope 20MMM">Asbestos Rope 20MMM</option>
+      <option value="Asbestos Rope 6MM">Asbestos Rope 6MM</option>
+      <option value="Belt Fastner 2 1/2&quot;">Belt Fastner 2 1/2&quot;</option>
+      <option value="Belt Fastner 2&quot;">Belt Fastner 2&quot;</option>
+      <option value="Belt Fastner 3&quot;">Belt Fastner 3&quot;</option>
+      <option value="Brass Connector for Cutting Hose">Brass Connector for Cutting Hose</option>
+      <option value="Brasso Chemical 100Ml">Brasso Chemical 100Ml</option>
+      <option value="Bush for Taper Lock Pully 150X2XA">Bush for Taper Lock Pully 150X2XA</option>
+      <option value="Bush for Taper Lock Pully 200X2XA">Bush for Taper Lock Pully 200X2XA</option>
+      <option value="Butterfly Valve Gear Operated 200mm (8&quot;)">Butterfly Valve Gear Operated 200mm (8&quot;)</option>
+      <option value="Carrying Idler 114*250*280 mm, 3.5mm thk">Carrying Idler 114*250*280 mm, 3.5mm thk</option>
+      <option value="Chain Duplex 1&quot; Pitch">Chain Duplex 1&quot; Pitch</option>
+      <option value="Chain Link Simplex 1&quot;">Chain Link Simplex 1&quot;</option>
+      <option value="Chain Link Simplex 1/2&quot;">Chain Link Simplex 1/2&quot;</option>
+      <option value="Chain Link Simplex 3/4&quot;">Chain Link Simplex 3/4&quot;</option>
+      <option value="Chain Simplex ¾&quot; Pitch">Chain Simplex ¾&quot; Pitch</option>
+      <option value="Chain Sprocket Duplex 1&quot; X 20Teeth">Chain Sprocket Duplex 1&quot; X 20Teeth</option>
+      <option value="Chain Sprocket Duplex 1&quot; X 38Teeth">Chain Sprocket Duplex 1&quot; X 38Teeth</option>
+      <option value="Chain Sprocket Simplex  3/4&quot;*28teeth">Chain Sprocket Simplex  3/4&quot;*28teeth</option>
+      <option value="CI Gate Valve Flange Type 80NB,WCB 300">CI Gate Valve Flange Type 80NB,WCB 300</option>
+      <option value="CI NRV Flange Type 80NB,WCB 300">CI NRV Flange Type 80NB,WCB 300</option>
+      <option value="Cold Vulcanising Solution TC310">Cold Vulcanising Solution TC310</option>
+      <option value="Colour Coated Sheet">Colour Coated Sheet</option>
+      <option value=" Coupling Alluminium R-75">Coupling Alluminium R-75</option>
+      <option value="Coupling Alluminium Spacer SW/RRS 225/140">Coupling Alluminium Spacer SW/RRS 225/140</option>
+      <option value="Coupling Love Joy L-150">Coupling Love Joy L-150</option>
+      <option value="Coupling Love Joy L-75">Coupling Love Joy L-75</option>
+      <option value="Coupling Lovejoy L-100">Coupling Lovejoy L-100</option>
+      <option value="Coupling Lovejoy L-110">Coupling Lovejoy L-110</option>
+      <option value="Coupling RRL-190">Coupling RRL-190</option>
+      <option value="Coupling SW 95ES100">Coupling SW 95ES100</option>
+      <option value="Cutting Hose Blue">Cutting Hose Blue</option>
+      <option value="Cutting Hose Red">Cutting Hose Red</option>
+      <option value="Cutting Torch">Cutting Torch</option>
+      <option value="Cutting Wheel AG-7">Cutting Wheel AG-7</option>
+      <option value="Dial Guage 0 To 0.8">Dial Guage 0 To 0.8</option>
+      <option value="Dial Guage 0 To 50MM">Dial Guage 0 To 50MM</option>
+      <option value="Gasket Metalic 3MM Style-54">Gasket Metalic 3MM Style-54</option>
+      <option value="Gasket Metalic 5MM Style-54">Gasket Metalic 5MM Style-54</option>
+      <option value="Gasket Metalik 3MM Klinger-1000 Size-1500mm*2000MM">Gasket Metalik 3MM Klinger-1000 Size-1500mm*2000MM</option>
+      <option value="Gasket Metalik 5MM Klinger-1000 Size-1500mm*2000MM">Gasket Metalik 5MM Klinger-1000 Size-1500mm*2000MM</option>
+      <option value="Gasket Non Metalic 2MM">Gasket Non Metalic 2MM</option>
+      <option value="Gasket Non Metalik 1MM">Gasket Non Metalik 1MM</option>
+      <option value="Gate Valve IBR 15MM, Class-1500, A-105">Gate Valve IBR 15MM, Class-1500, A-105</option>
+      <option value="Gate Valve IBR 15MM, Class-1500, F-22">Gate Valve IBR 15MM, Class-1500, F-22</option>
+      <option value="Gate Valve IBR 25MM, Class-1500, A-105">Gate Valve IBR 25MM, Class-1500, A-105</option>
+      <option value="Gate Valve IBR 50MM, Class-1500, A-105">Gate Valve IBR 50MM, Class-1500, A-105</option>
+      <option value="Gear Coupling LFG-100">Gear Coupling LFG-100</option>
+      <option value="Gear Coupling UFG-103">Gear Coupling UFG-103</option>
+      <option value="GI turn Buckle 12MM">GI turn Buckle 12MM</option>
+      <option value="Gland Rope 8MM Style 1960">Gland Rope 8MM Style 1960</option>
+      <option value="Gate Valve 11/2&quot;Class-800#,A105">Gate Valve 11/2&quot;Class-800#,A105</option>
+      <option value="Globe Valve IBR 15MM, Class-1500, A-105 T-5">Globe Valve IBR 15MM, Class-1500, A-105 T-5</option>
+      <option value="Globe Valve IBR 2&quot;, Class-1500">Globe Valve IBR 2&quot;, Class-1500</option>
+      <option value="Globe Valve IBR 25MM, Class-1500, A-105 T-5">Globe Valve IBR 25MM, Class-1500, A-105 T-5</option>
+      <option value="Globe Valve IBR 40NB, F-22 SW Class-1500">Globe Valve IBR 40NB, F-22 SW Class-1500</option>
+      <option value="Grease MP3">Grease MP3</option>
+      <option value="Grinding Wheel AG-7">Grinding Wheel AG-7</option>
+      <option value="Grinnding Stone">Grinnding Stone</option>
+      <option value="Grub Screw 8*30">Grub Screw 8*30</option>
+      <option value="Guage Blocks Guage (1Set*87Pc) Type-BM1-87.1/PD, Sr No. 2004394 (Slip Guage)">Guage Blocks Guage (1Set*87Pc) Type-BM1-87.1/PD, Sr No. 2004394 (Slip Guage)</option>
+      <option value="Gumetal Bush 35*27*40MM">Gumetal Bush 35*27*40MM</option>
+      <option value="HP Parthan EP-220">HP Parthan EP-220</option>
+      <option value="HT Bolt 14*90 MM With Double Nut &amp; Washer">HT Bolt 14*90 MM With Double Nut &amp; Washer</option>
+      <option value="HT Bolt 24*180 MM With Double Nut &amp; Washer">HT Bolt 24*180 MM With Double Nut &amp; Washer</option>
+      <option value="HT Bolt 24*50 MM With Double Nut &amp; Washer">HT Bolt 24*50 MM With Double Nut &amp; Washer</option>
+      <option value="HT Bolt Full Threaded 18*200MM With Double Nut &amp; Spring Washer">HT Bolt Full Threaded 18*200MM With Double Nut &amp; Spring Washer</option>
+      <option value="HT Cup Square Head Bolt LG M 16*130MM">HT Cup Square Head Bolt LG M 16*130MM</option>
+      <option value="Hydroulic Hose Pipe 3/8&quot;*400mm">Hydroulic Hose Pipe 3/8&quot;*400mm</option>
+      <option value="Hydroulic Oil 68">Hydroulic Oil 68</option>
+      <option value="IBR Globe Valve 1/2&quot; Class-1500 f-22">IBR Globe Valve 1/2&quot; Class-1500 f-22</option>
+      <option value="IBR Short Bend 1/2&quot; Socket Weld Class-1500">IBR Short Bend 1/2&quot; Socket Weld Class-1500</option>
+      <option value="Lapping Paste 400Grm Smooth">Lapping Paste 400Grm Smooth</option>
+      <option value="Lead Wire 0.5MM">Lead Wire 0.5MM</option>
+      <option value="LPG Cylinder 19 Kgs">LPG Cylinder 19 Kgs</option>
+      <option value="Magnetic Stand For 0-50MM Dail Guage">Magnetic Stand For 0-50MM Dail Guage</option>
+      <option value="Measuring Range Mini Digital Level &amp; Protector FMDL360">Measuring Range Mini Digital Level &amp; Protector FMDL360</option>
+      <option value="Molykote  Spray Bottel 450Ml">Molykote  Spray Bottel 450Ml</option>
+      <option value="Molykot Paste 1000Grm">Molykot Paste 1000Grm</option>
+      <option value="Mouting Stone For Flexible Shaft Grinder">Mouting Stone For Flexible Shaft Grinder</option>
+      <option value="MS Angle 65X65X5MM">MS Angle 65X65X5MM</option>
+      <option value="MS Angle 75X75X6MM">MS Angle 75X75X6MM</option>
+      <option value="MS Bolt M10*100MM">MS Bolt M10*100MM</option>
+      <option value="MS Bolt M16*65MM">MS Bolt M16*65MM</option>
+      <option value="MS Bolt M20*50MM">MS Bolt M20*50MM</option>
+      <option value="MS Bolt M20*75mm">MS Bolt M20*75mm</option>
+      <option value="MS Flange 3&quot;">MS Flange 3&quot;</option>
+      <option value="MS Flange 4&quot;">MS Flange 4&quot;</option>
+      <option value="MS Plate 3MM">MS Plate 3MM</option>
+      <option value="MS Straight Seamless Equal Tee 5&quot; Sch-40">MS Straight Seamless Equal Tee 5&quot; Sch-40</option>
+      <option value="MS Tee 1 1/2&quot; A Class">MS Tee 1 1/2&quot; A Class</option>
+      <option value="Oil Can (Kuppi)">Oil Can (Kuppi)</option>
+      <option value="Oil Gasket Non Metalic 1.5 mm, 1500*1800mm style-59">Oil Gasket Non Metalic 1.5 mm, 1500*1800mm style-59</option>
+      <option value="Oil Gasket Non Metalic 2 mm, 1500*1800mm style-59">Oil Gasket Non Metalic 2 mm, 1500*1800mm style-59</option>
+      <option value="Oil Gasket Non Metalic 3 mm, 1500*1800mm style-59">Oil Gasket Non Metalic 3 mm, 1500*1800mm style-59</option>
+      <option value="Oil Gasket Sheet 0.8MM">Oil Gasket Sheet 0.8MM</option>
+      <option value="Oil Gasket Sheet Non Metalic 3MM">Oil Gasket Sheet Non Metalic 3MM</option>
+      <option value="Oil Seal 20*35*7">Oil Seal 20*35*7</option>
+      <option value="Oil Seal 30*62*7">Oil Seal 30*62*7</option>
+      <option value="Oil Seal 35*52*7">Oil Seal 35*52*7</option>
+      <option value="Oil Seal 35*52*8">Oil Seal 35*52*8</option>
+      <option value="Oil Seal 45*60*8">Oil Seal 45*60*8</option>
+      <option value="Oil Seal 45*65*8">Oil Seal 45*65*8</option>
+      <option value="Oil Seal 50*62*7">Oil Seal 50*62*7</option>
+      <option value="Oil Seal 50*65*8">Oil Seal 50*65*8</option>
+      <option value="Oil Seal 50*68*8">Oil Seal 50*68*8</option>
+      <option value="Oil Seal 55*80*8">Oil Seal 55*80*8</option>
+      <option value="Oil Seal 70*85*8">Oil Seal 70*85*8</option>
+      <option value="OMVAL Make CI Butterly Valve 8&quot;,200MM">OMVAL Make CI Butterly Valve 8&quot;,200MM</option>
+      <option value="Oxygen Regulator With Pressure Guage">Oxygen Regulator With Pressure Guage</option>
+      <option value="PIPE MS 5&quot;">PIPE MS 5&quot;</option>
+      <option value="Pipe MS 6&quot;">Pipe MS 6&quot;</option>
+      <option value="Plastic Tarpauline 24*36">Plastic Tarpauline 24*36</option>
+      <option value="Plumber Block SN-522">Plumber Block SN-522</option>
+      <option value="Pulley Taper Lock For A-51 V-Belt,Nos of Groove:2,Size:A200">Pulley Taper Lock For A-51 V-Belt,Nos of Groove:2,Size:A200</option>
+      <option value="Return Idler 88.9*500*3.5mm(Thk)">Return Idler 88.9*500*3.5mm(Thk)</option>
+      <option value="Return Idler 88.9*600*3.5mm(Thk)">Return Idler 88.9*600*3.5mm(Thk)</option>
+      <option value="Rubber Cord 12MM">Rubber Cord 12MM</option>
+      <option value="Rubber Sheet Neoprime 5MM">Rubber Sheet Neoprime 5MM</option>
+      <option value="Rustoline Liquid 1Ltr">Rustoline Liquid 1Ltr</option>
+      <option value="Shim SS 0.05 MM Width 600MM*1Mtr">Shim SS 0.05 MM Width 600MM*1Mtr</option>
+      <option value="Shim SS 0.1 MM Width 600MM*1Mtr">Shim SS 0.1 MM Width 600MM*1Mtr</option>
+      <option value="Shim SS 0.2 MM Width 600MM*1Mtr">Shim SS 0.2 MM Width 600MM*1Mtr</option>
+      <option value="Shim SS 0.3 MM Width 600MM*1Mtr">Shim SS 0.3 MM Width 600MM*1Mtr</option>
+      <option value="Shim SS 0.5 MM Width 600MM*1Mtr">Shim SS 0.5 MM Width 600MM*1Mtr</option>
+      <option value="Short Bend MS 1 1/2&quot; Class-A">Short Bend MS 1 1/2&quot; Class-A</option>
+      <option value="Socket GI 50MM">Socket GI 50MM</option>
+      <option value="Sprocket Simplex Pitch 3/4&quot;*27teeth">Sprocket Simplex Pitch 3/4&quot;*27teeth</option>
+      <option value="Sprocket Simplex Pitch 3/4&quot;*58TTeeth">Sprocket Simplex Pitch 3/4&quot;*58TTeeth</option>
+      <option value="SS 304 Hex Nipple With 2Side Nut &amp; Sleeve">SS 304 Hex Nipple With 2Side Nut &amp; Sleeve</option>
+      <option value="Stud HT 10*250mm With Double Nut">Stud HT 10*250mm With Double Nut</option>
+      <option value="Stud HT 12*250mm With Double Nut">Stud HT 12*250mm With Double Nut</option>
+      <option value="Stud HT 16*250mm With Double Nut">Stud HT 16*250mm With Double Nut</option>
+      <option value="Stud HT 20*500mm With Double Nut">Stud HT 20*500mm With Double Nut</option>
+      <option value="Stud HT 24*500mm With Double Nut">Stud HT 24*500mm With Double Nut</option>
+      <option value="Stud HT 30*300mm With Double Nut">Stud HT 30*300mm With Double Nut</option>
+      <option value="Stud HT 8*250mm With Double Nut">Stud HT 8*250mm With Double Nut</option>
+      <option value="Taper Lock Pully 355 X 3C">Taper Lock Pully 355 X 3C</option>
+      <option value="Tube Cleaning Brush 10mm">Tube Cleaning Brush 10mm</option>
+      <option value="Tube Cleaning Brush 12mm">Tube Cleaning Brush 12mm</option>
+      <option value="Tube Cleaning Brush 14mm">Tube Cleaning Brush 14mm</option>
+      <option value="Tube Cleaning Brush 6mm">Tube Cleaning Brush 6mm</option>
+      <option value="Tube Cleaning Brush 8mm">Tube Cleaning Brush 8mm</option>
+      <option value="Tyre For Coupling F-60">Tyre For Coupling F-60</option>
+      <option value="V Block 65x65x50 Magnetic">V Block 65x65x50 Magnetic</option>
+      <option value="V Block 85x655x60 Magnetic">V Block 85x655x60 Magnetic</option>
+      <option value="Welding Cable Alluminium 400 Amp">Welding Cable Alluminium 400 Amp</option>
+      <option value="Welding Electrodes 7018, 2.5MM">Welding Electrodes 7018, 2.5MM</option>
+      <option value="Welding Electrodes 7018, 3.15MM*450MM">Welding Electrodes 7018, 3.15MM*450MM</option>
+      <option value="Welding Electrodes CI-2, 3.15MM">Welding Electrodes CI-2, 3.15MM</option>
+      <option value="Welding Hand Screen">Welding Hand Screen</option>
+      <option value="Welding Socket Plug">Welding Socket Plug</option>
+      <option value="Bearing No 2208 2ZR">Bearing No 2208 2ZR</option>
+      <option value="GLAND PACKING METALLIC GRAPHITE 3MM">GLAND PACKING METALLIC GRAPHITE 3MM</option>
+      <option value="GLAND PACKING METALLIC GRAPHITE 4MM">GLAND PACKING METALLIC GRAPHITE 4MM</option>
+      <option value="GLAND PACKING METALLIC GRAPHITE 5MM">GLAND PACKING METALLIC GRAPHITE 5MM</option>
+      <option value="Coupling F-60">Coupling F-60</option>
+      <option value="Tyre Coupling Set F-50">Tyre Coupling Set F-50</option>
+      <option value="Rotor Shaft For 100 0*1000 Impactor">Rotor Shaft For 1000*1000 Impactor</option>
+      <option value="Dia 45 Wiper Seal">Dia 45 Wiper Seal</option>
+      <option value="Sprocket Simplex Pitch 1&quot;* 16Teeth">Sprocket Simplex Pitch 1&quot;* 16Teeth</option>
+      <option value="Sprocket Simplex Pitch 1&quot;* 18Teeth">Sprocket Simplex Pitch 1&quot;* 18Teeth</option>
+      <option value="Sprocket Simplex Pitch 3/4&quot;*19teeth">Sprocket Simplex Pitch 3/4&quot;*19teeth</option>
+      <option value="Sprocket Simplex Pitch 3/4&quot;*42teeth">Sprocket Simplex Pitch 3/4&quot;*42teeth</option>
+        <option value="sprocket_simplex_13teeth">Sprocket Simplex Pitch 1" - 13 Teeth</option>
+        <option value="sprocket_simplex_52teeth">Sprocket Simplex Pitch 1" - 52 Teeth</option>
+        <option value="oil_seal_25_52_7">Oil Seal 25*52*7</option>
+        <option value="ms_pipe_1_1_2_class_c">MS Pipe 1 1/2" Class-C</option>
+        <option value="ms_pipe_3_class_c">MS Pipe 3" Class-C</option>
+        <option value="bolt_ht_24_150mm">Bolt HT 24*150MM</option>
+        <option value="bolt_ht_16_65mm_half_threaded">Bolt HT 16*65MM Half Threaded</option>
+        <option value="nrv_50mm_class_800_a_105">NRV 50MM Class-800, A-105</option>
+        <option value="asbestos_rope_16mm">Asbestos Rope 16MMM</option>
+        <option value="ht_bolt_full_threaded_16_120mm">HT Bolt Full Threaded 16*120MM With Nut & Washer</option>
+        <option value="ss_stud_12_200mm">SS Stud 12*200MM With Double Nut</option>
+        <option value="ss_stud_10_200mm">SS Stud 10*200MM With Double Nut</option>
+        <option value="ss_stud_12_65mm">SS Stud 12*65MM With Double Nut</option>
+        <option value="ss_stud_12_100mm">SS Stud 12*100MM With Double Nut</option>
+        <option value="ibr_pipe_4">IBR Pipe 4" (100MM), HPS-206, SA106, GRB-40 With TC</option>
+        <option value="ball_valve_ci_4">Ball Valve CI 4" Class-150, Max Pressure 170PSI, Pressure 12Kg/cm²</option>
+        <option value="oil_seal_35_62_7">Oil Seal 35*62*7</option>
+        <option value="ibr_short_bend_cs_a105">IBR Short Bend CS A105, 1½"*3000# Socket Weld</option>
+        <option value="shim_ss_1mm_1mtr">Shim SS 1MM*1 Mtr</option>
+        <option value="gi_bend_3_4">GI Bend 3/4"</option>
+        <option value="gland_rope_10mm">Gland Rope 10MM Style 1960</option>
+        <option value="gland_rope_6mm">Gland Rope 6MM</option>
+        <option value="sprocket_simplex_36teeth">Sprocket Simplex Pitch 1" - 36 Teeth</option>
+        <option value="ms_flange_4_class_150">MS Flange 4", Class-150</option>
+        <option value="welding_electrodes_hf7">Welding Electrodes HF7, 3.15mm</option>
+        <option value="bolt_ht_12_90mm">Bolt HT 12*90MM</option>
+        <option value="gi_reducer_2_1_2">GI Reducer 2"*1/2"</option>
+        <option value="glydring_45">GLYDRING 45</option>
+        <option value="glydring_hard_90">GLYDRING HARD 90</option>
+        <option value="slydring_90">SLYDRING 90</option>
+        <option value="middle_arm_cylinder_piston_rod_assembly">MIDDLE ARM CYLINDER PISTON ROD ASSEMBLY</option>
+        <option value="base_arm_cylinder_piston_rod_assembly">BASE ARM CYLINDER PISTON ROD ASSEMBLY</option>
+        <option value="filter_element_tie">FILTER ELEMENT TIE</option>
+        <option value="o_ring_90_3">O RING 90X3</option>
+        <option value="back_up_seal_90">BACK UP SEAL 90</option>
+        <option value="step_seal_45">STEP SEAL 45</option>
+        <option value="suction_strainer_filter">SUCTION STRAINER FILTER</option>
+        <option value="metal_breather">METAL BREATHER</option>
+        <option value="o_ring_seal_100_4">O RING SEAL 100X4</option>
+        <option value="glydring_big_45">GLYDRING BIG 45</option>
+        <option value="base_arm_cylinder_head">BASE ARM CYLINDER HEAD</option>
+        <option value="dia_63_compact_seal">Dia 63 Compact Seal</option>
+        <option value="ball_bearing_part_no_12174">Ball Bearing Part No. 12174</option>
+        <option value="ball_bearing_part_no_233213_50">Ball Bearing Part No. 233213-50</option>
+        <option value="cap_nut_part_no_522997_01">Cap Nut Part No. 522997-01</option>
+        <option value="gravaty_disc_part_no_522993_02">Gravaty Disc Part No.522993-02</option>
+        <option value="gravaty_disc_part_no_522993_03">Gravaty Disc Part No.522993-03</option>
+        <option value="gravaty_disc_part_no_522993_04">Gravaty Disc Part No.522993-04</option>
+        <option value="gravaty_disc_part_no_522993_06">Gravaty Disc Part No.522993-06</option>
+        <option value="gravaty_disc_part_no_522993_07">Gravaty Disc Part No.522993-07</option>
+        <option value="gravaty_disc_part_no_528138_03">Gravaty Disc Part No.528138-03</option>
+        <option value="gravaty_disc_part_no_528138_07">Gravaty Disc Part No.528138-07</option>
+        <option value="gravity_disc_522993_09">Gravity Disc 522993-09</option>
+        <option value="pin_part_no_323">Pin Part No.323</option>
+        <option value="seal_ring_part_no_223521_17">Seal Ring Part No. 223521-17</option>
+        <option value="shear_pin_coupling_part_no_529207_01">Shear Pin Coupling Part No. 529207-01</option>
+        <option value="sight_glass_part_no_37166">Sight Glass Part No. 37166</option>
+        <option value="tubler_pin_part_no_222119_10">Tubler Pin Part No.222119-10</option>
+        <option value="worm_wheel_part_no_63292">Worm Wheel Part No. 63292</option>
+        <option value="worn_wheel_shaft_mab103_part_no_531430_80">Worn Wheel Shaft MAB103 Part No 531430-80</option>
+        <option value="bushing_part_no_545511_01">Bushing Part No 545511-01</option>
+        <option value="impeller_part_no_545514_02">Impeller Part No 545514-02</option>
+        <option value="impeller_part_no_545515_03">Impeller Part No 545515-03</option>
+        <option value="bushing_part_no_545512_01">Bushing Part No 545512-01</option>
+        <option value="gasket_part_no_62013">Gasket Part No 62013</option>
+        <option value="gasket_part_no_37402">Gasket Part No 37402</option>
+        <option value="gasket_part_no_8392">Gasket Part No 8392</option>
+        <option value="gasket_part_no_14161">Gasket Part No 14161</option>
+        <option value="o_ring_no_223402_54">O Ring No 223402-54</option>
+        <option value="o_ring_no_223406_13">O Ring No 223406-13</option>
+        <option value="o_ring_no_709402">O Ring No 709402</option>
+        <option value="o_ring_no_64100">O Ring No 64100</option>
+        <option value="o_ring_no_223406_20">O Ring No 223406-20</option>
+        <option value="o_ring_no_223406_26">O Ring No 223406-26</option>
+        <option value="o_ring_no_223406_24">O Ring No 223406-24</option>
+        <option value="o_ring_no_223406_44"> O Ring No 223406-44</option>
+        <option value="o_ring_no_65395">O Ring No 65395</option>
+        <option value="gasket_part_no_8821">Gasket Part No 8821</option>
+        <option value="bushing_part_no_545513_01">Bushing Part No 545513-01</option>
+        <option value="rectanguler_ring_223436_19">Rectanguler Ring 223436-19</option>
+        <option value="ms_pipe_4_class_c">MS Pipe 4" Class-C</option>
+        <option value="reducer_upvc_1_1_2">Reducer UPVC 1*1/2</option>
+        <option value="reducer_upvc_11_4_1">Reducer UPVC 11/4"*1"</option>
+        <option value="reducer_upvc_11_4_1_2">Reducer UPVC 11/4"*1/2"</option>
+        <option value="socket_upvc_1_2">Socket UPVC 1/2"</option>
+        <option value="socket_upvc_3_4">Socket UPVC 3/4"</option>
+        <option value="tee_gi_1">Tee GI 1"</option>
+        <option value="tee_upvc_11_4_1_2">Tee UPVC 11/4"*1/2"</option>
+        <option value="upvc_ball_valve_1_1_2">UPVC Ball Valve 1 1/2"</option>
+        <option value="upvc_ball_valve_2">UPVC Ball Valve 2"</option>
+        <option value="upvc_brass_fta_1_1_2">UPVC Brass FTA 1 1/2"</option>
+        <option value="upvc_brass_fta_1_1_4">UPVC Brass FTA 1 1/4"</option>
+        <option value="upvc_brass_fta_1">UPVC Brass FTA 1"</option>
+        <option value="upvc_brass_fta_2">UPVC Brass FTA 2"</option>
+        <option value="upvc_elbow_3_4">UPVC Elbow 3/4"</option>
+        <option value="upvc_elbow_1_1_2">UPVC Elbow 1 1/2"</option>
+        <option value="upvc_elbow_1_1_4">UPVC Elbow 1 1/4"</option>
+        <option value="upvc_elbow_2">UPVC Elbow 2"</option >
+        <option value="upvc_flange_3">UPVC Flange 3"</option>
+        <option value="upvc_brass_fta_1_2">UPVC Brass FTA 1/2"</option>
+        <option value="upvc_long_bend_1_1_2">UPVC Long Bend 1 1/2"</option>
+        <option value="upvc_long_bend_1_1_4">UPVC Long Bend 1 1/4"</option>
+        <option value="upvc_long_bend_2">UPVC Long Bend 2"</option>
+        <option value="upvc_pipe_1_1_4">UPVC Pipe 1 1/4"</option>
+        <option value="upvc_pipe_1_1_2">UPVC Pipe 1 1/2"</option>
+        <option value="upvc_pipe_2">UPVC Pipe 2"</option>
+        <option value="upvc_pipe_2_1_2">UPVC Pipe 2 1/2"</option>
+        <option value="upvc_pipe_3">UPVC Pipe 3"</option>
+        <option value="upvc_reducer_1_1_4_1_1_2">UPVC Reducer 1 1/4"*1 1/2"</option>
+        <option value="upvc_reducer_11_2_1">UPVC Reducer 11/2"*1"</option>
+        <option value="upvc_reducer_21_2_x2">UPVC Reducer 21/2"X2"</option>
+        <option value="upvc_reducer_2_x1_1_2">UPVC Reducer 2X1 1/2"</option>
+        <option value="upvc_reducer_3_x2">UPVC Reducer 3"X2"</option>
+        <option value="upvc_fta_reducer_socket_3_4_1_2">UPVC FTA Reducer Socket 3/4"*1/2"</option>
+        <option value="upvc_socket_1_1_2">UPVC Socket 1 1/2"</option>
+        <option value="upvc_socket_1_1_4">UPVC Socket 1 1/4"</option>
+        <option value="upvc_socket_2">UPVC Socket 2"</option>
+        <option value="upvc_solution_118ml">UPVC Solution 118Ml</option>
+        <option value="upvc_stub_end_with_flange_1">UPVC Stub End With Flange 1 "</option>
+        <option value="upvc_stub_end_with_flange_1_1_2">UPVC Stub End With Flange 1 1/2"</option>
+        <option value="upvc_stub_end_with_flange_1_1_4">UPVC Stub End With Flange 1 1/4"</option>
+        <option value="upvc_stub_end_with_flange_2">UPVC Stub End With Flange 2"</option>
+        <option value="upvc_stub_end_with_flange_21_2">UPVC Stub End With Flange 21/2"</option>
+        <option value="upvc_tee_1_1_2">UPVC Tee 1 1/2"</option>
+        <option value="upvc_tee_1">UPVC Tee 1"</option>
+        <option value="upvc_tee_2">UPVC Tee 2"</option>
+        <option value="upvc_tee_3_4">UPVC Tee 3/4"</option>
+        <option value="upvc_union_1_1_2">UPVC Union 1 1/2"</option>
+        <option value="upvc_union_1_1_4">UPVC Union 1 1/4"</option>
+        <option value="upvc_tee_11_4">UPVC Tee 11/4"</option>
+        <option value="upvc_tee_2_1_2">UPVC Tee 2 1/2"</option>
+        <option value="upvc_elbow_2_1_2">UPVC Elbow 2 1/2"</option>
+        <option value="tee_gi_2">Tee GI 2"</option>
+        <option value="ear_plug_make_venus">Ear Plug Make-Venus</option>
+        <option value="nose_mask">Nose Mask</option>
+        <option value="ppe_kit_90gsm_20gsm">PPE Kit 90GSM+20GSM</option>
+        <option value="ht_nut_m10">HT Nut M10</option>
+        <option value="mechanical_seal_for_three_screw_pump">Mechanical Seal For Three Screw Pump sr No. 101097/0947,0948 Model No T3ST-80/54 Make-Tushaco</option>
+        <option value="safety_block_complete_assly">Safety Block Complete Assly.1CYJ414438,Part No.105383445</option>
+        <option value="spiral_wound_gasket_72_25_5mm">Spiral Wound Gasket 72*25*5MM SS304 With Graphoil Filler Centering Ring Gasket As Per ANSI B 16.5 Class-1500 Pressure Rating Size 75*25*5MM</option>
+        <option value="spiral_wound_gasket_76_46_3_5mm">Spiral Wound Gasket 76*46*3.5MM Class-1500</option>
+        <option value="spiral_wound_metalic_gasket_72_25_5mm">Spiral Wound Metalic Gasket 72*25*5mm Class-1500</option>
+        <option value="spiral_wound_metalic_gasket_154_192_3_5mm">Spiral Wound Metalic Gasket 154*192*3.5mm(Thk) Class-1500</option>
+        <option value="spiral_wound_metalik_gasket_285_155_5mm">Spiral Wound Metalik Gasket 285*155*5MM Thik, Class-1500</option>
+        <option value="turbine_oil_t_46">Turbine Oil T-46</option>
+        <option value="spiral_wound_copper_gasket_154_192_3mm">Spiral Wound Copper Gasket 154*192*3mm Class-1500</option>
+        <option value="spiral_wound_copper_gasket_155_285_5mm">Spiral Wound Copper Gasket 155*285*5mm Class-1500</option>
+        <option value="spiral_wound_copper_gasket_165_220_5mm">Spiral Wound Copper Gasket 165*220*5mm Class-1500</option>
+        <option value="fastner_set_for_ksb_make_gate_valve">Fastner Set For KSB Make-Gate Valve CL-900 100MM</option>
+        <option value="fastner_set_b16_4_7_for_ksb_make_gate_valve">Fastner Set (B16/4/7) For KSB Make-Gate Valve CL-900 100MM</option>
+        <option value="fastner_set_b16_4_7_part_no_920_1_902_1">Fastner Set (B16/4/7) Part No. 920.1/902.1 For Gate Valve 6" CL-900 Make KSB</option>
+        <option value="fastner_set_b7_2h_for_ksb_make_gate_valve">Fastner Set (B7/2H) For KSB Make-Gate Valve CL-900 100MM</option>
+        <option value="fastner_set_b7_2h_part_no_920_1_902_1">Fastner Set (B7/2H) Part No. 920.1/902.1 For Gate Valve 6" CL-900 Make KSB</option>
+        <option value="fastner_set_gland_for_ksb_make_gate_valve">Fastner Set (Gland) For KSB Make-Gate Valve CL-900 100MM</option>
+        <option value="fastner_set_gland_part_no_920_2_902_2">Fastner Set (Gland) Part No. 920.2/902.2 For Gate Valve 6" CL-900 Make KSB</option>
+        <option value="fastner_set_part_no_920_3_902_2">Fastner Set Part No. 920.3/902.2 For Gate Valve 6" CL-900 Make KSB</option>
+        <option value="gland_bush_for_ksb_make_gate_valve">Gland Bush For KSB Make-Gate Valve CL-900 100MM</option>
+        <option value="gland_flange_for_ksb_make_gate_valve">Gland Flange For KSB Make-Gate Valve CL-900 100MM</option>
+        <option value="gland_flange_part_no_452">Gland Flange Part No. 452 For Gate Valve 6" CL-900 Make KSB</option>
+        <option value="gland _packing_set_part_no_461">Gland Packing Set Part No. 461 For Gate Valve 6" CL-900 Make KSB</option>
+        <option value="graphite_packing_ring_163mm">Graphite Packing Ring 163MM(OD)X152MM(ID)X15MM(THK)</option>
+        <option value="grub_screw_part_no_904">Grub Screw Part No. 904 For Gate Valve 6" CL-900 Make KSB</option>
+        <option value="hand_wheel_part_no_921">Hand Wheel Part No. 921 For Gate Valve 6" CL-900 Make KSB</option>
+        <option value="joint_ring_for_ksb_make_gate_valve">Joint Ring For KSB Make Gate Valve 6" CL-900 100MM</option>
+        <option value="neck_bush_for_ksb_make_gate_valve">Neck Bush For KSB Make Gate Valve 6" CL-900 150MM (Graphite Ring)</option>
+        <option value="neck_ring_for_ksb_make_gate_valve">Neck Ring For KSB Make Gate Valve 6" CL-900 100MM</option>
+        <option value="neck_ring_for_ksb_make_gate_valve_150mm">Neck Ring For KSB Make Gate Valve 6" CL-900 150MM</option>
+        <option value="packing_ring_for_ksb_make_gate_valve">Packing Ring For KSB Make-Gate Valve CL-900 100MM</option>
+        <option value="stem_for_ksb_make_gate_valve">Stem For KSB Make-Gate Valve CL-900 100MM</option>
+        <option value="stop_nut_part_no_920">Stop Nut Part No. 920 For Gate Valve 6" CL-900 Make KSB</option>
+        <option value="graphite_packing_ring_for_mssv_valve">Graphite Packing Ring For MSSV Valve 150NB Class-1500, WCB Stem,Pin-CR13, 3750PSI AT100 Deg.FASME B16,34SPL, Ring 31.7MM (ID), 47.5MM (OD), 8MM (Thk), Make-KSB</option>
+    
+                </select>
                 <div class="input-group-append">
-                    <button type="button" class="btn btn-primary ml-3" onclick="addItem()">Add Item</button>
+                    <button type="button" class="btn btn-primary ml-3" onclick="toggleNewItemFields()">Add Item</button>
                 </div>
             </div>
         </div>
         
-        <div class="form-group">
-            <label for="itemDescription">Item Description</label>
-            <input type="text" class="form-control" id="itemDescription" required>
+        <div class="new-item-fields">
+            <div class="form-group">
+                <label for="newItemDescription">Add New Item in Description List</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="newItemDescription" placeholder="Enter new item description">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-success ml-3" onclick="addItem()">Add Data</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="itemDescription">Item Description</label>
+                <input type="text" class="form-control" id="itemDescription">
+            </div>
         </div>
+
         <div class="form-group">
             <label for="umo">UMO</label>
             <select class="form-control" id="umo">
@@ -791,24 +802,28 @@
             <label for="lastPurchasePrice">Last Purchase Price</label>
             <input type="number" class="form-control" id="lastPurchasePrice" required>
         </div>
+    
         <div class="form-group">
             <label for="lastPurchaseDate">Last Purchase Date</label>
             <input type="date" class="form-control" id="lastPurchaseDate">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-danger ml-4" onclick="window.location.href='table.html'">View</button>
         
     </form>
 
     <script>
         // Function to toggle the visibility of the required textbox
         function toggleRequiredTextbox() {
-            var stockPosition = document.getElementById("stockPosition").value;
-            var requiredTextbox = document.getElementById("requiredTextbox");
-            if (stockPosition === "Required") {
-                requiredTextbox.style.display = "block"; // Show textbox
-            } else {
-                requiredTextbox.style.display = "none"; // Hide textbox
-            }
+            const stockPosition = document.getElementById("stockPosition").value;
+            const requiredTextbox = document.getElementById("requiredTextbox");
+            requiredTextbox.style.display = stockPosition === "Required" ? "block" : "none";
+        }
+
+        // Function to toggle the visibility of the new item fields
+        function toggleNewItemFields() {
+            const newItemFields = document.querySelector('.new-item-fields');
+            newItemFields.style.display = newItemFields.style.display === 'none' ? 'block' : 'none';
         }
 
         // Function to add a new item to the description list

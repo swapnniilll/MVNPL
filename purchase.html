@@ -22,6 +22,9 @@
         .email {
             text-decoration: underline; /* Underline the email address */
         }
+        .aa{
+            border: 3px solid black;
+        }
     </style>
     <title>Maharashtra Vidyut Nigam Pvt. Ltd.</title>
 </head>
@@ -36,14 +39,160 @@
             <div>
                 <p class="mb-0">Tel: 0712-66640000</p>
                 <p class="mb-0">Fax: 0712-6664089</p>
-                <p class="mb-0">Email: <span class="email">purchase@mnvpl.com</span></p> <!-- Underlined email value only -->
+                <p class="mb-0">Email: <span class="email">purchase@mnvpl.com</span></p>
                 <p class="mb-0">Office: 1st floor, Shree Ram Shyam Tower<br>
                     Block No.29.30 S.V.Patel Road, Near NIT<br>
                     Kingsway, Nagpur-01<br><b>IN</b></p>
             </div>
         </div>
         <div class="header-line"></div>
+        <div>
+            <h2 class="mt-3 text-center font-weight-bold">PURCHASE ORDER</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <p>P.O. No. MVNPL/DEOLI/HO/2024-25/M059</p>
+                <p>TO,<br>
+                M/S, <span>        AYS Enterprises</span><br>
+                    Plot No. 10, Dhomne Layout,<br>
+                    Ambika Nagar,<br>
+                    Nagpur-440024
+                </p>
+                <p>Sub.  Purchase order for supply of Titanium Putty at our 10 M.W.Biomass Power Plant at Deoli, Dist. Wradha(M.S).</p>
+                <p>Dear Sir,<br>
+                With reference to our enquiry No. MVNPL/ENQ/DEOLI/PR-0. Dtd. 25.09.24 & your offer No. dtd. 26.09.24 & subsequent
+                discussion had with you, we are please to place the order on you for the supply of under noted material,
+                as per terms & conditions appended below.</p>
+            </div>
+            <div class="col-4">
+                <p>P.O. DATE  </p><br><br>
+                <p>GST NO. : 27AAECM4428MZZ4</p><br><br>
+                <p>PAN NO. : AAECM4428M1</p>
+            </div>
+        </div>
+        
+        <!-- Editable Table Section -->
+        <div class="mt-4">
+            <table class="table table-bordered" id="purchaseOrderTable">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Sr.No.</th>
+                        <th>Items</th>
+                        <th>Material Description</th>
+                        <th>Make</th>
+                        <th>Unit</th>
+                        <th>Qty</th>
+                        <th>Rate(RS)</th>
+                        <th>Amount(RS)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true "></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td contenteditable="true"></td>
+                        <td><button class="btn btn-danger" onclick="deleteRow(this)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn btn-primary" onclick="addRow()">Add Row</button>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-6">
+                <p>Disc.  0.0%  0.00</p>
+                <p>Price Basis : Ex-Nagpur</p>
+                <p>Freight : Extra at Actual</p>
+                <p>Insurance : Inclusive</p>
+                <p>Delivery Period : Immediate</p>
+                <p class="font-weight-bold">Grand Total : Rs.</p>
+                <p class="font-weight-bold">Order Value :</p>
+            </div>
+            <div class="col-6">
+                <p>Total after disc :  Rs:  </p>
+                <p>P & F :  Rs.     </p>
+                <p>Install & Comm. :</p>
+                <p>GST Extra :    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p><b>Price :</b>The Price will remain firm until te completion of the order. No increase in the price will will be allowed
+                till the execution of the entire order to our satisfaction.</p>
+                <p><b>Payment :</b>100% payment against delivery.</p>
+                <p>PACKING/MARKING : The goods shall be packed wherever necessary according to your usual practice,
+                    properly for transit by road so as to ensure that they are received on arrival at the destination
+                    free from all damages or losses.
+                </p>
+                <p><b>Remarks : </b>Please dispatch the material through your <b>Sai Baba Goods Garage upto Wardha</b>
+                & email dispatched details to us. Please send Test Certificate, Gurantee Certificate, Inspection Certificate
+            along with supply wherever required.</p>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-6 d-flex">
+            <p class=""><b>Bill to Address</b></p>
+            <p class=" aa w-50 ml-4"><b>MAHARASHTRA VIDYUT NIGAM PVT. LTD.<br></b>
+            Plot No. C/1, Beside Mahalaxmi Steel<br> M.I.D.C., Deoli, Wardha-442101<br>
+        Cont. Person Mr. Satish Bhutle<br> Mob.9657382925</p>
+            </div>
+
+            <div class="col-6 d-flex">
+            <p><b>Ship to Address</b></p>
+            <p class="aa w-50 ml-4"><b>MAHARASHTRA VIDYUT NIGAM PVT. LTD.<br></b>
+                Plot No. C/1, Beside Mahalaxmi Steel<br> M.I.D.C., Deoli, Wardha-442101<br>
+            Cont. Person Mr. Satish Bhutle<br> Mob.9657382925</p>
+            </div>
+        </div>
+
+        <div class="row-cols-12 mt-3">
+            <b>Special Instruct.</b>
+           <p class="d-inline"> (a)Please send you "TAX INVOICE" showing the amount of GST separately in the invoice.</p>
+          <span>          <p>(b)Our Order No. & date must invariable be quoted in your challan, bill, & all further correspondence.</p></span>
+           <p>(c)Please forward your order acceptance at the earliest for our records.</p>
+           <p>(d)All disputes are subject to jurisdiction of Nagpur (MS).</p>
+        </div>
+        <p>Thanking You,<br>
+        Your`s faithfully,<br>
+       <b>For MAHARASHTRA VIDYUT NIGAM PVT. LTD.</b><br><br><br><b>Authoriased Signatory</b></p>
     </div>
+
+    <script>
+        function addRow() {
+            var table = document.getElementById("purchaseOrderTable");
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            var cell7 = row.insertCell(6);
+            var cell8 = row.insertCell(7);
+            var cell9 = row.insertCell(8);
+            cell1.contentEditable = "true";
+            cell2.contentEditable = "true";
+            cell3.contentEditable = "true";
+            cell4.contentEditable = "true";
+            cell5.contentEditable = "true";
+            cell6.contentEditable = "true";
+            cell7.contentEditable = "true";
+            cell8.contentEditable = "true";
+            cell9.innerHTML = '<button class="btn btn-danger" onclick="deleteRow(this)">Delete</button>';
+        }
+
+        function deleteRow(btn) {
+            var row = btn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

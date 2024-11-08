@@ -42,7 +42,6 @@
     <h3 class="text-center text-dark font-weight-bold underline">PURCHASE REQUISITION</h3>
     <h3 class="text-center text-dark font-weight-bold underline">(INDENT)</h3>
 
-    
     <!-- Nature of Indent Section -->
     <div class="form-group position-relative nature">
         <label for="natureOfIndent">Nature of Indent:</label><br>
@@ -88,8 +87,8 @@
                 <option value="Instrument">Instrument</option>
                 <option value="Johnson Pump Spares">Johnson Pump Spares</option>
                 <option value="Mechanical">Mechanical</option>
-                <option value="Oil Cent rifigal Pump Spares">Oil Centrifigal Pump Spares</option>
-                <option value=" Pipe fitting Material">Pipe fitting Material</option>
+                <option value="Oil Centrifugal Pump Spares">Oil Centrifugal Pump Spares</option>
+                <option value="Pipe fitting Material">Pipe fitting Material</option>
                 <option value="Safety & Fire">Safety & Fire</option>
                 <option value="Stores">Stores</option>
                 <option value="TG Spares">TG Spares</option>
@@ -117,6 +116,7 @@
                 <th>Stock Position</th>
                 <th>Last Purchase Price</th>
                 <th>Last Purchase Date</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody id="itemTableBody">
@@ -132,7 +132,7 @@
         <div class="col-3"><hr class="border border-dark w-75">
             <label class="ml-5">Indent By</label>
         </div>
-        <div class ="col-3"><hr class ="border border-dark w-75">
+        <div class="col-3"><hr class="border border-dark w-75">
             <label class="ml-4">Signature of Store Manager</label>
         </div>
         <div class="col-3"><hr class="border border-dark w-75">
@@ -143,6 +143,7 @@
         </div>
     </div>
     <button type="submit" class="btn btn-primary mt-5" onclick="uploadData()">Upload</button>
+    <button type="button" class="btn btn-danger mt-5" onclick="window.location.href='store.html'">Add Item</button>
 
     <script>
         function toggleCheckboxes(checkbox) {
@@ -153,49 +154,85 @@
                 }
             }
         }
-    
-        // Retrieve data from local storage
+
+        let items = JSON.parse(localStorage.getItem('items')) || [];
+
+        function displayItems() {
+            const itemTableBody = document.getElementById('itemTableBody');
+            itemTableBody.innerHTML = '';
+            items.forEach((item, index) => {
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${item.itemCode}</td>
+                    <td>${item.itemOption}</td>
+                    <td>${item.itemDescription}</td>
+                    <td>${item.umo}</td>
+                    <td>${item.quantityRequired}</td>
+                    <td>${item.population}</td>
+                    <td>${item.purchaseQuantity}</td>
+                    <td>${item.issuedQuantity}</td>
+                    <td>${item.stockPositionValue}</td>
+                    <td>${item.lastPurchasePrice}</td>
+                    <td>${item.lastPurchaseDate}</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" onclick="editItem(${index})">Edit</button>
+                        <button class="btn btn-danger btn-sm mt-3" onclick ="deleteItem(${index})">Delete</button>
+                    </td>
+                `;
+                itemTableBody.appendChild(newRow);
+            });
+        }
+
+        function editItem(index) {
+            const row = document.getElementById('itemTableBody').rows[index];
+            for (let i = 1; i < row.cells.length - 1; i++) { // Exclude Action column
+                const cell = row.cells[i];
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = cell.innerText;
+                cell.innerHTML = '';
+                cell.appendChild(input);
+            }
+            row.cells[row.cells.length - 1].innerHTML = `<button class="btn btn-success btn-sm" onclick="saveItem(${index})">Save</button>`;
+        }
+
+        function saveItem(index) {
+            const row = document.getElementById('itemTableBody').rows[index];
+            const updatedItem = {};
+            for (let i = 1; i < row.cells.length - 1; i++) { // Exclude Action column
+                const cell = row.cells[i];
+                updatedItem[Object.keys(items[0])[i - 1]] = cell.firstChild.value; // Update item properties
+                cell.innerHTML = cell.firstChild.value; // Set cell to updated value
+            }
+            items[index] = updatedItem; // Update the item in the array
+            localStorage.setItem('items', JSON.stringify(items)); // Update local storage
+            displayItems(); // Refresh the table
+        }
+
+        function deleteItem(index) {
+            items.splice(index, 1); // Remove item from array
+            localStorage.setItem('items', JSON.stringify(items)); // Update local storage
+            displayItems(); // Refresh the table
+        }
+
         const itemData = JSON.parse(localStorage.getItem('itemData'));
-    
-        // Create a new table row
-        const newRow = document.createElement('tr');
-        newRow.innerHTML = `
-            <td>1</td> <!-- Sr. No. column -->
-            <td>${itemData.itemCode}</td>
-            <td>${itemData.itemOption}</td>
-            <td>${itemData.itemDescription}</td>
-            <td>${itemData.umo}</td>
-            <td>${itemData.quantityRequired}</td>
-            <td>${itemData.population}</td>
-            <td>${itemData.purchaseQuantity}</td>
-            <td>${itemData.issuedQuantity}</td>
-            <td>${itemData.stockPositionValue}</td>
-            <td>${itemData.lastPurchasePrice}</td>
-            <td>${itemData.lastPurchaseDate}</td>
-        `;
-       
-       
-            
-        // Add the new row to the table
-        document.getElementById('itemTableBody').appendChild(newRow);
-    
-        // Generate PR. NO. (for demonstration purposes)
+        if (itemData) {
+            items.push(itemData);
+            localStorage.setItem('items', JSON.stringify(items));
+        }
+
         const prNo = `PR-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}`;
         document.getElementById('prNo').value = prNo;
-    
-        // Set current date
-        const currentDate = new Date().toISOString().split('T')[0]; // Format : YYYY-MM-DD
+
+        const currentDate = new Date().toISOString().split('T')[0];
         document.getElementById('currentDate').value = currentDate;
-    
-        function uploadData() {
-            // Get the selected nature of indent
+
+          function uploadData() {
             const selectedNature = Array.from(document.getElementsByName('natureOfIndent')).find(checkbox => checkbox.checked).value;
-    
-            // Get the selected budget head
             const selectedBudgetHead = document.getElementById('budgetHead').value;
-    
-            // Store the necessary data in local storage
             const data = {
+                
                 itemCode: itemData.itemCode,
                 itemOption: itemData.itemOption,
                 itemDescription: itemData.itemDescription,
@@ -208,15 +245,17 @@
                 lastPurchasePrice: itemData.lastPurchasePrice,
                 lastPurchaseDate: itemData.lastPurchaseDate
             };
+            
             localStorage.setItem('itemData', JSON.stringify(data));
             localStorage.setItem('selectedNature', selectedNature);
             localStorage.setItem('selectedBudgetHead', selectedBudgetHead);
             localStorage.setItem('prNo', prNo);
             localStorage.setItem('currentDate', currentDate);
-    
-            // Redirect to the display page
+
             window.location.href = 'displayData.html';
         }
+
+        displayItems(); // Call to display items on page load
     </script>
 
 </body>
