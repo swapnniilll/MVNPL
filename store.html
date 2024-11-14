@@ -7,7 +7,8 @@
     <title>Add Item</title>
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url("Home3.png");
+            background-size: cover;
             font-family: 'Arial', sans-serif;
         }
         .container {
@@ -28,12 +29,12 @@
     <form id="itemForm">
         <div class="form-group">
             <label for="itemCode">Item Code</label>
-            <input type="text" class="form-control" id="itemCode" readonly>
+            <input type="text" class="form-control bg-transparent border-dark" id="itemCode" readonly>
         </div>
         <div class="form-group">
             <label for="itemOption">Item Description List</label>
             <div class="input-group">
-                <select class="form-control" id="itemOption">
+                <select class="form-control bg-transparent border-dark" id="itemOption">
                     <option value="Output Gear Wheel">Output Gear Wheel</option>
                     <option value="Output Shaft">Output Shaft</option>
                     <option value="PIN Bush Coupling Complete Set EFC-08">PIN Bush Coupling Complete Set EFC-08</option> 
@@ -751,7 +752,7 @@
             <div class="form-group">
                 <label for="newItemDescription">Add New Item in Description List</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="newItemDescription" placeholder="Enter new item description">
+                    <input type="text" class="form-control bg-transparent border-dark" id="newItemDescription" placeholder="Enter new item description">
                     <div class="input-group-append">
                         <button type="button" class="btn btn-success ml-3" onclick="addItem()">Add Data</button>
                     </div>
@@ -759,13 +760,13 @@
             </div>
             <div class="form-group">
                 <label for="itemDescription">Item Description</label>
-                <input type="text" class="form-control" id="itemDescription">
+                <input type="text" class="form-control bg-transparent border-dark" id="itemDescription">
             </div>
         </div>
 
         <div class="form-group">
             <label for="umo">UMO</label>
-            <select class="form-control" id="umo">
+            <select class="form-control bg-transparent bg-transparent border-dark" id="umo">
                 <option value="LIT">LIT</option>
                 <option value="KG">KG</option>
                 <option value="MT">MT</option>
@@ -776,36 +777,36 @@
         </div>
         <div class="form-group">
             <label for="quantityRequired">Quantity Required</label>
-            <input type="text" class="form-control" id="quantityRequired" required>
+            <input type="text" class="form-control bg-transparent border-dark" id="quantityRequired" required>
         </div>
         <div class="form-group">
             <label for="population">Population</label>
-            <input type="text" class="form-control" id="population" required>
+            <input type="text" class="form-control bg-transparent border-dark" id="population" required>
         </div>
         <div class="form-group">
             <label for="purchaseQuantity">Purchase Quantity Till Date</label>
-            <input type="date" class="form-control" id="purchaseQuantity">
+            <input type="date" class="form-control bg-transparent border-dark" id="purchaseQuantity">
         </div>
         <div class="form-group">
             <label for="issuedQuantity">Issued Quantity Till Date</label>
-            <input type="date" class="form-control" id="issuedQuantity">
+            <input type="date" class="form-control bg-transparent border-dark" id="issuedQuantity">
         </div>
         <div class="form-group">
             <label for="stockPosition">Stock Position</label>
-            <select class="form-control" id="stockPosition" onchange="toggleRequiredTextbox()">
+            <select class="form-control bg-transparent border border-dark" id="stockPosition" onchange="toggleRequiredTextbox()">
                 <option value="Nill">Nill</option>
                 <option value="Required">Required</option>
             </select>
-            <input type="text" class="form-control required-textbox" id="requiredTextbox" placeholder="Enter details here">
+            <input type="text" class="form-control required-textbox bg-transparent border-dark" id="requiredTextbox" placeholder="Enter details here">
         </div>
         <div class="form-group">
             <label for="lastPurchasePrice">Last Purchase Price</label>
-            <input type="text" class="form-control" id="lastPurchasePrice" required>
+            <input type="text" class="form-control bg-transparent border-dark" id="lastPurchasePrice" required>
         </div>
     
         <div class="form-group">
             <label for="lastPurchaseDate">Last Purchase Date</label>
-            <input type="date" class="form-control" id="lastPurchaseDate">
+            <input type="date" class="form-control bg-transparent border-dark" id="lastPurchaseDate">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="button" class="btn btn-danger ml-4" onclick="window.location.href='table.html'">View</button>
